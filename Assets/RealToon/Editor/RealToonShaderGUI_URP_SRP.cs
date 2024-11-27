@@ -3183,7 +3183,7 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
         #region Check_RE_OL
         void Check_RE_OL()
         {
-            if (ReaLi("//OL_RE", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader"))
+            if (ReaLi("//OL_RE", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader"))
             {
                 remoout = true;
                 REMO_OUTL();
@@ -3201,55 +3201,55 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
         {
             if (remoout == true)
             {
-                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("Cull [_DoubleSidedOutline]//OL_RCUL", "//Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Cull [_DoubleSidedOutline]//OL_RCUL", "//Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#if N_F_O_ON//SSOL", "//#if N_F_O_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#if N_F_O_MOTTSO_ON//SSOL", "//#if N_F_O_MOTTSO_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#if N_F_O_ON//SSOL", "//#if N_F_O_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#if N_F_O_MOTTSO_ON//SSOL", "//#if N_F_O_MOTTSO_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//OL_NRE", "//OL_RE", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//OL_NRE", "//OL_RE", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//SSOL_U", "//SSOL_NU", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//SSOL_U", "//SSOL_NU", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
                 //============================
                 //============================
 
-                ChanLi("static bool remoout = true;", "static bool remoout = false;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string remooutstat = " + (char)34 + "Remove Outline" + (char)34 + ";", "static string remooutstat = " + (char)34 + "Add Outline" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool remoout = true;", "static bool remoout = false;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string remooutstat = " + (char)34 + "Remove Outline" + (char)34 + ";", "static string remooutstat = " + (char)34 + "Add Outline" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.Log("Outline feature removed on RealToon URP shader.");
             }
             else if (remoout == false)
             {
-                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//Cull [_DoubleSidedOutline]//OL_RCUL", "Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//Cull [_DoubleSidedOutline]//OL_RCUL", "Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//OL_RE", "//OL_NRE", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//OL_RE", "//OL_NRE", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
                 Check_SSOL_TOL();
 
                 //============================
                 //============================
 
-                ChanLi("static bool remoout = false;", "static bool remoout = true;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string remooutstat = " + (char)34 + "Add Outline" + (char)34 + ";", "static string remooutstat = " + (char)34 + "Remove Outline" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool remoout = false;", "static bool remoout = true;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string remooutstat = " + (char)34 + "Add Outline" + (char)34 + ";", "static string remooutstat = " + (char)34 + "Remove Outline" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.Log("Outline feature added on RealToon URP shader.");
             }
         }
@@ -3258,7 +3258,7 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
         #region Check_SSOL_TOL
         void Check_SSOL_TOL()
         {
-            if (ReaLi("//SSOL_U", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader"))
+            if (ReaLi("//SSOL_U", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader"))
             {
                 UseSSOL = true;
                 USSOL_OR_TOL();
@@ -3276,68 +3276,68 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
         {
             if (UseSSOL == true)
             {
-                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("Cull [_DoubleSidedOutline]//OL_RCUL", "//Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Cull [_DoubleSidedOutline]//OL_RCUL", "//Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//#if N_F_O_ON//SSOL", "#if N_F_O_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//#if N_F_O_MOTTSO_ON//SSOL", "#if N_F_O_MOTTSO_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//#else//SSOL", "#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//#else//SSOL", "#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#if N_F_O_ON//SSOL", "#if N_F_O_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#if N_F_O_MOTTSO_ON//SSOL", "#if N_F_O_MOTTSO_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#else//SSOL", "#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#else//SSOL", "#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//#endif//SSOL", "#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//SSOL_NU", "//SSOL_U", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//SSOL_NU", "//SSOL_U", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
                 //============================
                 //============================
 
-                ChanLi("static bool UseSSOL = true;", "static bool UseSSOL = false;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string OLType = " + (char)34 + "Traditional" + (char)34 + ";", "static string OLType = " + (char)34 + "Screen Space" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string UseSSOLStat = " + (char)34 + "Use Screen Space Outline" + (char)34 + ";", "static string UseSSOLStat = " + (char)34 + "Use Traditional Outline" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool UseSSOL = true;", "static bool UseSSOL = false;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string OLType = " + (char)34 + "Traditional" + (char)34 + ";", "static string OLType = " + (char)34 + "Screen Space" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string UseSSOLStat = " + (char)34 + "Use Screen Space Outline" + (char)34 + ";", "static string UseSSOLStat = " + (char)34 + "Use Traditional Outline" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.Log("Screen Space Outline is now use.");
             }
             else if (UseSSOL == false)
             {
-                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//Cull [_DoubleSidedOutline]//OL_RCUL", "Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "remove" + (char)34 + "}", "Tags{" + (char)34 + "LightMode" + (char)34 + "=" + (char)34 + "SRPDefaultUnlit" + (char)34 + "}", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//Cull [_DoubleSidedOutline]//OL_RCUL", "Cull [_DoubleSidedOutline]//OL_RCUL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "//#ifdef UNITY_COLORSPACE_GAMMA//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "//_OutlineColor=float4(LinearToGamma22(_OutlineColor.rgb),_OutlineColor.a);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#if N_F_O_ON//SSOL", "//#if N_F_O_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#if N_F_O_MOTTSO_ON//SSOL", "//#if N_F_O_MOTTSO_ON//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#if N_F_O_ON//SSOL", "//#if N_F_O_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "//float3 SSOLi=(float3)EdgDet(sceneUVs.xy);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#if N_F_O_MOTTSO_ON//SSOL", "//#if N_F_O_MOTTSO_ON//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=((RTD_CA*RTD_SON_CHE_1))*lerp((float3)1.0,_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "//float3 Init_FO=lerp((RTD_CA*RTD_SON_CHE_1),_OutlineColor.rgb,SSOLi);//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#else//SSOL", "//#else//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#endif//SSOL", "//#endif//SSOL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                ChanLi("//SSOL_U", "//SSOL_NU", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//SSOL_U", "//SSOL_NU", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
                 //============================
                 //============================
 
-                ChanLi("static bool UseSSOL = false;", "static bool UseSSOL = true;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string OLType = " + (char)34 + "Screen Space" + (char)34 + ";", "static string OLType = " + (char)34 + "Traditional" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string UseSSOLStat = " + (char)34 + "Use Traditional Outline" + (char)34 + ";", "static string UseSSOLStat = " + (char)34 + "Use Screen Space Outline" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool UseSSOL = false;", "static bool UseSSOL = true;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string OLType = " + (char)34 + "Screen Space" + (char)34 + ";", "static string OLType = " + (char)34 + "Traditional" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string UseSSOLStat = " + (char)34 + "Use Traditional Outline" + (char)34 + ";", "static string UseSSOLStat = " + (char)34 + "Use Screen Space Outline" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.Log("Traditional Outline is now use.");
             }
         }
@@ -3348,34 +3348,34 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
         {
             if (twofourfive_target == false)
             {
-                ChanLi("static bool twofourfive_target = false;", "static bool twofourfive_target = true;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 4.5" + (char)34 + ";", "static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 2.0" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool twofourfive_target = false;", "static bool twofourfive_target = true;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 4.5" + (char)34 + ";", "static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 2.0" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                ChanLi("#pragma target 2.0 //targetol", "#pragma target 4.5 //targetol", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 2.0 //targetfl", "#pragma target 4.5 //targetfl", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 2.0 //targetsc", "#pragma target 4.5 //targetsc", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 2.0 //targetdo", "#pragma target 4.5 //targetdo", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 2.0 //targetdn", "#pragma target 4.5 //targetdn", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 2.0 //targetm", "#pragma target 4.5 //targetm", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetol", "#pragma target 4.5 //targetol", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetfl", "#pragma target 4.5 //targetfl", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetsc", "#pragma target 4.5 //targetsc", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetdo", "#pragma target 4.5 //targetdo", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetdn", "#pragma target 4.5 //targetdn", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 2.0 //targetm", "#pragma target 4.5 //targetm", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.LogWarning("RealToon shader compilation target has been changed to 4.5, added support for DOTS and Tessellation.");
             }
             else if (twofourfive_target == true)
             {
-                ChanLi("static bool twofourfive_target = true;", "static bool twofourfive_target = false;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 2.0" + (char)34 + ";", "static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 4.5" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool twofourfive_target = true;", "static bool twofourfive_target = false;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 2.0" + (char)34 + ";", "static string twofourfive_target_string = " + (char)34 + "Change shader compilation target to 4.5" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
-                ChanLi("#pragma target 4.5 //targetol", "#pragma target 2.0 //targetol", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 4.5 //targetfl", "#pragma target 2.0 //targetfl", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 4.5 //targetsc", "#pragma target 2.0 //targetsc", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 4.5 //targetdo", "#pragma target 2.0 //targetdo", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 4.5 //targetdn", "#pragma target 2.0 //targetdn", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("#pragma target 4.5 //targetm", "#pragma target 2.0 //targetm", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetol", "#pragma target 2.0 //targetol", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetfl", "#pragma target 2.0 //targetfl", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetsc", "#pragma target 2.0 //targetsc", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetdo", "#pragma target 2.0 //targetdo", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetdn", "#pragma target 2.0 //targetdn", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("#pragma target 4.5 //targetm", "#pragma target 2.0 //targetm", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.LogWarning("RealToon shader compilation target has been changed to 2.0.");
             }
         }
@@ -3390,47 +3390,47 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
 
 #if ENABLE_COMPUTE_DEFORMATIONS
 
-        ChanLi("static bool dots_lbs_cd = false;", "static bool dots_lbs_cd = true;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-        ChanLi("static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Compute Deformation" + (char)34 + ";", "static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Linear Blend Skinning" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+        ChanLi("static bool dots_lbs_cd = false;", "static bool dots_lbs_cd = true;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+        ChanLi("static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Compute Deformation" + (char)34 + ";", "static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Linear Blend Skinning" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
 
-        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "//DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "//DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        ChanLi("DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-        AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-        AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+        AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+        AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
         Debug.LogWarning("DOTS|HR - Compute Deformation is now use, This will enable you to use BlendShapes and other deformation.");
 #else
 
@@ -3440,47 +3440,47 @@ static string dots_lbs_cd_string = "DOTS|HR - Use Compute Deformation";
             }
             else if (dots_lbs_cd == true)
             {
-                ChanLi("static bool dots_lbs_cd = true;", "static bool dots_lbs_cd = false;", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
-                ChanLi("static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Linear Blend Skinning" + (char)34 + ";", "static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Compute Deformation" + (char)34 + ";", "Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static bool dots_lbs_cd = true;", "static bool dots_lbs_cd = false;", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                ChanLi("static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Linear Blend Skinning" + (char)34 + ";", "static string dots_lbs_cd_string = " + (char)34 + "DOTS|HR - Use Compute Deformation" + (char)34 + ";", "Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
 
 
-                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "//uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "//uint vertexID : SV_VertexID;//DOTS_CompDef_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_OL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "//uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "//uint vertexID : SV_VertexID;//DOTS_CompDef_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_FL", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "//uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "//uint vertexID : SV_VertexID;//DOTS_CompDef_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_SC", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "//uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "//uint vertexID : SV_VertexID;//DOTS_CompDef_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "DOTS_LiBleSki(input.indices, input.weights, input.position.xyz, input.normalOS.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DO", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "//uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "float4 weights : BLENDWEIGHTS;//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "uint4 indices : BLENDINDICES;//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "//uint vertexID : SV_VertexID;//DOTS_CompDef_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "//DOTS_CompDef(input.vertexID, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_CompDef_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                ChanLi("//DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "DOTS_LiBleSki(input.indices, input.weights, input.positionOS.xyz, input.normal.xyz, input.tangentOS.xyz, (float3)_LBS_CD_Position, _LBS_CD_Normal, (float3)_LBS_CD_Tangent);//DOTS_LiBleSki_DN", "Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
 
 
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
-                AssetDatabase.ImportAsset("Assets/Plugins/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
+                AssetDatabase.ImportAsset("Assets/RealToon/RealToon Shaders/Version 5/URP/Default/D_Default_URP.shader");
+                AssetDatabase.ImportAsset("Assets/RealToon/Editor/RealToonShaderGUI_URP_SRP.cs");
                 Debug.LogWarning("DOTS|HR - Linear Blending Skinning is now use.");
             }
         }
