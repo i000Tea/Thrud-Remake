@@ -38,7 +38,7 @@ namespace TeaFramework
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                inputSprintTimer = Time.time;
-            }            
+            }
          }
          if (Input.GetKeyUp(KeyCode.LeftShift))
          {
@@ -62,7 +62,6 @@ namespace TeaFramework
          float moveHorizontal = Input.GetAxis("Horizontal"); // 左右方向输入
          float moveVertical = Input.GetAxis("Vertical");     // 前后方向输入
          float moveDepth = Input.GetAxis("Depth");           // 上下方向输入
-
          // 将输入转换为局部方向的移动向量
          Vector3 localMove = new(moveHorizontal, moveDepth, moveVertical);
 
@@ -79,9 +78,19 @@ namespace TeaFramework
             PlayerControl.I.OnSprint = false;
          }
 
+         if (moveHorizontal > 0.1 || moveVertical > 0.1f)
+         { "MoveEvent".InvokeSomething(AnimEvent.onMove); }
+         else
+         { "MoveEvent".InvokeSomething(AnimEvent.offMove); }
+
+         // 计算刚体速度相对于物体局部坐标系的前向和右向分量
+         float forwardSpeed = Vector3.Dot(rb.velocity, forword.forward); // 前向速度
+         float sideSpeed = Vector3.Dot(rb.velocity, forword.right);     // 侧向速度
+
+         // 更新 MoveVelocity 事件
+         "MoveVelocity".InvokeSomething(forwardSpeed, sideSpeed);
          // 施加力到刚体
          rb.AddForce(force);
       }
-
    }
 }

@@ -11,6 +11,7 @@ namespace TeaFramework
       [SerializeField] private P_Movement movement;
       [SerializeField] private P_AngleOfView angleOfView;
       [SerializeField] private P_VisualEffect visualEffect;
+      [SerializeField] private P_AnimatorControl animCtrl;
       private Rigidbody rig;
       #endregion
 
@@ -22,7 +23,7 @@ namespace TeaFramework
       protected override void Awake()
       {
          base.Awake();
-
+         //Time.timeScale = 1;
          rig = GetComponent<Rigidbody>();
          movement.Initialize(rig, transform.GetChild(0).GetChild(0));
          angleOfView.Initialize(
@@ -30,16 +31,19 @@ namespace TeaFramework
             transform.GetChild(0).GetChild(0));
 
          visualEffect.Initialize(transform.GetChild(0).GetChild(0), transform.GetChild(1));
+         animCtrl.Initialize(transform.GetChild(1).GetChild(1));
       }
       private void Update()
       {
          angleOfView.InputUpdate();
          visualEffect.InputUpdate();
          movement.Update();
+         animCtrl.Update();
       }
       private void FixedUpdate()
       {
          movement.FixedUpdate();
-      }      
+         //animCtrl.FixedUpdate();
+      }
    }
 }
