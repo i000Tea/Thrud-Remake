@@ -6,9 +6,10 @@ namespace TeaFramework
    {
       #region 参数变量
       [Range(0.01f, 4f)] public float scale = 1;
+      /// <summary> 控制权限被接管(开场动画/大招/暂停) </summary>
       public bool ControlTakeOff;
-      public static PlayerConfig Config => I.config;
       public PlayerConfig config;
+      public FaceCanvasConfig canvasConfig; 
 
       #region 挂载对象
       [SerializeField] private P_Movement movement;
@@ -18,6 +19,7 @@ namespace TeaFramework
       #endregion
 
       private P_IModular[] modulars;
+
       #region 缓存参数
       #endregion
 

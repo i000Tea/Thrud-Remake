@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 namespace TeaFramework
 {
@@ -7,7 +5,6 @@ namespace TeaFramework
    [System.Serializable]
    public class PlayerConfig
    {
-
       #region 设置对象 transform
       /// <summary> 主控摄像机 </summary>
       public Camera camera;
@@ -130,5 +127,20 @@ namespace TeaFramework
       /// <summary> 显示对象的旋转速度因子 </summary>
       public float rotationSpeed = 5f;
       #endregion
+
+      #region battle 战斗相关
+      public Enemy_Main lockEnemy;
+      public Transform weaponForword;
+      public float LockEnemySpeed => lockEnemySpeed * lockSpeedMulti;
+      [SerializeField] private float lockEnemySpeed = 10;
+      public float lockSpeedMulti = 10;
+      public float enemyLockDistance = 175;
+      #endregion
+   }
+   [System.Serializable]
+   public class FaceCanvasConfig
+   {
+      public Canvas faceCanvas;
+      public RectTransform lockEnemyArm;
    }
 }

@@ -6,5 +6,9 @@ namespace TeaFramework
 {
    public class Enemy_Main : MonoBehaviour
    {
+      private void Awake()
+      {
+         EnemyControl.enemys.Add(this);
+      }
    }
 }

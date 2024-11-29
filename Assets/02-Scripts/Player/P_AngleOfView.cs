@@ -26,15 +26,15 @@ namespace TeaFramework
          // 如果鼠标处于锁定状态，则可以旋转视角
          if (Cursor.lockState == CursorLockMode.Locked)
          {
-            float mouseX = Input.GetAxis("Mouse X") * PlayerControl.Config.mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * PlayerControl.Config.mouseSensitivity * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * config.mouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * config.mouseSensitivity * Time.deltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f); // 限制垂直角度
 
             // 垂直旋转相机，水平旋转玩家身体
-            PlayerControl.Config.pitchingAxis.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-            PlayerControl.Config.horizontalAxis.Rotate(Vector3.up * mouseX);
+            config.pitchingAxis.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+            config.horizontalAxis.Rotate(Vector3.up * mouseX);
          }
       }
    }

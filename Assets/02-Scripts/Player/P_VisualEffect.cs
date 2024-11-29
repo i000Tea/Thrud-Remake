@@ -12,21 +12,21 @@ namespace TeaFramework
       }
       public override void Update()
       {
-         ShowViewFollow();
          CameraFovFromOnSprint();
+         ShowViewFollow();
       }
 
-      /// <summary> 相机平滑运动 </summary>
+      /// <summary> 相机视场角平滑运动 </summary>
       private void CameraFovFromOnSprint()
       {
          cacheFov = Mathf.Lerp(cacheFov, config.TargetFov, Time.deltaTime * config.fovLerpSpeed);
          //Debug.Log(cacheFov);
          config.camera.fieldOfView = cacheFov;
       }
-      /// <summary>  </summary>
+      /// <summary> 显示角色模型平滑运动 </summary>
       private void ShowViewFollow()
       {
-         // 目标旋转（与目标轴对齐）
+         // 相机目标的旋转值（与目标轴对齐）
          Quaternion targetRotation = config.forword.rotation;
 
          // 使用插值平滑过渡到目标旋转
