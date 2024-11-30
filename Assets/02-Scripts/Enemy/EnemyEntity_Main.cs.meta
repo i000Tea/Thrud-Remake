@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 258129043d744204dbec87830249ceae
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - UIPregfab: {fileID: 8656652531096268448, guid: 01f69bce0396c984c91c7c9d68ee9095, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

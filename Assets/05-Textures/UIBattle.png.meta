@@ -177,12 +177,12 @@ TextureImporter:
       name: UIBattle_SightArrow
       rect:
         serializedVersion: 2
-        x: 2167
-        y: 2899
-        width: 50
-        height: 50
+        x: 3331
+        y: 87
+        width: 44
+        height: 103
       alignment: 9
-      pivot: {x: 0.75, y: 0.25}
+      pivot: {x: 0.5, y: 0.2}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,6 +236,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Electric_Blue
+      rect:
+        serializedVersion: 2
+        x: 3434
+        y: 732
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909231f53c0dd934abcd9e48db61aaa8
+      internalID: -1861597815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Fire_Red
+      rect:
+        serializedVersion: 2
+        x: 3225
+        y: 833
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4642bda3eda059b45a591b1b184e7687
+      internalID: -831648326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Ice_Cyan
+      rect:
+        serializedVersion: 2
+        x: 2182
+        y: 2763
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2f99312b8e35b49844fd9ce23c25f5
+      internalID: 167320836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Wind_Green
+      rect:
+        serializedVersion: 2
+        x: 3323
+        y: 438
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8e1b9e749ddf340a5658cd605efbcb
+      internalID: -1917737930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -813, y: 47}
       - {x: -1091, y: -227}
@@ -275,6 +359,10 @@ TextureImporter:
       UIBattle-RadianR: 91980341
       UIBattle_SightArrow: 1229919078
       UIBattle_SightCenter: 577950099
+      UIBattle_Sign_Electric_Blue: -1861597815
+      UIBattle_Sign_Fire_Red: -831648326
+      UIBattle_Sign_Ice_Cyan: 167320836
+      UIBattle_Sign_Wind_Green: -1917737930
       UIBattle_TranslucentRing: -1372261487
   spritePackingTag: 
   pSDRemoveMatte: 0

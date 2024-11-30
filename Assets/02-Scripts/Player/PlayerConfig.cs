@@ -129,7 +129,7 @@ namespace TeaFramework
       #endregion
 
       #region battle 战斗相关
-      public Enemy_Main lockEnemy;
+      public EnemyEntity_Main lockEnemy;
       public Transform weaponForword;
       public float LockEnemySpeed => lockEnemySpeed * lockSpeedMulti;
       [SerializeField] private float lockEnemySpeed = 10;

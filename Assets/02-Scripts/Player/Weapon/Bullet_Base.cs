@@ -1,15 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class Bullet_Base : MonoBehaviour
+namespace TeaFramework
 {
-   private void OnTriggerEnter(Collider other)
+   public class Bullet_Base : MonoBehaviour
    {
-      Debug.Log(other.gameObject.tag);
-      if (other.gameObject.CompareTag("enemy"))
+      private void OnTriggerEnter(Collider other)
       {
-         Destroy(gameObject);
+         //Debug.Log(other.gameObject.tag);
+         if (other.transform.TryGetComponent(out EnemyEntity_Main enemy))
+         {
+            enemy.BeHit();
+         }
+
+         if (other.gameObject.CompareTag("enemy"))
+         {
+            Destroy(gameObject);
+         }
       }
    }
 }

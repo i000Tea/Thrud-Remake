@@ -9,5 +9,6 @@ namespace TeaFramework
       protected FaceCanvasConfig canvasConfig => PlayerControl.I.canvasConfig;
       public virtual void Update() { }
       public virtual void FixedUpdate() { }
+      public virtual void LateUpdate() { }
    }
 }
