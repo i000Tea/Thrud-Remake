@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EnemyTest
+  m_Name: EnemyTest-Ele
   m_Shader: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
   m_ValidKeywords:
   - N_F_DNO_ON
@@ -343,8 +343,8 @@ Material:
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 4.9245777, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 0, g: 0.14216948, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 1.0152746, b: 4.924577, a: 1}
     - _OutlineOffset: {r: -0.65, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}

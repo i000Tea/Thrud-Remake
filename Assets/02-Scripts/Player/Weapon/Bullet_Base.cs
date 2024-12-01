@@ -3,18 +3,18 @@ namespace TeaFramework
 {
    public class Bullet_Base : MonoBehaviour
    {
+      bool canHit=true;
       private void OnTriggerEnter(Collider other)
       {
-         //Debug.Log(other.gameObject.tag);
-         if (other.transform.TryGetComponent(out EnemyEntity_Main enemy))
-         {
-            enemy.BeHit(Random.Range(1,1000));
-         }
+         if (!canHit) return;
+         var enemy = other.transform.FindParentComponent<EnemyEntity_Main>();
 
-         if (other.gameObject.CompareTag("enemy"))
+         if (enemy)
          {
-            Destroy(gameObject);
+            enemy.BeHit();
+            canHit = false;
          }
+         Destroy(gameObject, 0.05f);      
       }
    }
 }

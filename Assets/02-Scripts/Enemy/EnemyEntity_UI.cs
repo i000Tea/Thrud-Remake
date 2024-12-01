@@ -1,26 +1,51 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 namespace TeaFramework
 {
    public class EnemyEntity_UI : MonoBehaviour
    {
-      public Image sign;
+      [SerializeField] private RectTransform canvas;
+      [SerializeField] private Image healthMain;
+      [SerializeField] private Image healthHode;
+      bool onOpen;
+      private float cacheHealthPer = 1;
+      [SerializeField] private Image sign;
       private EnemyUIData_Element uiIData;
       public void SetUIData(EnemyUIData_Element elementData)
       {
          uiIData = elementData;
          sign.sprite = uiIData.Sign;
       }
-
+      private void Awake()
+      {
+         canvas.sizeDelta = new(0, 40);
+      }
       // 用LateUpdate, 在每一帧的最后调整Canvas朝向
       void LateUpdate()
       {
          if (PlayerControl.I.config.camera != null)
          {
-            // 这里我的角色朝向和UI朝向是相反的，如果直接用LookAt()还需要把每个UI元素旋转过来。
-            // 为了简单，用了下面这个方法。它实际上是一个反向旋转，可以简单理解为“负负得正”吧
-            transform.rotation = Quaternion.LookRotation(transform.position - PlayerControl.I.config.camera.transform.position);
+            transform.LockCamera(PlayerControl.I.config.camera);
          }
+         healthHode.fillAmount = Mathf.Lerp(healthHode.fillAmount, cacheHealthPer, 0.05f);
       }
+
+      public void HealthUpdate(float healthPer)
+      {
+         Debug.Log(healthPer);
+         if (!onOpen)
+         {
+            onOpen = true;
+            HealthWidthSet();
+         }
+         healthMain.fillAmount = healthPer;
+         cacheHealthPer = healthPer;
+      }
+      private void HealthWidthSet(int width = 400)
+      {
+         canvas.DOSizeDelta(new(width, 40), 0.5f).SetEase(Ease.OutExpo);
+      }
+
    }
 }

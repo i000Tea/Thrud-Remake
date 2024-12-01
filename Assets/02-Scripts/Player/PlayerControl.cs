@@ -38,6 +38,7 @@ namespace TeaFramework
             new P_VisualEffect(),
             new P_AnimatorControl(),
             new P_Aim(),
+            new P_Health(),
          };
       }
       private void Update()
@@ -56,6 +57,11 @@ namespace TeaFramework
       private void LateUpdate()
       {
          for (int i = 0; i < modulars.Length; i++) { modulars[i].LateUpdate(); }
+      }
+      protected override void OnDestroy()
+      {
+         for (int i = 0; i < modulars.Length; i++) { modulars[i].OnDestroy(); }
+         base.OnDestroy();
       }
       private void TogglePause()
       {

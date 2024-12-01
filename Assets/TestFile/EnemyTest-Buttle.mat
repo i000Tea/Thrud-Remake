@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1812845534802750649
+--- !u!114 &-8446256509846923315
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,16 +20,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Faniya-Hair
+  m_Name: EnemyTest-Buttle
   m_Shader: {fileID: 4800000, guid: 6459b2db96a08ca41b0f9b39dc7ad59e, type: 3}
   m_ValidKeywords:
+  - N_F_DNO_ON
   - N_F_EAL_ON
-  - N_F_MC_ON
   - N_F_O_ON
   - N_F_RDC_ON
-  - N_F_RELGI_ON
-  - N_F_SON_ON
-  - N_F_SS_ON
+  - N_F_SL_ON
   - N_F_TRANSAFFSHA_ON
   m_InvalidKeywords:
   - N_F_TRANSAFFSHA
@@ -46,6 +44,7 @@ Material:
   - _MVCOL_OFF
   - _OUTLINEWIDTHAFFECTEDBYVIEWDISTANCE_OFF
   - _PSGLOTEX_OFF
+  - _SELFLITHIGHCONTRAST_OFF
   - _SELFSHADOWAFFECTEDBYLIGHTSHADOWSTRENGTH_OFF
   - _SELFSHADOWSHADOWTATVIEWDIRECTION_OFF
   - _SHOWNORMAL_OFF
@@ -56,7 +55,7 @@ Material:
   - _VERTEXCOLORBLUEAFFECTOUTLINEWITDH_OFF
   - _VERTEXCOLORGREENCONTROLSELFSHADOWTHRESHOLD_OFF
   - _VERTEXCOLORREDCONTROLSMOOTHOBJECTNORMAL_OFF
-  m_LightmapFlags: 0
+  m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -106,9 +105,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e9f0d05549ee8a5409d0295793bb6fa8, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Offset: {x: 0, y: 0.08}
     - _MaskGloss:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -201,7 +200,7 @@ Material:
     - _DirectionalLightIntensity: 0
     - _DoubleSidedOutline: 1
     - _DstBlend: 0
-    - _DynamicNoisyOutline: 0
+    - _DynamicNoisyOutline: 1
     - _EnvironmentReflections: 1
     - _EnvironmentalLightingIntensity: 1
     - _FarDistanceMaxWidth: 10
@@ -209,14 +208,14 @@ Material:
     - _GIShadeThreshold: 0
     - _GlossColorPower: 10
     - _GlossIntensity: 1
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0
     - _GlossSoftness: 0
     - _GlossTextureFollowLight: 0
     - _GlossTextureFollowObjectRotation: 0
     - _GlossTextureRotate: 0
     - _GlossTextureSoftness: 0
-    - _Glossiness: 0.2262175
-    - _GlossyReflections: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 0
     - _Glow_Edge_Width: 1
     - _HighlightColorPower: 1
     - _LigIgnoYNorDir: 0
@@ -229,12 +228,11 @@ Material:
     - _MCIALO: 0
     - _MCapIntensity: 1
     - _MVCOL: 0
-    - _MaiColPo: 0.8
+    - _MaiColPo: 0.1
     - _MaxFadDistance: 2
     - _Metallic: 0
     - _MinFadDistance: 0
     - _MixMainTexToOutline: 0
-    - _Mode: 0
     - _N_F_CA: 0
     - _N_F_CLD: 0
     - _N_F_CO: 0
@@ -248,7 +246,7 @@ Material:
     - _N_F_GLOT: 0
     - _N_F_HDLS: 0
     - _N_F_HPSS: 0
-    - _N_F_MC: 1
+    - _N_F_MC: 0
     - _N_F_MSSOLTFO: 0
     - _N_F_NFD: 0
     - _N_F_NLASOBF: 0
@@ -260,28 +258,28 @@ Material:
     - _N_F_RDC: 1
     - _N_F_RL: 0
     - _N_F_SCT: 0
-    - _N_F_SL: 0
-    - _N_F_SON: 1
-    - _N_F_SS: 1
+    - _N_F_SL: 1
+    - _N_F_SON: 0
+    - _N_F_SS: 0
     - _N_F_ST: 0
     - _N_F_STIAL: 0
     - _N_F_STIS: 0
-    - _NoisyOutlineIntensity: 0
+    - _NoisyOutlineIntensity: 1
     - _NormalMapIntensity: 1
     - _OcclusionStrength: 1
     - _Opacity: 1
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 0.2
+    - _OutlineWidth: -22.8
     - _OutlineWidthAffectedByViewDistance: 0
-    - _OutlineZPostionInCamera: 0
+    - _OutlineZPostionInCamera: -7.2
     - _OverallShadowColorPower: 1
     - _PSGLOTEX: 0
     - _PTexturePower: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.005
     - _PointSpotlightIntensity: 0
     - _QueueOffset: 0
-    - _RELG: 1
+    - _RELG: 0
     - _ReceiveShadows: 1
     - _ReduSha: 0.5
     - _RefMetallic: 0
@@ -297,13 +295,13 @@ Material:
     - _SPECMODE: 0
     - _STIL: 0
     - _Saturation: 1
-    - _SelfLitHighContrast: 1
-    - _SelfLitIntensity: 0
-    - _SelfLitPower: 2
+    - _SelfLitHighContrast: 0
+    - _SelfLitIntensity: 1
+    - _SelfLitPower: 15.44
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 1
     - _SelfShadowRealTimeShadowColorPower: 1
-    - _SelfShadowRealtimeShadowIntensity: 0.679
+    - _SelfShadowRealtimeShadowIntensity: 1
     - _SelfShadowShadowTAtViewDirection: 0
     - _SelfShadowThreshold: 0.93
     - _ShadowColorTexturePower: 0
@@ -319,7 +317,7 @@ Material:
     - _SimTrans: 0
     - _SkinMatrixIndex: 0
     - _SmoothObjectNormal: 0
-    - _Smoothness: 0.2262175
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
@@ -329,7 +327,6 @@ Material:
     - _TexturePatternStyle: 0
     - _TransAffSha: 1
     - _TransparentThreshold: 0
-    - _UVSec: 0
     - _UseSecondaryCutout: 0
     - _UseTLB: 0
     - _VertexColorBlueAffectOutlineWitdh: 0
@@ -345,10 +342,10 @@ Material:
     - _GlossColor: {r: 1, g: 1, b: 1, a: 1}
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _MainColor: {r: 0.2970481, g: 0, b: 1, a: 1}
+    - _OutlineColor: {r: 0.3121589, g: 0, b: 1.2421322, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
-    - _OverallShadowColor: {r: 0.8018868, g: 0.33626762, b: 0.16264686, a: 1}
+    - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SSAOColor: {r: 0, g: 0, b: 0, a: 0}

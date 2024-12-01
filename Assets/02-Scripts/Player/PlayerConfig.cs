@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 namespace TeaFramework
 {
@@ -129,6 +130,8 @@ namespace TeaFramework
       #endregion
 
       #region battle 战斗相关
+      public float health = 360;
+
       public EnemyEntity_Main lockEnemy;
       public Transform weaponForword;
       public float LockEnemySpeed => lockEnemySpeed * lockSpeedMulti;
@@ -141,6 +144,11 @@ namespace TeaFramework
    public class FaceCanvasConfig
    {
       public Canvas faceCanvas;
+      /// <summary>
+      /// 用来锁定敌方的屏幕准星
+      /// </summary>
       public RectTransform lockEnemyArm;
+      public RectTransform onHealth;
+      public TMP_Text onHealthText;
    }
 }

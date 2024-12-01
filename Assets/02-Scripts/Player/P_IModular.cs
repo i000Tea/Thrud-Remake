@@ -6,9 +6,10 @@ namespace TeaFramework
    public abstract class P_IModular
    {
       protected PlayerConfig config => PlayerControl.I.config;
-      protected FaceCanvasConfig canvasConfig => PlayerControl.I.canvasConfig;
+      protected FaceCanvasConfig uiConfig => PlayerControl.I.canvasConfig;
       public virtual void Update() { }
       public virtual void FixedUpdate() { }
-      public virtual void LateUpdate() { }
+      public virtual void LateUpdate() { }      
+      public virtual void OnDestroy() { }
    }
 }

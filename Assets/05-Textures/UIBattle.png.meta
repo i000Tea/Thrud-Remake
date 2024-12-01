@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 2
     mipBias: 0
     wrapU: 1
@@ -320,6 +320,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Out_Boss
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 3806
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231c88ab15752724187355f5dd9b1d70
+      internalID: 31949915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_Sign_Out
+      rect:
+        serializedVersion: 2
+        x: 3271
+        y: 981
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a3a750d01e73142a9825bd18bce530
+      internalID: -1716929669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_WhiteCube
+      rect:
+        serializedVersion: 2
+        x: 3410
+        y: 4
+        width: 20
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e019cc6178c228a46907d0bfda403e9b
+      internalID: -724068798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIBattle_PlayerHealth
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 2007
+        width: 141
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 69, y: 0, z: 69, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0471de83e3988e64bac55bf7db3c4ef3
+      internalID: -965651372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline:
     - - {x: -813, y: 47}
       - {x: -1091, y: -227}
@@ -357,13 +441,17 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       UIBattle-RadianR: 91980341
+      UIBattle_PlayerHealth: -965651372
       UIBattle_SightArrow: 1229919078
       UIBattle_SightCenter: 577950099
       UIBattle_Sign_Electric_Blue: -1861597815
       UIBattle_Sign_Fire_Red: -831648326
       UIBattle_Sign_Ice_Cyan: 167320836
+      UIBattle_Sign_Out: -1716929669
+      UIBattle_Sign_Out_Boss: 31949915
       UIBattle_Sign_Wind_Green: -1917737930
       UIBattle_TranslucentRing: -1372261487
+      UIBattle_WhiteCube: -724068798
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

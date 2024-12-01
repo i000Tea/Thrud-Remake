@@ -3,12 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace TeaFramework
 {
-   public class P_VisualEffect: P_IModular
+   public class P_VisualEffect : P_IModular
    {
       private float cacheFov;
+      private float healthWidth;
+      private float healthHeigth;
       public P_VisualEffect()
       {
          cacheFov = config.TargetFov;
+         healthWidth = uiConfig.onHealth.sizeDelta.x;
+         healthHeigth = uiConfig.onHealth.sizeDelta.y;
+         HealthUpdate((int)config.health, (int)config.health);
+         "UI-HealthUpdate".OnAddAnotherList<int, int>(HealthUpdate);
+      }
+      public override void OnDestroy()
+      {
+         "UI-HealthUpdate".OnRemoveAnotherList<int, int>(HealthUpdate);
+      }
+      public void HealthUpdate(int now, int max)
+      {
+         Debug.Log(now + " " + max);
+         uiConfig.onHealth.sizeDelta = new(healthWidth * now / max, healthHeigth);
+         uiConfig.onHealthText.text = $"{now}/{max}";
       }
       public override void Update()
       {

@@ -92,7 +92,7 @@ namespace TeaFramework
             // 给 x 值一半概率变为负数 // 生成 0 或 1，50% 概率
             if (Random.Range(0, 2) == 0) { x = -x; }
             // 设置对象的相对坐标，z 固定为 1
-            childObject.localPosition = new Vector3(x, y, 0);
+            childObject.localPosition = new Vector3(x, y, -0.1f);
 
          }
 
@@ -148,6 +148,9 @@ namespace TeaFramework
       public static void LockCamera(this Transform transform, Camera camera)
       {
          transform.rotation = camera.transform.rotation;
+         // 这里我的角色朝向和UI朝向是相反的，如果直接用LookAt()还需要把每个UI元素旋转过来。
+         // 为了简单，用了下面这个方法。它实际上是一个反向旋转，可以简单理解为“负负得正”吧
+         //transform.rotation = Quaternion.LookRotation(transform.position - PlayerControl.I.config.camera.transform.position);
       }
    }
 }

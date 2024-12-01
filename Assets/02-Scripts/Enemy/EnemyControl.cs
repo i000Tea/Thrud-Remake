@@ -6,6 +6,7 @@ namespace TeaFramework
    {
       public static List<EnemyEntity_Main> enemys = new();
       public EnemyUIData uiData;
+      public GameObject enemyButtle;
       protected override void OnDestroy()
       {
          enemys.Clear();
