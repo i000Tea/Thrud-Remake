@@ -27,20 +27,23 @@ namespace TeaFramework
 
       public void BeHit(float damage = 1)
       {
-
+         BaseHP -= damage;
+         if (BaseHP <= 0)
+         {
+            Debug.Log("die");
+         }
+         EnvEffectControl.I.NewDamageText(transform.position, (int)damage);
       }
       private void OnBecameVisible()
       {
          onCame = true;
          //Debug.Log(this.name.ToString() + "这个物体出现在屏幕里面了");
       }
-
       //物体离开屏幕  
       private void OnBecameInvisible()
       {
          onCame = false;
          //Debug.Log(this.name.ToString() + "这个物体离开屏幕里面了");
       }
-
    }
 }

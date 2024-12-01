@@ -8,7 +8,7 @@ namespace TeaFramework
          //Debug.Log(other.gameObject.tag);
          if (other.transform.TryGetComponent(out EnemyEntity_Main enemy))
          {
-            enemy.BeHit();
+            enemy.BeHit(Random.Range(1,1000));
          }
 
          if (other.gameObject.CompareTag("enemy"))
