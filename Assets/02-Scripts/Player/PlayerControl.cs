@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -13,16 +15,10 @@ namespace TeaFramework
       public PlayerConfig config;
       public FaceCanvasConfig canvasConfig;
 
-      #region 挂载对象
-      [SerializeField] private P_Movement movement;
-      [SerializeField] private P_AngleOfView angleOfView;
-      [SerializeField] private P_VisualEffect visualEffect;
-      [SerializeField] private P_AnimatorControl animCtrl;
-      #endregion
+      #region 缓存参数
 
       private P_IModular[] modulars;
 
-      #region 缓存参数
       #endregion
 
       #endregion
@@ -32,11 +28,13 @@ namespace TeaFramework
          base.Awake();
 
          Time.timeScale = scale;
+
          modulars = new P_IModular[] {
+            new P_Roles(),
+            new P_Input(),
             new P_Movement(),
             new P_AngleOfView(),
             new P_VisualEffect(),
-            new P_AnimatorControl(),
             new P_Aim(),
             new P_Health(),
          };
@@ -65,8 +63,7 @@ namespace TeaFramework
       }
       private void TogglePause()
       {
-         if (!EditorApplication.isPaused)
-            EditorApplication.isPaused = true;
+         if (!EditorApplication.isPaused) EditorApplication.isPaused = true;
       }
    }
 }

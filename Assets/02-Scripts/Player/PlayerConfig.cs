@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 namespace TeaFramework
@@ -6,12 +7,12 @@ namespace TeaFramework
    [System.Serializable]
    public class PlayerConfig
    {
-      #region 设置对象 transform
+      #region 设置unity场景中对象
+      [Header("主配置")]
       /// <summary> 主控摄像机 </summary>
       public Camera camera;
       /// <summary> 刚体 </summary>
       public Rigidbody rb;
-      public Animator playerAnimator;
       [Header("控制")]
       /// <summary> 控制器轴向-横轴 </summary>
       public Transform horizontalAxis;
@@ -22,6 +23,7 @@ namespace TeaFramework
       [Header("显示")]
       /// <summary> 显示对象轴向 </summary>
       public Transform showViewAxis;
+
       #endregion
 
       #region 移动参数 movement
@@ -116,7 +118,7 @@ namespace TeaFramework
 
       #endregion
 
-      #region 视角与显示
+      #region fov 视角与显示
       public float TargetFov => OnSprint() ? sprintFov : mainFov;
       [Header("视场角与显示对象")]
       /// <summary> 默认视角 </summary>
@@ -139,14 +141,19 @@ namespace TeaFramework
       public float lockSpeedMulti = 10;
       public float enemyLockDistance = 175;
       #endregion
+
+      #region 角色参数模型相关
+      [Header("角色参数模型相关")]
+      public Transform roleParent;
+      public List<RoleData> loadRoles;
+      public int selectRoleIndedx = 0;
+      #endregion
    }
    [System.Serializable]
    public class FaceCanvasConfig
    {
       public Canvas faceCanvas;
-      /// <summary>
-      /// 用来锁定敌方的屏幕准星
-      /// </summary>
+      /// <summary> 用来锁定敌方的屏幕准星 </summary>
       public RectTransform lockEnemyArm;
       public RectTransform onHealth;
       public TMP_Text onHealthText;
