@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 564d61ff791a6834690970dc42f89624
+guid: 93a8eaa4069535341abde21c2b18253e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -153,22 +153,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u62BD\u5361\u7D20\u6750"
+      name: Gacha_Button
       rect:
         serializedVersion: 2
-        x: 250
-        y: 250
-        width: 256
-        height: 256
+        x: 0
+        y: 283
+        width: 377
+        height: 82
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72b3942776e492742bf6954721eb2b2b
-      internalID: 1027150164
+      spriteID: 5fba4d345571eee468f8581535e4e0c4
+      internalID: 1373484025
       vertices: []
       indices: 
       edges: []
@@ -184,7 +184,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u62BD\u5361\u7D20\u6750": 1027150164
+      Gacha_Button: 1373484025
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
