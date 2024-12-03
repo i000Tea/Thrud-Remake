@@ -11,20 +11,19 @@ namespace TeaFramework
       public P_VisualEffect()
       {
          cacheFov = Config.TargetFov;
-         healthWidth = uiConfig.onHealth.sizeDelta.x;
-         healthHeigth = uiConfig.onHealth.sizeDelta.y;
-         HealthUpdate((int)Config.health, (int)Config.health);
-         "UI-HealthUpdate".OnAddAnotherList<int, int>(HealthUpdate);
+         healthWidth = UiConfig.onHealth.sizeDelta.x;
+         healthHeigth = UiConfig.onHealth.sizeDelta.y;
+         "UI-HealthUpdate".OnAddAnotherList<int, int>(UI_HealthUpdate);
       }
       public override void OnDestroy()
       {
-         "UI-HealthUpdate".OnRemoveAnotherList<int, int>(HealthUpdate);
+         "UI-HealthUpdate".OnRemoveAnotherList<int, int>(UI_HealthUpdate);
       }
-      public void HealthUpdate(int now, int max)
+      public void UI_HealthUpdate(int now, int max)
       {
          Debug.Log(now + " " + max);
-         uiConfig.onHealth.sizeDelta = new(healthWidth * now / max, healthHeigth);
-         uiConfig.onHealthText.text = $"{now}/{max}";
+         UiConfig.onHealth.sizeDelta = new(healthWidth * now / max, healthHeigth);
+         UiConfig.onHealthText.text = $"{now}/{max}";
       }
       public override void Update()
       {

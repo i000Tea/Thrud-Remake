@@ -8,7 +8,7 @@ namespace TeaFramework
    public class PlayerConfig
    {
       #region 设置unity场景中对象
-      [Header("主配置")]
+      [Header("组件")]
       /// <summary> 主控摄像机 </summary>
       public Camera camera;
       /// <summary> 刚体 </summary>
@@ -20,7 +20,7 @@ namespace TeaFramework
       public Transform pitchingAxis;
       /// <summary> 正前方向的参考对象 </summary>
       public Transform forword;
-      [Header("显示")]
+      [Header("模型显示轴")]
       /// <summary> 显示对象轴向 </summary>
       public Transform showViewAxis;
 
@@ -113,7 +113,7 @@ namespace TeaFramework
       #endregion
 
       #region 视角旋转 angleOfView
-      [Header("视角旋转")]
+      [Header("旋转参数")]
       public float mouseSensitivity = 100f; // 鼠标灵敏度
 
       #endregion
@@ -132,7 +132,7 @@ namespace TeaFramework
       #endregion
 
       #region battle 战斗相关
-      public float health = 360;
+      [Header("战斗相关")]
 
       public EnemyEntity_Main lockEnemy;
       public Transform weaponForword;

@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: "role data \u683C\u8587\u5FB7\u6797"
   m_EditorClassIdentifier: 
   roleName: "\u683C\u8587\u5FB7\u6797"
+  health: 460
   rolePreafab: {fileID: 6039487699033000045, guid: e1976b7bd006b69418903a3c9ea6f853, type: 3}
-  roleBattleAnimator: {fileID: 9100000, guid: 28cbc5a832d7a4b49b947a9cd72fcdf0, type: 2}
-  roleHomeAnimator: {fileID: 9100000, guid: 46bb68f659b0a144ea4ee1bcc2e75b06, type: 2}

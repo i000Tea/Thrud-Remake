@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Animations;
 using UnityEngine;
 
 namespace TeaFramework
@@ -9,17 +6,16 @@ namespace TeaFramework
    public class RoleData : ScriptableObject
    {
       public string roleName;
+      public float health = 360;
       public GameObject rolePreafab;
-      public AnimatorController roleBattleAnimator;
-      public AnimatorController roleHomeAnimator;
    }
    [System.Serializable]
    public class RoleBattleData
    {
-      public RoleBattleData(GameObject role)
+      public RoleBattleData(GameObject role,float health)
       {
          this.role = role;
-
+         maxHealth = nowHealth = health;
          if (!animator)
          {
             if (role.TryGetComponent(out Animator animator)) { }
@@ -28,6 +24,10 @@ namespace TeaFramework
          }
       }
       public GameObject role;
+
+      public float maxHealth;
+      public float nowHealth;
+
       public Animator animator;
 
       public void EnterSet(int index)
@@ -40,6 +40,14 @@ namespace TeaFramework
          {
             role.SetActive(false);
          }
+      }
+
+      public void BeHit(float damage)
+      {
+         nowHealth -= damage;
+         Debug.Log("玩家受到攻击，当前" + nowHealth);
+         if (nowHealth < 0) nowHealth = 0;
+         "UI-HealthUpdate".InvokeSomething((int)nowHealth, (int)maxHealth);
       }
    }
 }

@@ -6,15 +6,17 @@ namespace TeaFramework
    public class P_Roles : P_IModular
    {
       private readonly List<RoleBattleData> battleRoles = new();
+      private RoleBattleData NowBattleData => battleRoles[Config.selectRoleIndedx];
       public P_Roles()
       {
          battleRoles.Clear();
          for (int i = 0; i < Config.loadRoles.Count; i++)
          {
-            var prefab = Config.loadRoles[i].rolePreafab;
+            var roldData = Config.loadRoles[i];
+            var prefab = roldData.rolePreafab;
             if (!prefab) continue;
 
-            battleRoles.Add(new RoleBattleData(Object.Instantiate(prefab, Config.roleParent)));
+            battleRoles.Add(new RoleBattleData(Object.Instantiate(prefab, Config.roleParent), roldData.health));
          }
          for (int i = 0; i < battleRoles.Count; i++)
          {
@@ -22,6 +24,11 @@ namespace TeaFramework
          }
          "RoleSwitch".OnAddAnotherList(RoleSwitch);
          "RoleAnimatorEvent".OnAddAnotherList<string>(RoleAnimatorEvent);
+         "PlayerBeHit".OnAddAnotherList<int>(BeHit);
+      }
+      public override void Start()
+      {
+         NowBattleData.BeHit(0);
       }
       public override void Update()
       {
@@ -31,11 +38,12 @@ namespace TeaFramework
       {
          "RoleSwitch".OnRemoveAnotherList(RoleSwitch);
          "RoleAnimatorEvent".OnRemoveAnotherList<string>(RoleAnimatorEvent);
+         "PlayerBeHit".OnRemoveAnotherList<int>(BeHit);
       }
 
       public void MoveVelocity()
       {
-         var anim = battleRoles[Config.selectRoleIndedx].animator;
+         var anim = NowBattleData.animator;
          var data = Config.GetRigFromForword();
          //Debug.Log(data);
          anim.SetFloat("MoveFront", data.z);
@@ -49,7 +57,7 @@ namespace TeaFramework
          Debug.Log("角色切换");
          for (int i = 0; i < battleRoles.Count; i++)
          {
-            Debug.Log($"角色切换 {Config.selectRoleIndedx} {i} {Config.selectRoleIndedx == i}");
+            //Debug.Log($"角色切换 {Config.selectRoleIndedx} {i} {Config.selectRoleIndedx == i}");
             battleRoles[i].role.SetActive(Config.selectRoleIndedx == i);
          }
       }
@@ -68,5 +76,8 @@ namespace TeaFramework
                break;
          }
       }
+
+      public void BeHit(int damage) => NowBattleData.BeHit(damage);
+
    }
 }

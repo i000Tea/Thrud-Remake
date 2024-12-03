@@ -17,7 +17,7 @@ namespace TeaFramework
       /// <summary>  </summary>
       private void ArmUpdate()
       {
-         RectTransform rect = uiConfig.lockEnemyArm;
+         RectTransform rect = UiConfig.lockEnemyArm;
          var dist = Vector2.Distance(rect.anchoredPosition, screenTarget);
          if (dist > 50 || dist <= 0) { Config.lockSpeedMulti = 1; }
          else if (dist > 15) { Config.lockSpeedMulti = 4; }
@@ -42,7 +42,7 @@ namespace TeaFramework
                // 转换到屏幕坐标和 Canvas 坐标
                Vector3 screenPosition = Config.camera.WorldToScreenPoint(targetPosition);
                RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                   uiConfig.faceCanvas.transform as RectTransform,
+                   UiConfig.faceCanvas.transform as RectTransform,
                    screenPosition,
                    Config.camera,
                    out Vector2 canvasPosition

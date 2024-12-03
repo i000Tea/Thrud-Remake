@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -36,8 +35,11 @@ namespace TeaFramework
             new P_AngleOfView(),
             new P_VisualEffect(),
             new P_Aim(),
-            new P_Health(),
          };
+      }
+      private void Start()
+      {
+         for (int i = 0; i < modulars.Length; i++) { modulars[i].Start(); }
       }
       private void Update()
       {
@@ -63,7 +65,9 @@ namespace TeaFramework
       }
       private void TogglePause()
       {
+#if UNITY_EDITOR
          if (!EditorApplication.isPaused) EditorApplication.isPaused = true;
+#endif
       }
    }
 }
