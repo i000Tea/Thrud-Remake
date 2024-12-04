@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2012001-Tawil
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u5854\u7EF4\u5C14"
+  rolePinyin: taweier
+  enName: Tawil
+  roleID: 2012001
+  Rarity: 4
+  damageElement: 3
+  roleDefinition: 1
+  profile: "\u6CBF\u7740\u8FD9\u6761\u5D0E\u5C96\u7684\u9053\u8DEF\uFF0C\u72EC\u81EA\u5B88\u62A4\u7740\u98CE\u5316\u7684\u5F80\u4E8B\u548C\u7834\u788E\u7684\u5FC3\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u5524\u51AC\u53F7\u89D2"
+  onFactions: REVO
+  birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"
+  birthday: 2023/9/16 0:00:00
+  Age: 18
+  height: 162
+  SpecialtyAndHobby: "\u7814\u7A76\u6599\u7406"
+  CV: "\u949F\u53EF"
+  favoriteCuisine: "\u5976\u6CB9\u6D53\u6C64\u3001\u62C9\u666E\u5170\u4F20\u7EDF\u6D53\u6C64\u3001\u683C\u6D1B\u83DC\u6C64"

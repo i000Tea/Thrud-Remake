@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2024001-Ollie
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u5965\u5229"
+  rolePinyin: aoli
+  enName: Ollie
+  roleID: 2024001
+  Rarity: 4
+  damageElement: 2
+  roleDefinition: 2
+  profile: "\u55EF\uFF1F\u662F\u5B83\u4EEC\u5148\u52A8\u7684\u624B\uFF0C\u5965\u5229\u53EA\u8D1F\u8D23\u53CD\u51FB\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u8D8A\u91CE\u793E"
+  onFactions: REVO
+  birthplace: "\u672A\u77E5"
+  birthday: 45136
+  Age: 19
+  height: 175
+  SpecialtyAndHobby: "\u6ED1\u677F"
+  CV: "\u5927\u6C6A"
+  favoriteCuisine: "\u5170\u5FB7\u98CE\u5473\u70E9\u996D\u3001\u4E73\u6C41\u8106\u7247\u7CA5\u3001\u6249\u52D2\u9171\u901A\u5FC3\u7C89"

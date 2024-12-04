@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2016001-Chun
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u693F"
+  rolePinyin: chun
+  enName: Chun
+  roleID: 2016001
+  Rarity: 5
+  damageElement: 4
+  roleDefinition: 0
+  profile: "\u5357\u65B9\u5236\u9020\u6210\u5458\uFF0C\u6D3B\u6CFC\u4F36\u4FD0\u7684\u5C11\u5973\uFF0C\u6076\u4F5C\u5267\u5927\u5E08\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u5357\u65B9\u5236\u9020"
+  onFactions: "\u71E7\u660E"
+  birthplace: "\u71E7\u660E"
+  birthday: 2023/12/22 0:00:00
+  Age: 20
+  height: 145
+  SpecialtyAndHobby: "\u6076\u4F5C\u5267"
+  CV: "\u745E\u6BD4"
+  favoriteCuisine: "\u7518\u85AF\u7096\u7F94\u7F8A\u3001\u4EC0\u9526\u70E9\u83DC"

@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2008001-Yera
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u8036\u62C9"
+  rolePinyin: yela
+  enName: Yera
+  roleID: 2008001
+  Rarity: 5
+  damageElement: 3
+  roleDefinition: 0
+  profile: "\u8868\u8C61\u662F\u6781\u6613\u6D88\u901D\u7684\uFF0C\u771F\u76F8\u662F\u6781\u5176\u73CD\u8D35\u7684\uFF0C\u503C\u5F97\u6211\u4ED8\u51FA\u4EFB\u4F55\u4EE3\u4EF7\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u9610\u91CA\u5DE5\u574A"
+  onFactions: REVO
+  birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"
+  birthday: 2023/1/18 0:00:00
+  Age: 26
+  height: 167
+  SpecialtyAndHobby: "\u6218\u6597"
+  CV: "\u88F4\u81F4\u83B9"
+  favoriteCuisine: "\u7EA2\u7CD6\u5E03\u4E01\u3001\u9178\u4E73\u916A\u86CB\u7CD5"

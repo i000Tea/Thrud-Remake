@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2007001-Blank
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u7A7A"
+  rolePinyin: kong
+  enName: Blank
+  roleID: 2007001
+  Rarity: 5
+  damageElement: 3
+  roleDefinition: 1
+  profile: "\u518D\u7ED9\u7A7A\u4E00\u70B9\u65F6\u95F4\uFF0C\u7A7A\u4F1A\u53D8\u6210\u8BA9\u6240\u6709\u4EBA\u60CA\u8BB6\u7684\u6837\u5B50\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u9610\u91CA\u5DE5\u574A"
+  onFactions: REVO
+  birthplace: "\u672A\u77E5"
+  birthday: 2023/6/29 0:00:00
+  Age: 15
+  height: 155
+  SpecialtyAndHobby: "\u6B23\u8D4F\u98CE\u666F"
+  CV: "\u9648\u96E8"
+  favoriteCuisine: "\u672A\u77E5\u559C\u597D\u83DC\u5F0F"

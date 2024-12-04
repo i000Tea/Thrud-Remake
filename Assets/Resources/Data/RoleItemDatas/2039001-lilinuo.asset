@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2039001-lilinuo
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u8389\u8389\u8BFA(\u6587\u5B57\u5B58\u7591)"
+  rolePinyin: lilinuo
+  enName: "\u672A\u8BBE\u7F6E"
+  roleID: 2039001
+  Rarity: 3
+  damageElement: 0
+  roleDefinition: 0
+  profile: "\u672A\u8BBE\u7F6E"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u672A\u8BBE\u7F6E"
+  onFactions: "\u672A\u8BBE\u7F6E"
+  birthplace: "\u672A\u8BBE\u7F6E"
+  birthday: "\u672A\u8BBE\u7F6E"
+  Age: 18
+  height: 157
+  SpecialtyAndHobby: "\u672A\u8BBE\u7F6E"
+  CV: "\u672A\u8BBE\u7F6E"
+  favoriteCuisine: "\u672A\u77E5\u559C\u597D\u83DC\u5F0F"

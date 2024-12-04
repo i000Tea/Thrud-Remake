@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2003001-Charlotte
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u590F\u6D1B"
+  rolePinyin: xialuo
+  enName: Charlotte
+  roleID: 2003001
+  Rarity: 4
+  damageElement: 3
+  roleDefinition: 3
+  profile: "\u6027\u683C\u5F00\u6717\u6D3B\u6CFC\u7684\u5C11\u5973\uFF0C\u6709\u81EA\u5DF1\u7684\u575A\u6301\u548C\u68A6\u60F3\u3002\u5E38\u5E38\u5728\u6218\u6597\u548C\u751F\u6D3B\u4E2D\u534F\u52A9\u540C\u4F34\uFF0C\u5F88\u53D7\u5927\u5BB6\u6B22\u8FCE\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u74E6\u54C8\u7EB3"
+  onFactions: REVO
+  birthplace: "\u53CC\u5CF0\u5730\u533A"
+  birthday: 2023/6/1 0:00:00
+  Age: 16
+  height: 162
+  SpecialtyAndHobby: "\u5531\u6B4C"
+  CV: "\u56DB\u767D"
+  favoriteCuisine: "\u7518\u85AF\u7096\u7F94\u7F8A\u3001\u4EC0\u9526\u70E9\u83DC"

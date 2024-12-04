@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2029001-Trilobita
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u4E09\u53F6"
+  rolePinyin: sanye
+  enName: Trilobita
+  roleID: 2029001
+  Rarity: 5
+  damageElement: 2
+  roleDefinition: 2
+  profile: "\u751F\u5B58\u7684\u65B9\u5F0F\u5343\u5947\u767E\u602A\uFF0C\u4E0D\u8981\u5C0F\u770B\u4EFB\u4F55\u4E00\u79CD\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u9610\u91CA\u5DE5\u574A-\u8FDB\u5316\u7EC4"
+  onFactions: REVO
+  birthplace: "\u53CC\u5CF0\u5730\u533A"
+  birthday: 45191
+  Age: 15
+  height: 154
+  SpecialtyAndHobby: "\u5316\u77F3\u6536\u96C6"
+  CV: "\u848B\u4E3D"
+  favoriteCuisine: "\u7EA2\u7CD6\u5E03\u4E01\u3001\u9178\u4E73\u916A\u86CB\u7CD5\u3001\u5170\u5FB7\u98CE\u5473\u70E9\u996D"

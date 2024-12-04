@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691f7c98616716a4db4b6a632efe0461, type: 3}
+  m_Name: Battle EnemyUIData
+  m_EditorClassIdentifier: 
+  UIPrefab: {fileID: 8656652531096268448, guid: 01f69bce0396c984c91c7c9d68ee9095, type: 3}
+  uiIData_None:
+    Sign: {fileID: 0}
+  uiIData_Ice:
+    Sign: {fileID: 167320836, guid: 4da9c39f5afda144696fe502d44405c1, type: 3}
+  uiIData_Fire:
+    Sign: {fileID: -831648326, guid: 4da9c39f5afda144696fe502d44405c1, type: 3}
+  uiIData_Wind:
+    Sign: {fileID: -1917737930, guid: 4da9c39f5afda144696fe502d44405c1, type: 3}
+  uiIData_Electric:
+    Sign: {fileID: -1861597815, guid: 4da9c39f5afda144696fe502d44405c1, type: 3}

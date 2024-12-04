@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2021001-Webber
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u97E6\u4F2F"
+  rolePinyin: weibo
+  enName: Webber
+  roleID: 2021001
+  Rarity: 5
+  damageElement: 2
+  roleDefinition: 0
+  profile: "\u7B26\u6587\u7F16\u7A0B\u7684\u9AD8\u624B\uFF0C\u610F\u5916\u53D1\u73B0\u68A6\u5883\u9690\u85CF\u7740\u4E0D\u4E3A\u4EBA\u77E5\u7684\u79D8\u5BC6\uFF0C\u4EE5\u6B64\u4E3A\u7814\u7A76\u65B9\u5411\u52A0\u5165\u75DB\u68A6\u903B\u8F91\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u75DB\u68A6\u903B\u8F91"
+  onFactions: REVO
+  birthplace: "\u5927\u7EF4\u6D85\u5C14\u5730\u533A"
+  birthday: 2023/3/8 0:00:00
+  Age: 21
+  height: 175
+  SpecialtyAndHobby: "\u7B26\u6587\u7F16\u7A0B"
+  CV: MACE
+  favoriteCuisine: "\u672A\u77E5\u559C\u597D\u83DC\u5F0F"

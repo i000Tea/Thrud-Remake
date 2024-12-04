@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: 2006001-Nakai
+  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  roleName: "\u5A1C\u5361\u4F0A"
+  rolePinyin: nakayi
+  enName: Nakai
+  roleID: 2006001
+  Rarity: 4
+  damageElement: 2
+  roleDefinition: 0
+  profile: "\u5A1C\u5361\u4F0A\u662F\u4E00\u4E2A\u5F88\u4E25\u8083\u7684\u4EBA\uFF0C\u9762\u5BF9\u8FD9\u4E2A\u5371\u673A\u56DB\u4F0F\u7684\u4E16\u754C\uFF0C\u5979\u4ECE\u6765\u4E0D\u6562\u61C8\u6020\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 0}
+  sprite_Lottery: {fileID: 0}
+  sprite_LotteryLeader: {fileID: 0}
+  sprite_roleUI: {fileID: 0}
+  onTeam: "\u9610\u91CA\u5DE5\u574A"
+  onFactions: REVO
+  birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"
+  birthday: 2023/9/24 0:00:00
+  Age: 19
+  height: 167
+  SpecialtyAndHobby: "\u51A5\u60F3"
+  CV: "\u5434\u8FEA"
+  favoriteCuisine: "\u5976\u6CB9\u6D53\u6C64\u3001\u62C9\u666E\u5170\u4F20\u7EDF\u6D53\u6C64\u3001\u683C\u6D1B\u83DC\u6C64"
