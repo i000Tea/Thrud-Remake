@@ -12,42 +12,41 @@ namespace TeaFramework.editor
 {
    public class Thrud_ReadExcel : Editor
    {
-      // 设置本地存储路径
-      public const string path = "Assets/Resources/data";
-      public const string folderPath = "Assets/05-Textures/ui_hero_pic/ListIcon"; // 你的图片文件夹路径
-      public string[] guids = AssetDatabase.FindAssets("t:texture", new[] { folderPath });
+      public const string resPath = "Assets/Resources/Data";
 
       #region 读取表格设置角色
 
-      [MenuItem("Thrud/Excel/读取表格设置斯露德信息")]
+      [MenuItem("Thrud/读取表格设置/设置【斯露德】信息")]
       public static void ReadExcelGetThrudData()
       {
-         // 获取指定路径下所有的 ScriptableObject 文件
-         string[] guids = AssetDatabase.FindAssets("t:ScriptableObject", new[] { path });
-         AllRoleItem_Data newData = null;
-
-         if (guids.Length == 0)
-         {
-            // 如果没有找到任何文件，则创建一个新的 AllRoleItem_Data 对象
-            newData = ScriptableObject.CreateInstance<AllRoleItem_Data>();
-            string filePath = Path.Combine(path, "AllRoleItem_Data.asset");  // 可以根据实际需求修改文件名
-            AssetDatabase.CreateAsset(newData, filePath);
-            AssetDatabase.SaveAssets();
-
-            Debug.Log($"未找到文件，已创建新的 {filePath}！");
-         }
-         else
-         {
-            // 如果找到了文件，则加载第一个找到的文件
-            string firstFoundPath = AssetDatabase.GUIDToAssetPath(guids[0]);
-            newData = AssetDatabase.LoadAssetAtPath<AllRoleItem_Data>(firstFoundPath);
-            Debug.Log($"找到第一个文件：{firstFoundPath}");
-         }
+         var getData = resPath.GetOrCreateDataAsset<RoleItem_ListData>("AllRoleItem_Data");
 
          // 调用数据填充方法
-         newData.FromExcelSetData();
-         EditorUtility.SetDirty(newData); // 标记 newData 为脏数据，保存修改
+         getData.FromExcelSetData("/斯露德重制计划-数据留存.xlsx", 0);
+
+         EditorUtility.SetDirty(getData); // 标记 newData 为脏数据，保存修改
          AssetDatabase.SaveAssets(); // 保存修改
+      }
+
+      [MenuItem("Thrud/读取表格设置/设置【武器】信息")]
+      public static void ReadExcelGetWeaponData()
+      {
+         var getData = resPath.GetOrCreateDataAsset<WeaponItem_ListData>("AllWeaponItem_Data");
+
+         // 调用数据填充方法
+         getData.FromExcelSetData("/斯露德重制计划-数据留存.xlsx", 4);
+
+         EditorUtility.SetDirty(getData); // 标记 newData 为脏数据，保存修改
+         AssetDatabase.SaveAssets(); // 保存修改
+
+      }
+      [MenuItem("Thrud/读取表格设置/设置【卡池】信息")]
+      public static void ReadExcelGetPoolData() { }
+
+      [MenuItem("Thrud/读取表格设置/设置【道具】信息")]
+      public static void ReadExcelGetPropData()
+      {
+         Debug.Log("暂未设置");
       }
 
       #endregion
@@ -55,42 +54,128 @@ namespace TeaFramework.editor
 
    public static class Thrud_ReadExcel_StaticMethod
    {
-      public static void FromExcelSetData(this AllRoleItem_Data newData)
+      private static Dictionary<string, Sprite[]> SpriteListDic = new();
+
+      public static string ResPath => Thrud_ReadExcel.resPath;
+
+      /// <summary>
+      /// 获取指定so文件
+      /// </summary>
+      /// <typeparam name="T"></typeparam>
+      /// <param name="resPath"></param>
+      /// <param name="newFileName"></param>
+      /// <returns></returns>
+      public static T GetOrCreateDataAsset<T>(this string resPath, string newFileName) where T : Base_AllItemData
       {
-         var excelData = ReadExcel(Thrud_ReadExcel.path, out int columnNum, out int rowNum, 0);
+         // 获取指定路径下所有的 ScriptableObject 文件
+         string[] datas = AssetDatabase.FindAssets("t:ScriptableObject", new[] { resPath });
+         T getData;
+
+         if (datas.Length == 0)
+         {
+            // 如果没有找到任何文件，则创建一个新的 AllRoleItem_Data 对象
+            getData = ScriptableObject.CreateInstance<T>();
+            string filePath = Path.Combine(resPath, $"{newFileName}.asset");  // 可以根据实际需求修改文件名
+            AssetDatabase.CreateAsset(getData, filePath);
+            AssetDatabase.SaveAssets();
+
+            Debug.Log($"未找到文件，已创建新的 {filePath}！");
+         }
+         else
+         {
+            // 如果找到了文件，则加载第一个找到的文件
+            string firstFoundPath = AssetDatabase.GUIDToAssetPath(datas[0]);
+            getData = AssetDatabase.LoadAssetAtPath<T>(firstFoundPath);
+            Debug.Log($"找到第一个文件：{firstFoundPath}");
+         }
+
+         return getData;
+      }
+
+      /// <summary>
+      /// 获取表格转换为的二维数组
+      /// </summary>
+      /// <typeparam name="T"></typeparam>
+      /// <param name="itemData"></param>
+      /// <param name="path"></param>
+      /// <param name="page"></param>
+      public static void FromExcelSetData<T>(this T itemData, string path, int page) where T : Base_AllItemData
+      {
+         // 获取指定路径下的excel中获取的二维数组内容
+         var excelData = ReadExcel(path, out int columnNum, out int rowNum, page);
          Debug.Log($"{columnNum} {rowNum}");
 
+         if (typeof(T) == typeof(RoleItem_ListData))
+         {
+            // 现在可以安全地使用 roleItemData 进行操作
+
+            Thrud_SetItemList(itemData as RoleItem_ListData, excelData, columnNum, rowNum);
+         }
+         else if (typeof(T) == typeof(WeaponItem_ListData))
+         {
+            Weapon_SetItemList(itemData as WeaponItem_ListData, excelData, columnNum, rowNum);
+         }
+         else if (typeof(T) == typeof(WeaponItem_ListData))
+         {
+
+         }
+         else if (typeof(T) == typeof(WeaponItem_ListData))
+         {
+
+         }
+      }
+
+      #region 角色 Thrud
+      public static void Thrud_SetItemList(RoleItem_ListData itemData, DataRowCollection excelData, int columnNum, int rowNum)
+      {
+         itemData.allRole.RemoveEmptyListItem();
 
          for (int i = 1; i < rowNum; i++)
          {
             // 如果该行是空行，不计算
             if (IsEmptyRow(excelData[i], columnNum)) continue;
-            newData.allRole = excelData[i].SetDataRow(newData.allRole); // 更新 allRole 数据
-         }
 
-         newData.allRole.FindSpriteToData();
-      }
-
-      public static List<RoleItem_Data> SetDataRow(this DataRow excelRow, List<RoleItem_Data> roleDataList)
-      {
-         RoleItem_Data roleData = null;
-
-         // 查找角色是否已存在，如果存在，则更新数据
-         for (int i = 0; i < roleDataList.Count; i++)
-         {
-            if (roleDataList[i].roleName.Equals(excelRow[0].ToString()))
+            var roleDataList = itemData.allRole;
+            var excelRow = excelData[i];
+            RoleItem_Data roleData = null;
+            // 查找角色是否已存在，如果存在，则更新数据
+            for (int j = 0; j < roleDataList.Count; j++)
             {
-               roleData = roleDataList[i];
-               break;
+               if (roleDataList[j].roleName.Equals(excelRow[0].ToString()))
+               {
+                  roleData = roleDataList[j];
+                  break;
+               }
+            }
+            // 如果角色不存在，则创建一个新的角色数据
+            roleData = roleData != null ? roleData : ScriptableObject.CreateInstance<RoleItem_Data>();
+
+            excelRow.Thrud_SetItemData(ref roleData);
+
+            // 在编辑器中保存 ScriptableObject
+            if (!roleDataList.Contains(roleData))
+            {
+               string assetPath =
+                  $"{ResPath}/RoleItemDatas/{roleData.roleID}-{(roleData.enName == "未设置" ? roleData.rolePinyin : roleData.enName)}.asset";
+
+               AssetDatabase.CreateAsset(roleData, assetPath); // 保存角色数据为资源文件
+               AssetDatabase.SaveAssets();
+               roleDataList.Add(roleData); // 如果角色数据不存在，则添加
             }
          }
+      }
 
-         // 如果角色不存在，则创建一个新的角色数据
-         roleData ??= ScriptableObject.CreateInstance<RoleItem_Data>();
-
+      /// <summary>
+      /// 对一个单独对象设置值
+      /// </summary>
+      /// <param name="excelRow"></param>
+      /// <param name="roleData"></param>
+      private static void Thrud_SetItemData(this DataRow excelRow, ref RoleItem_Data roleData)
+      {
          int index = 0;
-
          #region 内容设置
+
+         #region 名 id 简介
          // 填充角色数据
          string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.roleName = value; index++;
@@ -111,6 +196,10 @@ namespace TeaFramework.editor
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.profile = value; index++;
 
+         #endregion
+
+         #region 职业 元素 稀有度
+
          // 定位职业
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.roleDefinition = value.StringToEnum<RoleSpecialty>(); index++;
@@ -125,6 +214,9 @@ namespace TeaFramework.editor
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (int.TryParse(value, out int rarity)) roleData.Rarity = rarity; index++;
 
+         #endregion
+
+         #region 文案信息
          // 出生地
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.birthplace = value; index++;
@@ -140,6 +232,7 @@ namespace TeaFramework.editor
          // 生日
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.birthday = value; index++;
+         Debug.Log($"{roleData.roleName} {roleData.birthday}");
 
          // 年龄
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -165,62 +258,199 @@ namespace TeaFramework.editor
 
          #endregion
 
-         // 在编辑器中保存 ScriptableObject
-         if (!roleDataList.Contains(roleData))
-         {
-            string assetPath =
-               $"Assets/Resources/Data/RoleItemDatas/{roleData.roleID}-{(roleData.enName == "未设置" ? roleData.rolePinyin : roleData.enName)}.asset";
-
-            AssetDatabase.CreateAsset(roleData, assetPath); // 保存角色数据为资源文件
-            AssetDatabase.SaveAssets();
-            roleDataList.Add(roleData); // 如果角色数据不存在，则添加
-         }
-
-         return roleDataList;
-      }
-
-      private static List<RoleItem_Data> FindSpriteToData(this List<RoleItem_Data> roleDataList)
-      {
-         // 加载Sprite数组
-         var ListIcon = "ListIcon".LoadFirstSpritesFromTextures();
-         var Lottery = "Lottery".LoadFirstSpritesFromTextures();
-         var LotteryResult_leader = "LotteryResult_leader".LoadFirstSpritesFromTextures();
-         var Role = "Role".LoadFirstSpritesFromTextures();
-
-         for (int i = 0; i < roleDataList.Count; i++)
-         {
-            var getData = roleDataList[i];
-
-            // Keywords：角色相关的关键词
-            string[] Keywords = new string[] {
-               getData.roleName,
-               getData.enName,
-               getData.rolePinyin,
-               getData.roleID.ToString(),
+         #region 图片素材
+         // Keywords：角色相关的关键词
+         string[] Keywords = new string[] {
+               roleData.roleName,
+               roleData.enName,
+               roleData.rolePinyin,
+               roleData.roleID.ToString(),
             };
 
-            // 初始化Sprite
-            getData.sprite_listIcon = FindMatchingSprite(Keywords, ListIcon);
-            getData.sprite_Lottery = FindMatchingSprite(Keywords, Lottery);
-            getData.sprite_LotteryLeader = FindMatchingSprite(Keywords, LotteryResult_leader);
-            getData.sprite_roleUI = FindMatchingSprite(Keywords, Role);
-         }
+         var middlePath = "ui_hero_pic/";
+         roleData.sprite_listIcon = $"{middlePath}ListIcon".GetSpriteWithKeyword(Keywords);
+         roleData.sprite_Lottery = $"{middlePath}Lottery".GetSpriteWithKeyword(Keywords);
+         roleData.sprite_LotteryLeader = $"{middlePath}LotteryResult_leader".GetSpriteWithKeyword(Keywords);
+         roleData.sprite_roleUI = $"{middlePath}Role".GetSpriteWithKeyword(Keywords);
 
-         return roleDataList;
+         #endregion
+
+         #endregion
       }
+      #endregion
 
-      private static Sprite FindMatchingSprite(string[] Keywords, Sprite[] sprites)
+      #region 武器 weapon
+      private static void Weapon_SetItemList(WeaponItem_ListData itemData, DataRowCollection excelData, int columnNum, int rowNum)
       {
-         foreach (var sprite in sprites)
+         itemData.allwep.RemoveEmptyListItem();
+
+         for (int i = 1; i < rowNum; i++)
          {
-            if (Keywords.Any(keyword => sprite.name.Contains(keyword)))
+            // 如果该行是空行，不计算
+            if (IsEmptyRow(excelData[i], columnNum)) continue;
+
+            var wepDataList = itemData.allwep;
+            var excelRow = excelData[i];
+            WeaponItem_Data wepData = null;
+            // 查找角色是否已存在，如果存在，则更新数据
+            for (int j = 0; j < wepDataList.Count; j++)
             {
-               return sprite;
+               if (wepDataList[j].wepName.Equals(excelRow[0].ToString()))
+               {
+                  wepData = wepDataList[j];
+                  break;
+               }
+            }
+            // 如果武器不存在，则创建一个新的角色数据
+            wepData = wepData != null ? wepData : ScriptableObject.CreateInstance<WeaponItem_Data>();
+
+            excelRow.Weapon_SetItemData(ref wepData);
+
+            // 在编辑器中保存 ScriptableObject
+            if (!wepDataList.Contains(wepData))
+            {
+               string assetPath =
+                  $"{ResPath}/RoleItemDatas/wep-{wepData.wepID}.asset";
+
+               AssetDatabase.CreateAsset(wepData, assetPath); // 保存角色数据为资源文件
+               AssetDatabase.SaveAssets();
+               wepDataList.Add(wepData); // 如果角色数据不存在，则添加
             }
          }
+      }
+      private static void Weapon_SetItemData(this DataRow excelRow, ref WeaponItem_Data wepData)
+      {
+         int index = 0;
+
+         // ID行
+         string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (int.TryParse(value, out int wepID)) wepData.wepID = wepID; index++;
+
+         // 名字
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.wepName = value; index++;
+
+         // 拼音行
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.wepPinyin = value; index++;
+
+         // 稀有度
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (int.TryParse(value, out int rarity)) wepData.Rarity = rarity; index++;
+
+         // 武器类型
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.weaponType = value.StringToEnum<WeaponType>(); index++;
+
+         // 武器子类型
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.weaponSubType = value.StringToEnum<WeaponSubType>(); index++;
+
+         // 获取途径
+         index++;
+
+         // 介绍
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.profile = value; index++;
+
+         // 技能
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.skillName = value; index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.skillDescribe = value; 
+         //index++;
+
+      }
+      #endregion
+
+      #region 通用方法
+
+      #region 图片获取
+      /// <summary>
+      /// 获取具有特定关键词的图片
+      /// </summary>
+      /// <param name="middlePath"></param>
+      /// <param name="Keywords"></param>
+      /// <returns></returns>
+      private static Sprite GetSpriteWithKeyword(this string endPath, string[] Keywords)
+      {
+         if (!SpriteListDic.TryGetValue(endPath, out Sprite[] Sprites))
+         {
+            Sprites = endPath.LoadFirstSpritesFromTextures().ToArray();
+            SpriteListDic.Add(endPath, Sprites);
+         }
+         foreach (var sprite in Sprites) { if (Keywords.Any(keyword => sprite.name.Contains(keyword))) { return sprite; } }
          return default; // 如果没有找到匹配的Sprite，返回默认值
       }
 
+      /// <summary>
+      /// 加载一个路径文件夹下 所有图片素材中的第一个Sprite图
+      /// </summary>
+      /// <param name="folder"></param>
+      /// <returns></returns>
+      private static List<Sprite> LoadFirstSpritesFromTextures(this string folder)
+      {
+         string folderPath = "Assets/05-Textures/" + folder; // 图片文件夹路径
+         string[] guids = AssetDatabase.FindAssets("t:texture", new[] { folderPath });
+
+         List<Sprite> sprites = new();
+
+         foreach (string guid in guids)
+         {
+            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
+            Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(assetPath);
+
+            if (texture != null)
+            {
+               // 如果纹理是图集，则获取图集中的第一个Sprite
+               if (texture.mipmapCount > 1 || texture.filterMode != FilterMode.Point)
+               {
+                  // 获取该纹理下的所有Sprite
+                  string[] spriteGuids = AssetDatabase.FindAssets("t:sprite", new[] { folderPath });
+
+                  foreach (string spriteGuid in spriteGuids)
+                  {
+                     string spriteAssetPath = AssetDatabase.GUIDToAssetPath(spriteGuid);
+                     Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(spriteAssetPath);
+
+                     if (sprite != null && sprite.texture == texture)
+                     {
+                        // 将第一个Sprite加入列表并跳出循环
+                        sprites.Add(sprite);
+                        break;
+                     }
+                  }
+               }
+               else
+               {
+                  // 如果是单一的Texture2D，创建一个Sprite并添加到列表
+                  Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+                  sprites.Add(sprite);
+               }
+            }
+         }
+
+         Debug.Log("Total sprites loaded: " + sprites.Count);
+
+         // 返回所有Sprite作为Sprite[]数组
+         return sprites;
+      }
+
+      #endregion
+
+      /// <summary>
+      /// 删除列表中的空项
+      /// </summary>
+      /// <typeparam name="T"></typeparam>
+      /// <param name="newDatas"></param>
+      public static void RemoveEmptyListItem<T>(this List<T> newDatas) where T : ScriptableObject
+      {
+         for (int i = newDatas.Count - 1; i >= 0; i--) if (newDatas[i] == null) newDatas.RemoveAt(i);
+      }
+
+      #region 数值转置
 
       /// <summary>
       /// 从字符串中提取数字并转换为 int 类型。
@@ -268,6 +498,9 @@ namespace TeaFramework.editor
          return false; // 如果没有找到有效数字，则返回 0
       }
 
+      #endregion
+
+      #region 表格相关
       /// <summary>
       /// 读取excel文件内容获取行数 列数 方便保存
       /// </summary>
@@ -275,9 +508,9 @@ namespace TeaFramework.editor
       /// <param name="columnNum">行数</param>
       /// <param name="rowNum">列数</param>
       /// <returns></returns>
-      public static DataRowCollection ReadExcel(string filePath, out int columnNum, out int rowNum, int sheet)
+      public static DataRowCollection ReadExcel(this string filePath, out int columnNum, out int rowNum, int sheet)
       {
-         FileStream stream = File.Open(filePath + "/斯露德重制计划-数据留存.xlsx", FileMode.Open, FileAccess.Read, FileShare.Read);
+         FileStream stream = File.Open(ResPath + filePath, FileMode.Open, FileAccess.Read, FileShare.Read);
          IExcelDataReader excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
 
          DataSet result = excelReader.AsDataSet();
@@ -287,60 +520,20 @@ namespace TeaFramework.editor
          return result.Tables[sheet].Rows;
       }
 
-      // 判断是否是空行
+      /// <summary>
+      /// 判断是否是空行
+      /// </summary>
+      /// <param name="collect"></param>
+      /// <param name="columnNum"></param>
+      /// <returns></returns>
       public static bool IsEmptyRow(this DataRow collect, int columnNum)
       {
          for (int i = 0; i < columnNum; i++) { if (!collect.IsNull(i)) return false; }
          return true;
       }
 
+      #endregion
 
-      public static Sprite[] LoadFirstSpritesFromTextures(this string folder)
-      {
-         string folderPath = "Assets/05-Textures/ui_hero_pic/" + folder; // 图片文件夹路径
-         string[] guids = AssetDatabase.FindAssets("t:texture", new[] { folderPath });
-
-         List<Sprite> sprites = new List<Sprite>();
-
-         foreach (string guid in guids)
-         {
-            string assetPath = AssetDatabase.GUIDToAssetPath(guid);
-            Texture2D texture = AssetDatabase.LoadAssetAtPath<Texture2D>(assetPath);
-
-            if (texture != null)
-            {
-               // 如果纹理是图集，则获取图集中的第一个Sprite
-               if (texture.mipmapCount > 1 || texture.filterMode != FilterMode.Point)
-               {
-                  // 获取该纹理下的所有Sprite
-                  string[] spriteGuids = AssetDatabase.FindAssets("t:sprite", new[] { folderPath });
-
-                  foreach (string spriteGuid in spriteGuids)
-                  {
-                     string spriteAssetPath = AssetDatabase.GUIDToAssetPath(spriteGuid);
-                     Sprite sprite = AssetDatabase.LoadAssetAtPath<Sprite>(spriteAssetPath);
-
-                     if (sprite != null && sprite.texture == texture)
-                     {
-                        // 将第一个Sprite加入列表并跳出循环
-                        sprites.Add(sprite);
-                        break;
-                     }
-                  }
-               }
-               else
-               {
-                  // 如果是单一的Texture2D，创建一个Sprite并添加到列表
-                  Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-                  sprites.Add(sprite);
-               }
-            }
-         }
-
-         Debug.Log("Total sprites loaded: " + sprites.Count);
-
-         // 返回所有Sprite作为Sprite[]数组
-         return sprites.ToArray();
-      }
+      #endregion
    }
 }

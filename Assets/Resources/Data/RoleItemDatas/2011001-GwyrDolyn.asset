@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2011001-GwyrDolyn
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u683C\u8587\u5FB7\u6797"
   rolePinyin: geweidelin
   enName: GwyrDolyn
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u6BCF\u4E2A\u4EBA\u90FD\u6709\u4E0D\u60F3\u88AB\u4EBA\u77E5\u9053\u7684\u79D8\u5BC6\uFF0C\u53EF\u8FD9\u79D8\u5BC6\u53C8\u662F\u5982\u6B64\u663E\u800C\u6613\u89C1\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: 19d88636809796840852c80e9ed2cd27, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 19d88636809796840852c80e9ed2cd27, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: 19d88636809796840852c80e9ed2cd27, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 19d88636809796840852c80e9ed2cd27, type: 3}
   onTeam: "\u9508\u8680\u94F6\u8155"
   onFactions: REVO
   birthplace: "\u5C3C\u5F17\u5229\u4E9A\u7FA4\u5C9B"

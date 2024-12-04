@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace TeaFramework
 {
-   [CreateAssetMenu(fileName = "All Role Item Data", menuName = "thrudData/角色数据", order = 1)]
-   public class AllRoleItem_Data : Base_AllItemData
-   {
-      public List<RoleItem_Data> allRole;
-   }
    public class RoleItem_Data : Base_ItemData
    {
       [Header("基础数据")]

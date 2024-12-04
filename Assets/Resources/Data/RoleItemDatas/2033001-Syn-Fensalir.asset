@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2033001-Syn-Fensalir
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u771F\u7406"
   rolePinyin: zhenli
   enName: Syn-Fensalir
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u66D9\u5149\u5C0F\u961F\u6210\u5458\uFF0CREVO\u57F9\u517B\u51FA\u7684\u7CBE\u82F1\uFF0C\u5979\u4EE5\u771F\u7406\u4E3A\u540D\uFF0C\u5BFB\u627E\u5E76\u634D\u536B\u4E16\u754C\u7684\u771F\u7406\uFF0C\u62E8\u6B63\u4E00\u5207\u8C2C\u8BEF\uFF0C\u4FBF\u662F\u5979\u6B64\u751F\u7684\u8FFD\u6C42\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: 1ea42ab15b2bab045aeac1756fa58332, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 1ea42ab15b2bab045aeac1756fa58332, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: 1ea42ab15b2bab045aeac1756fa58332, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 1ea42ab15b2bab045aeac1756fa58332, type: 3}
   onTeam: "\u66D9\u5149"
   onFactions: REVO
   birthplace: "\u5927\u7EF4\u6D85\u5C14\u5730\u533A"

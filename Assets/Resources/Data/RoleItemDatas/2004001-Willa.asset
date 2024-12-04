@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2004001-Willa
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u7EF4\u62C9"
   rolePinyin: weila
   enName: Willa
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u74E6\u54C8\u7EB3\u961F\u957F\uFF0C\u4E25\u8083\u4F46\u53EF\u9760\u7684\u4F19\u4F34\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: f9c3be12d82ca6442a5fa271c7d7da75, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: f9c3be12d82ca6442a5fa271c7d7da75, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: f9c3be12d82ca6442a5fa271c7d7da75, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: f9c3be12d82ca6442a5fa271c7d7da75, type: 3}
   onTeam: "\u74E6\u54C8\u7EB3"
   onFactions: REVO
   birthplace: "\u672A\u77E5"

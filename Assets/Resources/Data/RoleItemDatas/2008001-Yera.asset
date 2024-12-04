@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2008001-Yera
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u8036\u62C9"
   rolePinyin: yela
   enName: Yera
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u8868\u8C61\u662F\u6781\u6613\u6D88\u901D\u7684\uFF0C\u771F\u76F8\u662F\u6781\u5176\u73CD\u8D35\u7684\uFF0C\u503C\u5F97\u6211\u4ED8\u51FA\u4EFB\u4F55\u4EE3\u4EF7\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: e98aa8b509a6a6f49bc701ca4d332d2e, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: e98aa8b509a6a6f49bc701ca4d332d2e, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: e98aa8b509a6a6f49bc701ca4d332d2e, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: e98aa8b509a6a6f49bc701ca4d332d2e, type: 3}
   onTeam: "\u9610\u91CA\u5DE5\u574A"
   onFactions: REVO
   birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2029001-Trilobita
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u4E09\u53F6"
   rolePinyin: sanye
   enName: Trilobita
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u751F\u5B58\u7684\u65B9\u5F0F\u5343\u5947\u767E\u602A\uFF0C\u4E0D\u8981\u5C0F\u770B\u4EFB\u4F55\u4E00\u79CD\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: 495c65bc5a858df448b74366376cc7be, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 495c65bc5a858df448b74366376cc7be, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: 495c65bc5a858df448b74366376cc7be, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 495c65bc5a858df448b74366376cc7be, type: 3}
   onTeam: "\u9610\u91CA\u5DE5\u574A-\u8FDB\u5316\u7EC4"
   onFactions: REVO
   birthplace: "\u53CC\u5CF0\u5730\u533A"

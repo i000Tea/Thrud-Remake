@@ -22,12 +22,50 @@ namespace TeaFramework
    {
       [EnumDescription("突击型武器", "冲锋")]
       wep_Assault,
+      [EnumDescription("重装型武器", "重型")]
+      wep_Heavy,
       [EnumDescription("散射型武器", "散射")]
       wep_Scatter,
       [EnumDescription("狙击型武器", "狙击")]
       wep_Sniper,
-      [EnumDescription("重装型武器", "重型")]
-      wep_Heavy,
+   }
+
+   /// <summary> 武器子分类 </summary>
+   public enum WeaponSubType
+   {
+      [EnumDescription("精确框架")]
+      assault_PreciseFrame,
+      [EnumDescription("能量框架")]
+      assault_EnergyFrame,
+      [EnumDescription("速射框架")]
+      assault_RapidFireFrame,
+      [EnumDescription("专注框架")]
+      assault_FocusFrame,
+      [EnumDescription("强攻框架")]
+      assault_StormFrame,
+
+      [EnumDescription("追踪飞弹")]
+      heavy_TrackingMissile,
+      [EnumDescription("强力飞弹")]
+      heavy_PowerfulMissile,
+      [EnumDescription("轻质飞弹")]
+      heavy_LightweightMissile,
+      [EnumDescription("多联装飞弹")]
+      heavy_MultiLoadedMissile,
+
+      [EnumDescription("重击霰弹")]
+      scatter_SmashShot,
+      [EnumDescription("精确霰弹")]
+      scatter_PrecisionShot,
+
+      [EnumDescription("穿透型")]
+      sniper_Penetrating,
+      [EnumDescription("连发型")]
+      sniper_Tandem,
+      [EnumDescription("迅捷型")]
+      sniper_Swift,
+      [EnumDescription("充能型")]
+      sniper_Charged,
    }
 
    /// <summary> 角色定位(职业) </summary>

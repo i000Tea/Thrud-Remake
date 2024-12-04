@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2041001-panpan
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u6F58\u6F58"
   rolePinyin: panpan
   enName: "\u672A\u8BBE\u7F6E"
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u672A\u8BBE\u7F6E"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: f5ed9e1dd8bf31d4d95e37b73952b4e8, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: f5ed9e1dd8bf31d4d95e37b73952b4e8, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: f5ed9e1dd8bf31d4d95e37b73952b4e8, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: f5ed9e1dd8bf31d4d95e37b73952b4e8, type: 3}
   onTeam: "\u672A\u8BBE\u7F6E"
   onFactions: "\u672A\u8BBE\u7F6E"
   birthplace: "\u672A\u8BBE\u7F6E"

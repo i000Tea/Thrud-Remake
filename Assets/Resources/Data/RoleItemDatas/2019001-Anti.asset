@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2019001-Anti
-  m_EditorClassIdentifier: Assembly-CSharp:TeaFramework:RoleItem_Data
+  m_EditorClassIdentifier: 
   roleName: "\u5B89\u8FEA"
   rolePinyin: andi
   enName: Anti
@@ -22,10 +22,10 @@ MonoBehaviour:
   profile: "\u4E00\u6D41\u753B\u5BB6\uFF0C\u4E00\u6D41\u4F5C\u54C1\u3002"
   health: 360
   rolePreafab: {fileID: 0}
-  sprite_listIcon: {fileID: 0}
-  sprite_Lottery: {fileID: 0}
-  sprite_LotteryLeader: {fileID: 0}
-  sprite_roleUI: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: c91a612552b901f43b878ddfd1a4a0a2, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: c91a612552b901f43b878ddfd1a4a0a2, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: c91a612552b901f43b878ddfd1a4a0a2, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: c91a612552b901f43b878ddfd1a4a0a2, type: 3}
   onTeam: "\u75DB\u68A6\u903B\u8F91"
   onFactions: REVO
   birthplace: "\u53CC\u5CF0\u5730\u533A"
