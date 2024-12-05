@@ -12,7 +12,8 @@ namespace TeaFramework.editor
 {
    public class Thrud_ReadExcel : Editor
    {
-      public const string resPath = "Assets/Resources/Data";
+      public const string resPath = "Assets/Data";
+      public const string file = "/斯露德重制计划-数据留存.xlsx";
 
       #region 读取表格设置角色
 
@@ -22,26 +23,24 @@ namespace TeaFramework.editor
          var getData = resPath.GetOrCreateDataAsset<RoleItem_ListData>("AllRoleItem_Data");
 
          // 调用数据填充方法
-         getData.FromExcelSetData("/斯露德重制计划-数据留存.xlsx", 0);
-
-         EditorUtility.SetDirty(getData); // 标记 newData 为脏数据，保存修改
-         AssetDatabase.SaveAssets(); // 保存修改
+         getData.FromExcelSetData(file, 0);
       }
 
       [MenuItem("Thrud/读取表格设置/设置【武器】信息")]
       public static void ReadExcelGetWeaponData()
       {
          var getData = resPath.GetOrCreateDataAsset<WeaponItem_ListData>("AllWeaponItem_Data");
-
          // 调用数据填充方法
-         getData.FromExcelSetData("/斯露德重制计划-数据留存.xlsx", 4);
-
-         EditorUtility.SetDirty(getData); // 标记 newData 为脏数据，保存修改
-         AssetDatabase.SaveAssets(); // 保存修改
-
+         getData.FromExcelSetData(file, 3);
       }
+
       [MenuItem("Thrud/读取表格设置/设置【卡池】信息")]
-      public static void ReadExcelGetPoolData() { }
+      public static void ReadExcelGetPoolData()
+      {
+         var getData = resPath.GetOrCreateDataAsset<GachaPool_ListData>("AllPoolItem_Data");
+         // 调用数据填充方法
+         getData.FromExcelSetData(file, 2);
+      }
 
       [MenuItem("Thrud/读取表格设置/设置【道具】信息")]
       public static void ReadExcelGetPropData()
@@ -54,7 +53,7 @@ namespace TeaFramework.editor
 
    public static class Thrud_ReadExcel_StaticMethod
    {
-      private static Dictionary<string, Sprite[]> SpriteListDic = new();
+      private static readonly Dictionary<string, Sprite[]> SpriteListDic = new();
 
       public static string ResPath => Thrud_ReadExcel.resPath;
 
@@ -68,7 +67,7 @@ namespace TeaFramework.editor
       public static T GetOrCreateDataAsset<T>(this string resPath, string newFileName) where T : Base_AllItemData
       {
          // 获取指定路径下所有的 ScriptableObject 文件
-         string[] datas = AssetDatabase.FindAssets("t:ScriptableObject", new[] { resPath });
+         string[] datas = AssetDatabase.FindAssets($"t:{typeof(T)}", new[] { resPath });
          T getData;
 
          if (datas.Length == 0)
@@ -88,7 +87,6 @@ namespace TeaFramework.editor
             getData = AssetDatabase.LoadAssetAtPath<T>(firstFoundPath);
             Debug.Log($"找到第一个文件：{firstFoundPath}");
          }
-
          return getData;
       }
 
@@ -115,14 +113,20 @@ namespace TeaFramework.editor
          {
             Weapon_SetItemList(itemData as WeaponItem_ListData, excelData, columnNum, rowNum);
          }
-         else if (typeof(T) == typeof(WeaponItem_ListData))
+         else if (typeof(T) == typeof(GachaPool_ListData))
          {
-
+            Pool_SetItemList(itemData as GachaPool_ListData, excelData, columnNum, rowNum);
          }
          else if (typeof(T) == typeof(WeaponItem_ListData))
          {
 
          }
+
+
+         // 强制刷新缓存，避免重复加载
+         SpriteListDic.Clear(); // 清空缓存，防止之前的缓存影响新的加载
+         AssetDatabase.SaveAssets(); // 保存修改
+         EditorUtility.SetDirty(itemData); // 标记 newData 为脏数据，保存修改
       }
 
       #region 角色 Thrud
@@ -159,9 +163,10 @@ namespace TeaFramework.editor
                   $"{ResPath}/RoleItemDatas/{roleData.roleID}-{(roleData.enName == "未设置" ? roleData.rolePinyin : roleData.enName)}.asset";
 
                AssetDatabase.CreateAsset(roleData, assetPath); // 保存角色数据为资源文件
-               AssetDatabase.SaveAssets();
                roleDataList.Add(roleData); // 如果角色数据不存在，则添加
             }
+            // 保存已获取的武器数据
+            AssetDatabase.SaveAssets();  // 保存所有更改
          }
       }
 
@@ -191,6 +196,9 @@ namespace TeaFramework.editor
          // 英文名
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.enName = value; index++;
+
+         // 获取途径
+         index++;
 
          // 简介
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -288,11 +296,13 @@ namespace TeaFramework.editor
          {
             // 如果该行是空行，不计算
             if (IsEmptyRow(excelData[i], columnNum)) continue;
+            if (excelData[i][0].ToString().ToLower().Equals("end")) break;
 
             var wepDataList = itemData.allwep;
             var excelRow = excelData[i];
             WeaponItem_Data wepData = null;
-            // 查找角色是否已存在，如果存在，则更新数据
+
+            // 查找武器是否已存在，如果存在，则更新数据
             for (int j = 0; j < wepDataList.Count; j++)
             {
                if (wepDataList[j].wepName.Equals(excelRow[0].ToString()))
@@ -301,26 +311,33 @@ namespace TeaFramework.editor
                   break;
                }
             }
-            // 如果武器不存在，则创建一个新的角色数据
-            wepData = wepData != null ? wepData : ScriptableObject.CreateInstance<WeaponItem_Data>();
 
+            // 如果武器不存在，则创建一个新的武器数据
+            if (wepData == null)
+            {
+               wepData = ScriptableObject.CreateInstance<WeaponItem_Data>();
+               Debug.Log(wepData);
+               wepDataList.Add(wepData); // 添加新武器到列表
+            }
+
+            // 更新武器数据
             excelRow.Weapon_SetItemData(ref wepData);
 
             // 在编辑器中保存 ScriptableObject
-            if (!wepDataList.Contains(wepData))
+            string assetPath = $"{ResPath}/WepItemDatas/{wepData.wepID}-{wepData.wepPinyin}.asset";
+            if (!AssetDatabase.LoadAssetAtPath<WeaponItem_Data>(assetPath)) // 如果该资源不存在，则创建
             {
-               string assetPath =
-                  $"{ResPath}/RoleItemDatas/wep-{wepData.wepID}.asset";
-
-               AssetDatabase.CreateAsset(wepData, assetPath); // 保存角色数据为资源文件
-               AssetDatabase.SaveAssets();
-               wepDataList.Add(wepData); // 如果角色数据不存在，则添加
+               AssetDatabase.CreateAsset(wepData, assetPath); // 保存武器数据为资源文件
             }
+
+            AssetDatabase.SaveAssets();  // 保存所有更改
          }
       }
       private static void Weapon_SetItemData(this DataRow excelRow, ref WeaponItem_Data wepData)
       {
          int index = 0;
+
+         #region id 名称 拼音
 
          // ID行
          string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -333,7 +350,9 @@ namespace TeaFramework.editor
          // 拼音行
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) wepData.wepPinyin = value; index++;
+         #endregion
 
+         #region 稀有度 武器类型 子类
          // 稀有度
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (int.TryParse(value, out int rarity)) wepData.Rarity = rarity; index++;
@@ -345,9 +364,12 @@ namespace TeaFramework.editor
          // 武器子类型
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) wepData.weaponSubType = value.StringToEnum<WeaponSubType>(); index++;
+         #endregion
 
          // 获取途径
          index++;
+
+         #region 介绍 技能
 
          // 介绍
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -359,9 +381,119 @@ namespace TeaFramework.editor
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         if (!string.IsNullOrEmpty(value)) wepData.skillDescribe = value; 
+         if (!string.IsNullOrEmpty(value)) wepData.skillDescribe = value;
+         //index++;
+         #endregion
+
+         #region 图片
+
+         // Keywords：角色相关的关键词
+         string[] Keywords = new string[] { wepData.wepID.ToString() };
+
+         var middlePath = "ui_weapon_pic/";
+         // 抽卡显示大图
+         wepData.sprite_Square = $"{middlePath}ui weapon pic_texture".GetSpriteWithKeyword(Keywords);
+         // 抽卡结算的竖条
+         wepData.sprite_LotteryResult = $"{middlePath}LotteryResult_weapon".GetSpriteWithKeyword(Keywords);
+         // 角色装配页的横图
+         wepData.sprite_Line = $"{middlePath}ui weapon texture".GetSpriteWithKeyword(Keywords);
+
+         #endregion
+      }
+      #endregion
+
+      #region Gacha Pool
+      public static void Pool_SetItemList(GachaPool_ListData itemData, DataRowCollection excelData, int columnNum, int rowNum)
+      {
+         itemData.allPool.RemoveEmptyListItem();
+         for (int i = 1; i < rowNum; i++)
+         {
+            // 如果该行是空行，不计算
+            if (IsEmptyRow(excelData[i], columnNum)) continue;
+
+            var poolDataList = itemData.allPool;
+            var excelRow = excelData[i];
+            GachaPool_Data poolData = null;
+            excelRow[1].ToString().ExtractDigitsAndConvertToInt(out var poolID);
+            // 查找角色是否已存在，如果存在，则更新数据
+            for (int j = 0; j < poolDataList.Count; j++)
+            {
+               if (poolDataList[j].poolID.Equals(poolID))
+               {
+                  poolData = poolDataList[j];
+                  break;
+               }
+            }
+            // 如果角色不存在，则创建一个新的角色数据
+            poolData = poolData != null ? poolData : ScriptableObject.CreateInstance<GachaPool_Data>();
+
+            excelRow.Pool_SetItemData(ref poolData);
+
+            var rolelist = Thrud_ReadExcel.resPath.GetOrCreateDataAsset<RoleItem_ListData>("rolelist");
+            var weplist = Thrud_ReadExcel.resPath.GetOrCreateDataAsset<WeaponItem_ListData>("rolelist");
+            Pool_SetInItemList(ref poolData, rolelist.allRole, weplist.allwep);
+            // 在编辑器中保存 ScriptableObject
+            if (!poolDataList.Contains(poolData))
+            {
+               string assetPath =
+                  $"{ResPath}/GachaPoolDatas/{poolData.poolID}.asset";
+
+               AssetDatabase.CreateAsset(poolData, assetPath); // 保存角色数据为资源文件
+               poolDataList.Add(poolData); // 如果角色数据不存在，则添加
+            }
+            // 保存已获取的武器数据
+            AssetDatabase.SaveAssets();  // 保存所有更改
+         }
+      }
+      private static void Pool_SetItemData(this DataRow excelRow, ref GachaPool_Data poolData)
+      {
+         int index = 0;
+
+         // 卡池名
+         string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) poolData.poolName = value; index++;
+
+         // 拼音
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) poolData.poolPinyin = value; index++;
+
+         // ID行
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (value.ExtractDigitsAndConvertToInt(out int poolID)) poolData.poolID = poolID;
          //index++;
 
+         string[] Keywords = new string[] {
+               poolData.poolID.ToString(),
+               poolData.poolName,
+               poolData.poolPinyin,
+            };
+
+         var middlePath = "GachaResource/GachaUIResource/";
+
+         // 抽卡显示大图
+         poolData.sprite_PoolBg = $"{middlePath}gacha_pool_bg".GetSpriteWithKeyword(Keywords);
+         poolData.sprite_PoolBtnBg = $"{middlePath}gacha_pool_btnbg".GetSpriteWithKeyword(Keywords);
+      }
+
+      private static void Pool_SetInItemList(ref GachaPool_Data poolData, List<RoleItem_Data> rolelist, List<WeaponItem_Data> weplist)
+      {
+         poolData.poolV5_ItemData.Clear();
+         poolData.poolV4_ItemData.Clear();
+         poolData.poolV3_ItemData.Clear();
+         poolData.poolV2_ItemData.Clear();
+
+         for (int i = 0; i < rolelist.Count; i++)
+         {
+            if (rolelist[i].Rarity == 5) { poolData.poolV5_ItemData.Add(rolelist[i]); }
+            else if (rolelist[i].Rarity == 4) { poolData.poolV4_ItemData.Add(rolelist[i]); }
+         }
+         for (int i = 0; i < weplist.Count; i++)
+         {
+            if (weplist[i].Rarity == 5) { poolData.poolV5_ItemData.Add(weplist[i]); }
+            else if (weplist[i].Rarity == 4) { poolData.poolV4_ItemData.Add(weplist[i]); }
+            else if (weplist[i].Rarity == 3) { poolData.poolV3_ItemData.Add(weplist[i]); }
+            else if (weplist[i].Rarity == 2) { poolData.poolV2_ItemData.Add(weplist[i]); }
+         }
       }
       #endregion
 
@@ -382,6 +514,11 @@ namespace TeaFramework.editor
             SpriteListDic.Add(endPath, Sprites);
          }
          foreach (var sprite in Sprites) { if (Keywords.Any(keyword => sprite.name.Contains(keyword))) { return sprite; } }
+
+         for (int i = 0; i < Sprites.Length; i++)
+         {
+            //Debug.Log(Sprites[i].name + " " + Keywords[0]);
+         }
          return default; // 如果没有找到匹配的Sprite，返回默认值
       }
 
@@ -431,8 +568,8 @@ namespace TeaFramework.editor
                }
             }
          }
+         Debug.Log($"加载的sprites图总数：{sprites.Count}\n{folder}");
 
-         Debug.Log("Total sprites loaded: " + sprites.Count);
 
          // 返回所有Sprite作为Sprite[]数组
          return sprites;

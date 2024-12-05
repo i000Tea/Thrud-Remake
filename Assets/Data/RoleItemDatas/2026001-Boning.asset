@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
+  m_Name: 2026001-Boning
+  m_EditorClassIdentifier: 
+  roleName: "\u5254\u9AA8"
+  rolePinyin: tigu
+  enName: Boning
+  roleID: 2026001
+  Rarity: 5
+  damageElement: 1
+  roleDefinition: 0
+  profile: "\u7834\u788E\u7684\u7269\u54C1\u65E0\u6CD5\u590D\u539F\u2014\u2014\u8FD9\u5C31\u662F\u6211\u7684\u76EE\u7684\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: ef26cc229964c0340a8aa67431e477ec, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: e4546c8d983478946b43a3a48d0fb9e7, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: 2a5ddee9e7f31fa46afe57a673901f0a, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 013d195cac12f494cb0c64c550615e8b, type: 3}
+  onTeam: "\u8D8A\u91CE\u793E"
+  onFactions: REVO
+  birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"
+  birthday: "5\u670813\u65E5"
+  Age: 25
+  height: 169
+  SpecialtyAndHobby: "\u65B0\u5947\u7684\u4E1C\u897F"
+  CV: "\u5468\u5E05"
+  favoriteCuisine: "\u5170\u5FB7\u98CE\u5473\u70E9\u996D\u3001\u4E73\u6C41\u8106\u7247\u7CA5\u3001\u6249\u52D2\u9171\u901A\u5FC3\u7C89"

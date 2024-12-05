@@ -9,7 +9,7 @@ namespace TeaFramework
       public string wepName = "角色的名字";
       public string wepPinyin = "角色的名字";
       public int wepID = 999999;
-      [Range(4, 5)] public int Rarity = 3;
+      [Range(2, 5)] public int Rarity = 3;
       public WeaponType weaponType;
       public WeaponSubType weaponSubType;
       /// <summary> 简介 </summary>
@@ -25,9 +25,9 @@ namespace TeaFramework
       public GameObject wepPreafab;
       /// <summary> 方图 结算显示 </summary>
       [Header("美术素材")]
-      public Sprite sprite_Lottery;
+      public Sprite sprite_LotteryResult;
       /// <summary> 竖条 </summary>
-      public Sprite sprite_List;
+      public Sprite sprite_Square;
       /// <summary> 横条 </summary>
       public Sprite sprite_Line;
       /// <summary> 小队 </summary>

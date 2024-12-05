@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
+  m_Name: 2025001-Calif
+  m_EditorClassIdentifier: 
+  roleName: "\u52A0\u5229\u798F"
+  rolePinyin: jialifu
+  enName: Calif
+  roleID: 2025001
+  Rarity: 5
+  damageElement: 3
+  roleDefinition: 0
+  profile: "\u65F6\u5C1A\u662F\u8FC7\u5F80\u7684\u7E41\u8363\uFF0C\u662F\u65B0\u4E16\u754C\u7684\u5E0C\u671B\uFF01"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: c746e37524af37f45a150051eb6ab549, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 6f9184f8a0c12b14a86ccc20a6efcc5c, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: c5cf26815a9c95a4c99e0dee0d5a91f8, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: ad169cf14ca8e7b4eb1783d4c7b83e72, type: 3}
+  onTeam: "\u8D8A\u91CE\u793E"
+  onFactions: REVO
+  birthplace: "\u53CC\u5CF0\u5730\u533A"
+  birthday: "2\u670812\u65E5"
+  Age: 18
+  height: 162
+  SpecialtyAndHobby: "\u65F6\u5C1A"
+  CV: "\u5F20\u7426"
+  favoriteCuisine: "\u9178\u4E73\u916A\u86CB\u7CD5\u3001\u5976\u6CB9\u6D53\u6C64"

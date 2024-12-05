@@ -106,7 +106,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6752c5446b5cf834ba5014d9e231745d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7759ce5aa0b2ae748ab8a639b7db53eb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskGloss:
@@ -275,7 +275,7 @@ Material:
     - _OutlineWidth: 3
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
-    - _OverallShadowColorPower: 1
+    - _OverallShadowColorPower: 0
     - _PSGLOTEX: 0
     - _PTexturePower: 1
     - _Parallax: 0.02
@@ -346,7 +346,7 @@ Material:
     - _Glow_Color: {r: 1, g: 1, b: 1, a: 1}
     - _HighlightColor: {r: 1, g: 1, b: 1, a: 1}
     - _MainColor: {r: 1, g: 1, b: 1, a: 1}
-    - _OutlineColor: {r: 0, g: 5.7126937, b: 21.112127, a: 1}
+    - _OutlineColor: {r: 2.3645587, g: 7.5087104, b: 21.112133, a: 1}
     - _OutlineOffset: {r: 0, g: 0, b: 0, a: 1}
     - _OverallShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _PTCol: {r: 0, g: 0, b: 0, a: 1}

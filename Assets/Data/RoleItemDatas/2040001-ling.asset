@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
+  m_Name: 2040001-ling
+  m_EditorClassIdentifier: 
+  roleName: "\u7075(\u6587\u5B57\u5B58\u7591)"
+  rolePinyin: ling
+  enName: "\u672A\u8BBE\u7F6E"
+  roleID: 2040001
+  Rarity: 99
+  damageElement: 0
+  roleDefinition: 0
+  profile: "\u672A\u8BBE\u7F6E"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: 5478aaed029f68c4dab062e304a5ea8b, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 59567f9f9e16b2942a6e83c7487f0801, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: a81d2793cf3608348ae71c92126b5676, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 1e32b0110703500419f7d0a7f48db0f4, type: 3}
+  onTeam: "\u672A\u8BBE\u7F6E"
+  onFactions: "\u672A\u8BBE\u7F6E"
+  birthplace: "\u672A\u8BBE\u7F6E"
+  birthday: "\u672A\u8BBE\u7F6E"
+  Age: 18
+  height: 157
+  SpecialtyAndHobby: "\u672A\u8BBE\u7F6E"
+  CV: "\u672A\u8BBE\u7F6E"
+  favoriteCuisine: "\u672A\u77E5\u559C\u597D\u83DC\u5F0F"

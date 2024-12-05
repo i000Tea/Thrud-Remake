@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
+  m_Name: 5021010-biangezhe-gai
+  m_EditorClassIdentifier: 
+  wepName: "\u53D8\u9769\u8005\xB7\u6539"
+  wepPinyin: biangezhe-gai
+  wepID: 5021010
+  Rarity: 2
+  weaponType: 0
+  weaponSubType: 0
+  profile: "REVO S210\uFF0C\u539F\u5178\u7CFB\u5217\u7684\u6539\u8FDB\u578B\uFF0C\u5728\u7B2C\u4E00\u4EE3\u7684\u57FA\u7840\u4E0A\u4F18\u5316\u4E86\u4F9B\u80FD\u7BA1\u7EBF\uFF0C\u4F46\u5B83\u8FD0\u8F6C\u65F6\u7684\u58F0\u54CD\u5F88\u96BE\u8BA9\u4EBA\u5C06\u5176\u4E0E\u8868\u9762\u7684\u94ED\u6587\u8054\u7CFB\u5230\u4E00\u8D77\u3002"
+  baseDamage: 360
+  skillName: "\u65E0"
+  skillDescribe: "\u65E0"
+  wepPreafab: {fileID: 0}
+  sprite_LotteryResult: {fileID: 21300000, guid: bd0f58e187001f44ba77396950fa58ad, type: 3}
+  sprite_Square: {fileID: 21300000, guid: 88792e3b0e597e8429228a156ce0ee49, type: 3}
+  sprite_Line: {fileID: 21300000, guid: 96048cd22d754f04b83ba2ad81582189, type: 3}

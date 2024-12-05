@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
+  m_Name: 5045040-lapulanhandong
+  m_EditorClassIdentifier: 
+  wepName: "\u62C9\u666E\u5170\u5BD2\u51AC"
+  wepPinyin: lapulanhandong
+  wepID: 5045040
+  Rarity: 4
+  weaponType: 2
+  weaponSubType: 10
+  profile: "\u8868\u9762\u88AB\u575A\u51B0\u8986\u76D6\u7684\u6B66\u88C5\uFF0C\u63CF\u8FF0\u7740\u62C9\u666E\u5170\u7684[\u51AC]\u3002"
+  baseDamage: 360
+  skillName: "\u62C9\u666E\u5170\u7684\u51AC\u666F"
+  skillDescribe: "\u666E\u653B\u547D\u4E2D\u51BB\u7ED3\u7684\u654C\u65B9\u65F6\uFF0C\u53EF\u989D\u5916\u5EF6\u957F\u76EE\u6807\u51BB\u7ED3\u72B6\u60011.25\u79D2\uFF0C\u6BCF\u6B21\u51BB\u7ED3\u72B6\u6001\u53EA\u80FD\u89E6\u53D11\u6B21"
+  wepPreafab: {fileID: 0}
+  sprite_LotteryResult: {fileID: 21300000, guid: af6c8bdac4302d34dbe211e26818421b, type: 3}
+  sprite_Square: {fileID: 21300000, guid: 28285de51a917274da3aade10bfe5ad5, type: 3}
+  sprite_Line: {fileID: 21300000, guid: 1ec5df03a819f154a8018cf97b7f3aeb, type: 3}

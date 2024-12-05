@@ -10,7 +10,7 @@ namespace TeaFramework
       public string rolePinyin = "角色的名字";
       public string enName = "englishName";
       public int roleID = 999999;
-      [Range(4, 5)] public int Rarity = 3;
+      [Range(4, 5)] public int Rarity = 99;
       public DamageElement damageElement;
       public RoleSpecialty roleDefinition;
       /// <summary> 简介 </summary>

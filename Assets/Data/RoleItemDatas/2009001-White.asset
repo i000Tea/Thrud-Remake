@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
+  m_Name: 2009001-White
+  m_EditorClassIdentifier: 
+  roleName: "\u767D"
+  rolePinyin: bai
+  enName: White
+  roleID: 2009001
+  Rarity: 5
+  damageElement: 1
+  roleDefinition: 1
+  profile: "\u6C89\u9ED8\u5BE1\u8A00\u7684\u5979\uFF0C\u5185\u5FC3\u9690\u85CF\u7740\u4E00\u4E2A\u65E0\u6BD4\u707F\u70C2\u7684\u4E16\u754C\u3002"
+  health: 360
+  rolePreafab: {fileID: 0}
+  sprite_listIcon: {fileID: 21300000, guid: d9b54ce1f4fb33f4b8e59e0c13893c70, type: 3}
+  sprite_Lottery: {fileID: 21300000, guid: 9ea7b0713e995a8468cede9eac4e62c9, type: 3}
+  sprite_LotteryLeader: {fileID: 21300000, guid: 1a6f30a8348962d4fa967614c5655ad8, type: 3}
+  sprite_roleUI: {fileID: 21300000, guid: 19480e7404c4c4042b5e895d8a39b86a, type: 3}
+  onTeam: "\u5524\u51AC\u53F7\u89D2"
+  onFactions: REVO
+  birthplace: "\u7279\u7F57\u59C6\u65AF\u96EA\u539F"
+  birthday: "11\u67081\u65E5"
+  Age: 15
+  height: 145
+  SpecialtyAndHobby: "\u96EA\u82B1\u3001\u540C\u4F34"
+  CV: "\u5218\u96EF"
+  favoriteCuisine: "\u7518\u85AF\u7096\u7F94\u7F8A\u3001\u4EC0\u9526\u70E9\u83DC"

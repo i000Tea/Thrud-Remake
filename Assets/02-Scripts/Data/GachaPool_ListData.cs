@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace TeaFramework
 {
-   [CreateAssetMenu(fileName = "gacha-pool-data", menuName = "thrudData/抽卡/卡池信息", order = 1)]
+   [CreateAssetMenu(fileName = "All Gacha Pool Data", menuName = "thrudData/所有卡池信息列表", order = 1)]
    public class GachaPool_ListData : Base_AllItemData
    {
       public List<GachaPool_Data> allPool;
