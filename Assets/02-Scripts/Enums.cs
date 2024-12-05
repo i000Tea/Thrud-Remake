@@ -83,10 +83,10 @@ namespace TeaFramework
 
    public enum PoolTag
    {
-      [EnumDescription("新手")]
-      rawRecruit = -1,
       [EnumDescription("常驻")]
       normal,
+      [EnumDescription("新手")]
+      rawRecruit,
       [EnumDescription("赛季")]
       competitionSeason,
       [EnumDescription("武装")]

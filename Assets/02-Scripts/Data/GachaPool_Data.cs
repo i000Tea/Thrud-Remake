@@ -7,6 +7,7 @@ namespace TeaFramework
       public string poolName = "卡池名";
       public string poolPinyin = "dontset";
       public int poolID = 999999;
+      public PoolTag pooltag;
 
       public Sprite sprite_PoolBg;
       public Sprite sprite_PoolBtnBg;

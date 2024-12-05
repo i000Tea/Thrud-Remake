@@ -70,3 +70,48 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Plugins/AmplifyShaderEditor/Examples/Built-In Samples.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Examples/HDRP Samples.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Examples/Sample Resources.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Examples/URP Samples.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 10x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 12x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 10x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 12x.unitypackage.meta
+Assets/RealToon/RealToon Examples/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Example).unitypackage.meta
+Assets/RealToon/RealToon Examples/SRP/HDRP/RealToon HDRP (Simple Example).unitypackage.meta
+Assets/RealToon/RealToon Examples/SRP/URP/RealToon URP (Simple Example).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Unity 2018 and below).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Unity 2019 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 10 and 11).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 12 and 13).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 14 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 7 and 8).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/LWRP/RealToon LWRP (Unity 2018).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/LWRP/RealToon LWRP (Unity 2019).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 10).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 11).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 12 and 13).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 14 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 7 and 8).unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 10x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 12x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 10x.unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/URP 12x.unitypackage.meta
+Assets/RealToon/RealToon Examples/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Example).unitypackage.meta
+Assets/RealToon/RealToon Examples/SRP/HDRP/RealToon HDRP (Simple Example).unitypackage.meta
+Assets/RealToon/RealToon Examples/SRP/URP/RealToon URP (Simple Example).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Unity 2018 and below).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/Built-In RP \[3D\]/RealToon Built-In RP \[3D\] (Unity 2019 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 10 and 11).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 12 and 13).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 14 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/HDRP/RealToon HDRP (HDRP 7 and 8).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/LWRP/RealToon LWRP (Unity 2018).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/LWRP/RealToon LWRP (Unity 2019).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 10).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 11).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 12 and 13).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 14 and Later).unitypackage.meta
+Assets/RealToon/RealToon Shader Packages/SRP (LWRP - URP - HDRP)/URP/RealToon URP (URP 7 and 8).unitypackage.meta
+Assets/Plugins/AmplifyShaderEditor/Plugins/EditorResources/Templates/HDRP 10x.unitypackage.meta

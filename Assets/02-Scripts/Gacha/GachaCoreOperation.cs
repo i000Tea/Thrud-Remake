@@ -9,7 +9,12 @@ namespace TeaFramework
       {
 
       }
-      public static void OnGacha()
+
+      public static void OnGacha01()
+      {
+
+      }
+      public static void OnGacha10()
       {
 
       }
