@@ -170,7 +170,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.i000sTea.Thrud_Remark
+    Android: com.i000stea.thrudremark
     Standalone: com.i000stea.thrud-remark
   buildNumber:
     Standalone: 0
