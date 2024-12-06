@@ -271,9 +271,9 @@ Material:
     - _Opacity: 1
     - _Oper: 0
     - _OutlineExtrudeMethod: 0
-    - _OutlineWidth: 3
+    - _OutlineWidth: 1
     - _OutlineWidthAffectedByViewDistance: 0
-    - _OutlineZPostionInCamera: 0.3
+    - _OutlineZPostionInCamera: 1.5
     - _OverallShadowColorPower: 0
     - _PSGLOTEX: 0
     - _PTexturePower: 1

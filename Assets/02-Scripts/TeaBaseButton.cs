@@ -7,9 +7,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 namespace TeaFramework
 {
-   public class GachaPoolButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
+   public class TeaBaseButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
    {
       public UnityEvent clickEvent;
+
+      public float clickChangeScale = 0.95f;
       public void OnPointerClick(PointerEventData eventData)
       {
          clickEvent?.Invoke();
@@ -17,12 +19,14 @@ namespace TeaFramework
 
       public void OnPointerDown(PointerEventData eventData)
       {
-         transform.DOScale(0.95f, 0.1f);
+         if (clickChangeScale != 1)
+            transform.DOScale(0.95f, 0.1f);
       }
 
       public void OnPointerUp(PointerEventData eventData)
       {
-         transform.DOScale(1f, 0.1f);
+         if (clickChangeScale != 1)
+            transform.DOScale(1f, 0.1f);
       }
    }
 }

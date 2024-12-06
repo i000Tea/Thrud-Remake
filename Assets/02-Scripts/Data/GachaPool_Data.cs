@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace TeaFramework
 {
    public class GachaPool_Data : Base_ItemData

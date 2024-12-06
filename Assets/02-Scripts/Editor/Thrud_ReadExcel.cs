@@ -145,7 +145,7 @@ namespace TeaFramework.editor
             // 查找角色是否已存在，如果存在，则更新数据
             for (int j = 0; j < roleDataList.Count; j++)
             {
-               if (roleDataList[j].roleName.Equals(excelRow[0].ToString()))
+               if (roleDataList[j].itemName.Equals(excelRow[0].ToString()))
                {
                   roleData = roleDataList[j];
                   break;
@@ -160,7 +160,7 @@ namespace TeaFramework.editor
             if (!roleDataList.Contains(roleData))
             {
                string assetPath =
-                  $"{ResPath}/RoleItemDatas/{roleData.roleID}-{(roleData.enName == "未设置" ? roleData.rolePinyin : roleData.enName)}.asset";
+                  $"{ResPath}/RoleItemDatas/{roleData.itemID}-{(roleData.enName == "未设置" ? roleData.rolePinyin : roleData.enName)}.asset";
 
                AssetDatabase.CreateAsset(roleData, assetPath); // 保存角色数据为资源文件
                roleDataList.Add(roleData); // 如果角色数据不存在，则添加
@@ -183,11 +183,11 @@ namespace TeaFramework.editor
          #region 名 id 简介
          // 填充角色数据
          string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         if (!string.IsNullOrEmpty(value)) roleData.roleName = value; index++;
+         if (!string.IsNullOrEmpty(value)) roleData.itemName = value; index++;
 
          // ID行
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         if (int.TryParse(value, out int roleID)) roleData.roleID = roleID; index++;
+         if (int.TryParse(value, out int roleID)) roleData.itemID = roleID; index++;
 
          // 拼音行
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -240,7 +240,7 @@ namespace TeaFramework.editor
          // 生日
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.birthday = value; index++;
-         Debug.Log($"{roleData.roleName} {roleData.birthday}");
+         Debug.Log($"{roleData.itemName} {roleData.birthday}");
 
          // 年龄
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -269,10 +269,10 @@ namespace TeaFramework.editor
          #region 图片素材
          // Keywords：角色相关的关键词
          string[] Keywords = new string[] {
-               roleData.roleName,
+               roleData.itemName,
                roleData.enName,
                roleData.rolePinyin,
-               roleData.roleID.ToString(),
+               roleData.itemID.ToString(),
             };
 
          var middlePath = "ui_hero_pic/";
