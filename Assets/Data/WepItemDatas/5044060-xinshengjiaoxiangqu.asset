@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5044060-xinshengjiaoxiangqu
   m_EditorClassIdentifier: 
-  wepName: "\u65B0\u751F\u4EA4\u54CD\u66F2"
-  wepPinyin: xinshengjiaoxiangqu
-  wepID: 5044060
+  itemName: "\u65B0\u751F\u4EA4\u54CD\u66F2"
+  itemID: 5044060
+  itemPinyin: xinshengjiaoxiangqu
   Rarity: 4
   weaponType: 1
   weaponSubType: 6

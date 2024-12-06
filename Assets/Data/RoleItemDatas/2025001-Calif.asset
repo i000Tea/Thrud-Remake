@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2025001-Calif
   m_EditorClassIdentifier: 
-  roleName: "\u52A0\u5229\u798F"
-  rolePinyin: jialifu
-  enName: Calif
-  roleID: 2025001
+  itemName: "\u52A0\u5229\u798F"
+  itemID: 2025001
+  itemPinyin: jialifu
   Rarity: 5
+  enName: Calif
   damageElement: 3
   roleDefinition: 0
   profile: "\u65F6\u5C1A\u662F\u8FC7\u5F80\u7684\u7E41\u8363\uFF0C\u662F\u65B0\u4E16\u754C\u7684\u5E0C\u671B\uFF01"

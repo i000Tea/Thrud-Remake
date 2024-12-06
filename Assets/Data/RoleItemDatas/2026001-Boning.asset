@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2026001-Boning
   m_EditorClassIdentifier: 
-  roleName: "\u5254\u9AA8"
-  rolePinyin: tigu
-  enName: Boning
-  roleID: 2026001
+  itemName: "\u5254\u9AA8"
+  itemID: 2026001
+  itemPinyin: tigu
   Rarity: 5
+  enName: Boning
   damageElement: 1
   roleDefinition: 0
   profile: "\u7834\u788E\u7684\u7269\u54C1\u65E0\u6CD5\u590D\u539F\u2014\u2014\u8FD9\u5C31\u662F\u6211\u7684\u76EE\u7684\u3002"

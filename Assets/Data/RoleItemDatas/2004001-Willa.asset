@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2004001-Willa
   m_EditorClassIdentifier: 
-  roleName: "\u7EF4\u62C9"
-  rolePinyin: weila
-  enName: Willa
-  roleID: 2004001
+  itemName: "\u7EF4\u62C9"
+  itemID: 2004001
+  itemPinyin: weila
   Rarity: 5
+  enName: Willa
   damageElement: 4
   roleDefinition: 0
   profile: "\u74E6\u54C8\u7EB3\u961F\u957F\uFF0C\u4E25\u8083\u4F46\u53EF\u9760\u7684\u4F19\u4F34\u3002"

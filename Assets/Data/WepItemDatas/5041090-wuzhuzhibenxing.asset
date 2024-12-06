@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5041090-wuzhuzhibenxing
   m_EditorClassIdentifier: 
-  wepName: "\u65E0\u9A7B\u4E4B\u5954\u661F"
-  wepPinyin: wuzhuzhibenxing
-  wepID: 5041090
+  itemName: "\u65E0\u9A7B\u4E4B\u5954\u661F"
+  itemID: 5041090
+  itemPinyin: wuzhuzhibenxing
   Rarity: 4
   weaponType: 0
   weaponSubType: 0

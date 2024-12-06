@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5025010-kuangrezhe-gai
   m_EditorClassIdentifier: 
-  wepName: "\u72C2\u70ED\u8005\xB7\u6539"
-  wepPinyin: kuangrezhe-gai
-  wepID: 5025010
+  itemName: "\u72C2\u70ED\u8005\xB7\u6539"
+  itemID: 5025010
+  itemPinyin: kuangrezhe-gai
   Rarity: 2
   weaponType: 2
   weaponSubType: 9

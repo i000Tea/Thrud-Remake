@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2013001-Ray
   m_EditorClassIdentifier: 
-  roleName: "\u857E"
-  rolePinyin: lei
-  enName: Ray
-  roleID: 2013001
+  itemName: "\u857E"
+  itemID: 2013001
+  itemPinyin: lei
   Rarity: 4
+  enName: Ray
   damageElement: 3
   roleDefinition: 2
   profile: "\u5F31\u8005\u90A3\u9897\u67D4\u8F6F\u7684\u5FC3\uFF0C\u5728\u8FD9\u9893\u8D25\u7684\u4E16\u754C\u4E2D\uFF0C\u5F00\u51FA\u6D01\u767D\u65E0\u6687\u7684\u82B1\u3002"

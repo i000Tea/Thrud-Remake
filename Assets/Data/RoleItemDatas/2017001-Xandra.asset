@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2017001-Xandra
   m_EditorClassIdentifier: 
-  roleName: "\u73CA\u591A\u62C9"
-  rolePinyin: shanduola
-  enName: Xandra
-  roleID: 2017001
+  itemName: "\u73CA\u591A\u62C9"
+  itemID: 2017001
+  itemPinyin: shanduola
   Rarity: 4
+  enName: Xandra
   damageElement: 1
   roleDefinition: 3
   profile: "\u4E00\u5206\u4E3A\u4E8C\u7684\u547D\u8FD0\uFF0C\u613F\u6211\u4EEC\u7684\u7075\u9B42\u6C38\u4E0D\u5206\u79BB\u3002"

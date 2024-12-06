@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5053030-dangzhongzhishi
   m_EditorClassIdentifier: 
-  wepName: "\u8361\u949F\u4E4B\u65F6"
-  wepPinyin: dangzhongzhishi
-  wepID: 5053030
+  itemName: "\u8361\u949F\u4E4B\u65F6"
+  itemID: 5053030
+  itemPinyin: dangzhongzhishi
   Rarity: 5
   weaponType: 3
   weaponSubType: 11

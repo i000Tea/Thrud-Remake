@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5031010-jielueryeguang
   m_EditorClassIdentifier: 
-  wepName: "\u6D01\u9732\u5C14\u66F3\u5149"
-  wepPinyin: jielueryeguang
-  wepID: 5031010
+  itemName: "\u6D01\u9732\u5C14\u66F3\u5149"
+  itemID: 5031010
+  itemPinyin: jielueryeguang
   Rarity: 3
   weaponType: 0
   weaponSubType: 0

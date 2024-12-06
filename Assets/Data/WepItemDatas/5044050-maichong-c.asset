@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5044050-maichong-c
   m_EditorClassIdentifier: 
-  wepName: "\u8109\u51B2\xB7\u03C9"
-  wepPinyin: maichong-c
-  wepID: 5044050
+  itemName: "\u8109\u51B2\xB7\u03C9"
+  itemID: 5044050
+  itemPinyin: maichong-c
   Rarity: 4
   weaponType: 1
   weaponSubType: 5

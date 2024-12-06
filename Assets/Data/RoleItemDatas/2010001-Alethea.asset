@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2010001-Alethea
   m_EditorClassIdentifier: 
-  roleName: "\u963F\u83B1\u897F\u5A05"
-  rolePinyin: alaixiya
-  enName: Alethea
-  roleID: 2010001
+  itemName: "\u963F\u83B1\u897F\u5A05"
+  itemID: 2010001
+  itemPinyin: alaixiya
   Rarity: 4
+  enName: Alethea
   damageElement: 4
   roleDefinition: 3
   profile: "\u5929\u624D\uFF01\u95EA\u8000\uFF01\u7B26\u6587\u5927\u5E08\uFF01"

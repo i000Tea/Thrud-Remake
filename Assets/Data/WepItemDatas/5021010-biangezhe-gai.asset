@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5021010-biangezhe-gai
   m_EditorClassIdentifier: 
-  wepName: "\u53D8\u9769\u8005\xB7\u6539"
-  wepPinyin: biangezhe-gai
-  wepID: 5021010
+  itemName: "\u53D8\u9769\u8005\xB7\u6539"
+  itemID: 5021010
+  itemPinyin: biangezhe-gai
   Rarity: 2
   weaponType: 0
   weaponSubType: 0

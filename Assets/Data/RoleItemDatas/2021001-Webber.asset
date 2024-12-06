@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2021001-Webber
   m_EditorClassIdentifier: 
-  roleName: "\u97E6\u4F2F"
-  rolePinyin: weibo
-  enName: Webber
-  roleID: 2021001
+  itemName: "\u97E6\u4F2F"
+  itemID: 2021001
+  itemPinyin: weibo
   Rarity: 5
+  enName: Webber
   damageElement: 2
   roleDefinition: 0
   profile: "\u7B26\u6587\u7F16\u7A0B\u7684\u9AD8\u624B\uFF0C\u610F\u5916\u53D1\u73B0\u68A6\u5883\u9690\u85CF\u7740\u4E0D\u4E3A\u4EBA\u77E5\u7684\u79D8\u5BC6\uFF0C\u4EE5\u6B64\u4E3A\u7814\u7A76\u65B9\u5411\u52A0\u5165\u75DB\u68A6\u903B\u8F91\u3002"

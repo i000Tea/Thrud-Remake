@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5043020-yitui-2nd
   m_EditorClassIdentifier: 
-  wepName: "\u9057\u8715\xB72nd"
-  wepPinyin: yitui-2nd
-  wepID: 5043020
+  itemName: "\u9057\u8715\xB72nd"
+  itemID: 5043020
+  itemPinyin: yitui-2nd
   Rarity: 4
   weaponType: 3
   weaponSubType: 12

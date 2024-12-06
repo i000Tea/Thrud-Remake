@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2016001-Chun
   m_EditorClassIdentifier: 
-  roleName: "\u693F"
-  rolePinyin: chun
-  enName: Chun
-  roleID: 2016001
+  itemName: "\u693F"
+  itemID: 2016001
+  itemPinyin: chun
   Rarity: 5
+  enName: Chun
   damageElement: 4
   roleDefinition: 0
   profile: "\u5357\u65B9\u5236\u9020\u6210\u5458\uFF0C\u6D3B\u6CFC\u4F36\u4FD0\u7684\u5C11\u5973\uFF0C\u6076\u4F5C\u5267\u5927\u5E08\u3002"

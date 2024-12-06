@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2023001-McDownroad
   m_EditorClassIdentifier: 
-  roleName: "\u9EA6\u5F53\u7136"
-  rolePinyin: maidangran
-  enName: McDownroad
-  roleID: 2023001
+  itemName: "\u9EA6\u5F53\u7136"
+  itemID: 2023001
+  itemPinyin: maidangran
   Rarity: 5
+  enName: McDownroad
   damageElement: 4
   roleDefinition: 0
   profile: "\u8FD9\u4E00\u5207\uFF0C\u90FD\u53EA\u662F\u4E00\u4E2A\u68A6\uFF0C\u4E00\u4E2A\u8D85\u8D8A\u4E00\u5207\u7684\u68A6\u3002"

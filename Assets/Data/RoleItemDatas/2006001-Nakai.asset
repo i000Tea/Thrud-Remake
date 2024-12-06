@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2006001-Nakai
   m_EditorClassIdentifier: 
-  roleName: "\u5A1C\u5361\u4F0A"
-  rolePinyin: nakayi
-  enName: Nakai
-  roleID: 2006001
+  itemName: "\u5A1C\u5361\u4F0A"
+  itemID: 2006001
+  itemPinyin: nakayi
   Rarity: 4
+  enName: Nakai
   damageElement: 2
   roleDefinition: 0
   profile: "\u5A1C\u5361\u4F0A\u662F\u4E00\u4E2A\u5F88\u4E25\u8083\u7684\u4EBA\uFF0C\u9762\u5BF9\u8FD9\u4E2A\u5371\u673A\u56DB\u4F0F\u7684\u4E16\u754C\uFF0C\u5979\u4ECE\u6765\u4E0D\u6562\u61C8\u6020\u3002"

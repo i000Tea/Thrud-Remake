@@ -1,4 +1,4 @@
-Shader "UI/Default"
+Shader "TeaAdd/UI/Default"
 {
 	Properties
 	{

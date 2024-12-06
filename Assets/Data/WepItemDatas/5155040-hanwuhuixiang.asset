@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5155040-hanwuhuixiang
   m_EditorClassIdentifier: 
-  wepName: "\u5BD2\u6B66\u56DE\u54CD"
-  wepPinyin: hanwuhuixiang
-  wepID: 5155040
+  itemName: "\u5BD2\u6B66\u56DE\u54CD"
+  itemID: 5155040
+  itemPinyin: hanwuhuixiang
   Rarity: 5
   weaponType: 2
   weaponSubType: 10

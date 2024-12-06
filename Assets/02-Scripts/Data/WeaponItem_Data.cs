@@ -4,12 +4,8 @@ using UnityEngine;
 namespace TeaFramework
 {
    public class WeaponItem_Data : Base_ItemData
-   {  
+   {
       [Header("基础数据")]
-      public string wepName = "角色的名字";
-      public string wepPinyin = "角色的名字";
-      public int wepID = 999999;
-      [Range(2, 5)] public int Rarity = 3;
       public WeaponType weaponType;
       public WeaponSubType weaponSubType;
       /// <summary> 简介 </summary>

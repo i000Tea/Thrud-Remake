@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2001001-Faria
   m_EditorClassIdentifier: 
-  roleName: "\u6CD5\u5C3C\u5A05"
-  rolePinyin: faniya
-  enName: Faria
-  roleID: 2001001
+  itemName: "\u6CD5\u5C3C\u5A05"
+  itemID: 2001001
+  itemPinyin: faniya
   Rarity: 4
+  enName: Faria
   damageElement: 4
   roleDefinition: 0
   profile: "\u603B\u662F\u85CF\u6709\u8BB8\u591A\u5FC3\u4E8B\u7684\u5C11\u5973\u3002\u5979\u6240\u5E0C\u5180\u7684\uFF0C\u6216\u8BB8\u5C31\u662F\u6211\u4EEC\u8FFD\u9010\u7684\u76EE\u6807\u3002"

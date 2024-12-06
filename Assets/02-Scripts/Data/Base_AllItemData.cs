@@ -9,6 +9,7 @@ namespace TeaFramework
       [Header("通用数据")]
       public string itemName;
       public int itemID;
+      public string itemPinyin = "角色的名字";
       [Range(1, 5)] public int Rarity = 0;
    }
 }

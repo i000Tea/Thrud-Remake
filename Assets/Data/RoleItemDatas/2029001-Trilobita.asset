@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2029001-Trilobita
   m_EditorClassIdentifier: 
-  roleName: "\u4E09\u53F6"
-  rolePinyin: sanye
-  enName: Trilobita
-  roleID: 2029001
+  itemName: "\u4E09\u53F6"
+  itemID: 2029001
+  itemPinyin: sanye
   Rarity: 5
+  enName: Trilobita
   damageElement: 2
   roleDefinition: 2
   profile: "\u751F\u5B58\u7684\u65B9\u5F0F\u5343\u5947\u767E\u602A\uFF0C\u4E0D\u8981\u5C0F\u770B\u4EFB\u4F55\u4E00\u79CD\u3002"

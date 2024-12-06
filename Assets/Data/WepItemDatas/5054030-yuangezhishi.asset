@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5054030-yuangezhishi
   m_EditorClassIdentifier: 
-  wepName: "\u613F\u6B4C\u4E4B\u65F6"
-  wepPinyin: yuangezhishi
-  wepID: 5054030
+  itemName: "\u613F\u6B4C\u4E4B\u65F6"
+  itemID: 5054030
+  itemPinyin: yuangezhishi
   Rarity: 5
   weaponType: 1
   weaponSubType: 5

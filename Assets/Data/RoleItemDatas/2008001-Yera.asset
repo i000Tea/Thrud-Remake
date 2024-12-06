@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2008001-Yera
   m_EditorClassIdentifier: 
-  roleName: "\u8036\u62C9"
-  rolePinyin: yela
-  enName: Yera
-  roleID: 2008001
+  itemName: "\u8036\u62C9"
+  itemID: 2008001
+  itemPinyin: yela
   Rarity: 5
+  enName: Yera
   damageElement: 3
   roleDefinition: 0
   profile: "\u8868\u8C61\u662F\u6781\u6613\u6D88\u901D\u7684\uFF0C\u771F\u76F8\u662F\u6781\u5176\u73CD\u8D35\u7684\uFF0C\u503C\u5F97\u6211\u4ED8\u51FA\u4EFB\u4F55\u4EE3\u4EF7\u3002"

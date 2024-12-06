@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Rendering;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 
 namespace TeaFramework
@@ -53,7 +50,7 @@ namespace TeaFramework
          if (selectPool.pooltag == PoolTag.normal)
             poolKey = PoolTag.normal.ToString();
          else
-            poolKey = selectPool.poolID.ToString();
+            poolKey = selectPool.itemID.ToString();
 
          // 在缓存中查找，若没有找到则新建一个
          cachePoolRecords.TryGetValue(poolKey, out PoolRecord getRecord);
@@ -90,7 +87,7 @@ namespace TeaFramework
       {
          rarity = CalculateRarity();
          // 
-         var item = rarity.RandomItemByRarity();
+         var item = rarity.RandomItemByRarity(out bool onGetV5Up);
          string itemName = "未确定类型";
          string itemID = "未确定类型";
          string itemType = "未确定类型";
@@ -102,12 +99,12 @@ namespace TeaFramework
          }
          else if (item.GetType() == typeof(WeaponItem_Data))
          {
-            itemName = (item as WeaponItem_Data).wepName;
-            itemID = (item as WeaponItem_Data).wepID.ToString();
+            itemName = (item as WeaponItem_Data).itemName;
+            itemID = (item as WeaponItem_Data).itemID.ToString();
             itemType = "wep";
          }
          Debug.Log($"搜索到{itemName}");
-         getItems[index] = $"{itemID}{sep}{rarity}{sep}{itemName}{sep}{itemType}";
+         getItems[index] = $"{itemID}{sep}{rarity}{sep}{onGetV5Up}{sep}{itemName}{sep}{itemType}";
       }
 
       /// <summary> 计算一个稀有度 </summary>
@@ -165,14 +162,19 @@ namespace TeaFramework
          return getRarity;
       }
 
-      private static Base_ItemData RandomItemByRarity(this int rarity)
+      private static Base_ItemData RandomItemByRarity(this int rarity, out bool onGetV5Up)
       {
+         onGetV5Up = false;
          var upValue = Random.Range(0, 10000);
          var itemList = cacheSelectPool.poolV3_ItemData;
          switch (rarity)
          {
             case 5:
-               if (cacheSelectPool.poolV5UP_ItemData.Count > 0 && upValue < v5UpProb) { itemList = cacheSelectPool.poolV5UP_ItemData; }
+               if (cacheSelectPool.poolV5UP_ItemData.Count > 0 && upValue < v5UpProb)
+               {
+                  onGetV5Up = true;
+                  itemList = cacheSelectPool.poolV5UP_ItemData;
+               }
                else { itemList = cacheSelectPool.poolV5_ItemData; }
                break;
             case 4:

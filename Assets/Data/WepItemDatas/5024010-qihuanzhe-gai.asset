@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5024010-qihuanzhe-gai
   m_EditorClassIdentifier: 
-  wepName: "\u7948\u5524\u8005\xB7\u6539"
-  wepPinyin: qihuanzhe-gai
-  wepID: 5024010
+  itemName: "\u7948\u5524\u8005\xB7\u6539"
+  itemID: 5024010
+  itemPinyin: qihuanzhe-gai
   Rarity: 2
   weaponType: 1
   weaponSubType: 7

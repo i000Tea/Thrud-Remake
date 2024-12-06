@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5155050-baijinhuguang
   m_EditorClassIdentifier: 
-  wepName: "\u767D\u91D1\u5F27\u5149"
-  wepPinyin: baijinhuguang
-  wepID: 5155050
+  itemName: "\u767D\u91D1\u5F27\u5149"
+  itemID: 5155050
+  itemPinyin: baijinhuguang
   Rarity: 5
   weaponType: 3
   weaponSubType: 13

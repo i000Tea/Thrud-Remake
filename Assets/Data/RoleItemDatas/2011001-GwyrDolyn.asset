@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2011001-GwyrDolyn
   m_EditorClassIdentifier: 
-  roleName: "\u683C\u8587\u5FB7\u6797"
-  rolePinyin: geweidelin
-  enName: GwyrDolyn
-  roleID: 2011001
+  itemName: "\u683C\u8587\u5FB7\u6797"
+  itemID: 2011001
+  itemPinyin: geweidelin
   Rarity: 5
+  enName: GwyrDolyn
   damageElement: 4
   roleDefinition: 1
   profile: "\u6BCF\u4E2A\u4EBA\u90FD\u6709\u4E0D\u60F3\u88AB\u4EBA\u77E5\u9053\u7684\u79D8\u5BC6\uFF0C\u53EF\u8FD9\u79D8\u5BC6\u53C8\u662F\u5982\u6B64\u663E\u800C\u6613\u89C1\u3002"

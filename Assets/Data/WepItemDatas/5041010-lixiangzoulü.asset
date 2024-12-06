@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: "5041010-lixiangzoul\xFC"
   m_EditorClassIdentifier: 
-  wepName: "\u7406\u60F3\u594F\u5F8B"
-  wepPinyin: "lixiangzoul\xFC"
-  wepID: 5041010
+  itemName: "\u7406\u60F3\u594F\u5F8B"
+  itemID: 5041010
+  itemPinyin: "lixiangzoul\xFC"
   Rarity: 4
   weaponType: 0
   weaponSubType: 0

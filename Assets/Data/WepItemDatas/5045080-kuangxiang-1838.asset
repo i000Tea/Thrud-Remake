@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5045080-kuangxiang-1838
   m_EditorClassIdentifier: 
-  wepName: "\u72C2\u60F3\xB71838"
-  wepPinyin: kuangxiang-1838
-  wepID: 5045080
+  itemName: "\u72C2\u60F3\xB71838"
+  itemID: 5045080
+  itemPinyin: kuangxiang-1838
   Rarity: 4
   weaponType: 2
   weaponSubType: 10

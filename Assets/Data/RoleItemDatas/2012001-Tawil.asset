@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2012001-Tawil
   m_EditorClassIdentifier: 
-  roleName: "\u5854\u7EF4\u5C14"
-  rolePinyin: taweier
-  enName: Tawil
-  roleID: 2012001
+  itemName: "\u5854\u7EF4\u5C14"
+  itemID: 2012001
+  itemPinyin: taweier
   Rarity: 4
+  enName: Tawil
   damageElement: 3
   roleDefinition: 1
   profile: "\u6CBF\u7740\u8FD9\u6761\u5D0E\u5C96\u7684\u9053\u8DEF\uFF0C\u72EC\u81EA\u5B88\u62A4\u7740\u98CE\u5316\u7684\u5F80\u4E8B\u548C\u7834\u788E\u7684\u5FC3\u3002"

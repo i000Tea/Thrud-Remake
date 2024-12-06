@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5051010-baizhijian-I
   m_EditorClassIdentifier: 
-  wepName: "\u767D\u4E4B\u952E\xB7I"
-  wepPinyin: baizhijian-I
-  wepID: 5051010
+  itemName: "\u767D\u4E4B\u952E\xB7I"
+  itemID: 5051010
+  itemPinyin: baizhijian-I
   Rarity: 5
   weaponType: 0
   weaponSubType: 2

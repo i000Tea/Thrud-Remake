@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5041040-lapulanbaiye
   m_EditorClassIdentifier: 
-  wepName: "\u62C9\u666E\u5170\u767D\u591C"
-  wepPinyin: lapulanbaiye
-  wepID: 5041040
+  itemName: "\u62C9\u666E\u5170\u767D\u591C"
+  itemID: 5041040
+  itemPinyin: lapulanbaiye
   Rarity: 4
   weaponType: 0
   weaponSubType: 1

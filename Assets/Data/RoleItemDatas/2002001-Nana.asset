@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2002001-Nana
   m_EditorClassIdentifier: 
-  roleName: "\u5948\u7EB3"
-  rolePinyin: naina
-  enName: Nana
-  roleID: 2002001
+  itemName: "\u5948\u7EB3"
+  itemID: 2002001
+  itemPinyin: naina
   Rarity: 4
+  enName: Nana
   damageElement: 2
   roleDefinition: 1
   profile: "\u53EA\u8981\u80FD\u652F\u4ED8\u8DB3\u591F\u7684\u62A5\u916C\uFF0C\u591A\u4E48\u8270\u5DE8\u7684\u4EFB\u52A1\u5979\u90FD\u80FD\u591F\u5B8C\u6210\u3002"

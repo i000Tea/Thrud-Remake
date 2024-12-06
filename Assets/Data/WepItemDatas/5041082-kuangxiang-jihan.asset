@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5041082-kuangxiang-jihan
   m_EditorClassIdentifier: 
-  wepName: "\u72C2\u60F3\xB7\u6781\u5BD2"
-  wepPinyin: kuangxiang-jihan
-  wepID: 5041082
+  itemName: "\u72C2\u60F3\xB7\u6781\u5BD2"
+  itemID: 5041082
+  itemPinyin: kuangxiang-jihan
   Rarity: 4
   weaponType: 0
   weaponSubType: 2

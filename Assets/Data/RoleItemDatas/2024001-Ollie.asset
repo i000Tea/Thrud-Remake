@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2024001-Ollie
   m_EditorClassIdentifier: 
-  roleName: "\u5965\u5229"
-  rolePinyin: aoli
-  enName: Ollie
-  roleID: 2024001
+  itemName: "\u5965\u5229"
+  itemID: 2024001
+  itemPinyin: aoli
   Rarity: 4
+  enName: Ollie
   damageElement: 2
   roleDefinition: 2
   profile: "\u55EF\uFF1F\u662F\u5B83\u4EEC\u5148\u52A8\u7684\u624B\uFF0C\u5965\u5229\u53EA\u8D1F\u8D23\u53CD\u51FB\u3002"

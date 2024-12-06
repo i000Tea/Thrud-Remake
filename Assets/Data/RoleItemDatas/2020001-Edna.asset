@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2020001-Edna
   m_EditorClassIdentifier: 
-  roleName: "\u827E\u5FB7\u5A1C"
-  rolePinyin: aidena
-  enName: Edna
-  roleID: 2020001
+  itemName: "\u827E\u5FB7\u5A1C"
+  itemID: 2020001
+  itemPinyin: aidena
   Rarity: 4
+  enName: Edna
   damageElement: 1
   roleDefinition: 1
   profile: "\u4E00\u5206\u4E3A\u4E8C\u7684\u547D\u8FD0\uFF0C\u4F7F\u6211\u4EEC\u7684\u7075\u9B42\u66F4\u52A0\u9760\u8FD1\u3002"

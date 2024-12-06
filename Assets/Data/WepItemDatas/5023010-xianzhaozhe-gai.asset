@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5023010-xianzhaozhe-gai
   m_EditorClassIdentifier: 
-  wepName: "\u5148\u5146\u8005\xB7\u6539"
-  wepPinyin: xianzhaozhe-gai
-  wepID: 5023010
+  itemName: "\u5148\u5146\u8005\xB7\u6539"
+  itemID: 5023010
+  itemPinyin: xianzhaozhe-gai
   Rarity: 2
   weaponType: 3
   weaponSubType: 13

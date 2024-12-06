@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5045060-xuanxulandiao
   m_EditorClassIdentifier: 
-  wepName: "\u5BA3\u53D9\u84DD\u8C03"
-  wepPinyin: xuanxulandiao
-  wepID: 5045060
+  itemName: "\u5BA3\u53D9\u84DD\u8C03"
+  itemID: 5045060
+  itemPinyin: xuanxulandiao
   Rarity: 4
   weaponType: 2
   weaponSubType: 10

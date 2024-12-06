@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2018001-Paft
   m_EditorClassIdentifier: 
-  roleName: "\u6CE1\u8299"
-  rolePinyin: paofu
-  enName: Paft
-  roleID: 2018001
+  itemName: "\u6CE1\u8299"
+  itemID: 2018001
+  itemPinyin: paofu
   Rarity: 4
+  enName: Paft
   damageElement: 3
   roleDefinition: 0
   profile: "1,2,3\uFF01\u97F3\u4E50\u54CD\u8D77\uFF01\u6B64\u523B\uFF0C\u6240\u6709\u7075\u9B42\u90FD\u4EFB\u51ED\u6446\u5E03\u3002\u6CE1\u8299\u7684\u6027\u683C\u6CE8\u5B9A\u4E86\u5979\u5F88\u96BE\u548C\u522B\u4EBA\u5408\u4F5C\uFF0C\u4F46\u5979\u5728\u58F0\u97F3\u65B9\u9762\u7684\u5929\u8D4B

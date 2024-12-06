@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5151010-yimianzaowu
   m_EditorClassIdentifier: 
-  wepName: "\u5F02\u9762\u9020\u7269"
-  wepPinyin: yimianzaowu
-  wepID: 5151010
+  itemName: "\u5F02\u9762\u9020\u7269"
+  itemID: 5151010
+  itemPinyin: yimianzaowu
   Rarity: 5
   weaponType: 0
   weaponSubType: 2

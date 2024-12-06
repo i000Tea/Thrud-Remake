@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99ba2d3b331afea48a9c309c0f91f716, type: 3}
   m_Name: 5033020-xiaoshidehuguang
   m_EditorClassIdentifier: 
-  wepName: "\u6D88\u901D\u7684\u6E56\u5149"
-  wepPinyin: xiaoshidehuguang
-  wepID: 5033020
+  itemName: "\u6D88\u901D\u7684\u6E56\u5149"
+  itemID: 5033020
+  itemPinyin: xiaoshidehuguang
   Rarity: 3
   weaponType: 3
   weaponSubType: 12

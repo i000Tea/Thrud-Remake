@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2007001-Blank
   m_EditorClassIdentifier: 
-  roleName: "\u7A7A"
-  rolePinyin: kong
-  enName: Blank
-  roleID: 2007001
+  itemName: "\u7A7A"
+  itemID: 2007001
+  itemPinyin: kong
   Rarity: 5
+  enName: Blank
   damageElement: 3
   roleDefinition: 1
   profile: "\u518D\u7ED9\u7A7A\u4E00\u70B9\u65F6\u95F4\uFF0C\u7A7A\u4F1A\u53D8\u6210\u8BA9\u6240\u6709\u4EBA\u60CA\u8BB6\u7684\u6837\u5B50\u3002"

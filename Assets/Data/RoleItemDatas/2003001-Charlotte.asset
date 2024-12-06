@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2003001-Charlotte
   m_EditorClassIdentifier: 
-  roleName: "\u590F\u6D1B"
-  rolePinyin: xialuo
-  enName: Charlotte
-  roleID: 2003001
+  itemName: "\u590F\u6D1B"
+  itemID: 2003001
+  itemPinyin: xialuo
   Rarity: 4
+  enName: Charlotte
   damageElement: 3
   roleDefinition: 3
   profile: "\u6027\u683C\u5F00\u6717\u6D3B\u6CFC\u7684\u5C11\u5973\uFF0C\u6709\u81EA\u5DF1\u7684\u575A\u6301\u548C\u68A6\u60F3\u3002\u5E38\u5E38\u5728\u6218\u6597\u548C\u751F\u6D3B\u4E2D\u534F\u52A9\u540C\u4F34\uFF0C\u5F88\u53D7\u5927\u5BB6\u6B22\u8FCE\u3002"

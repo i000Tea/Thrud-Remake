@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3d8751b7f76b439d76efe3ea8cd67, type: 3}
   m_Name: 4011
   m_EditorClassIdentifier: 
-  poolName: "\u5361\u6C60\u540D"
-  poolPinyin: dontset
-  poolID: 4011
+  itemName: 
+  itemID: 4011
+  itemPinyin: "\u89D2\u8272\u7684\u540D\u5B57"
+  Rarity: 0
+  itemName: "\u5361\u6C60\u540D"
+  pooltag: 0
   sprite_PoolBg: {fileID: 21300000, guid: 55e3fc28531032647be4b4fe76d995c7, type: 3}
   sprite_PoolBtnBg: {fileID: 21300000, guid: 9480d1a91eb64ac43ba553a62bb5ee89, type: 3}
   poolV5UP_ItemData: []

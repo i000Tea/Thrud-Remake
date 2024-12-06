@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474b4c00171127544860b3758b5e6833, type: 3}
   m_Name: 2049001-faniyav5
   m_EditorClassIdentifier: 
-  roleName: "\u6CD5\u5C3C\u5A05\xB7\u96F7\u9706"
-  rolePinyin: faniyav5
+  itemName: "\u6CD5\u5C3C\u5A05\xB7\u96F7\u9706"
+  itemID: 2049001
+  itemPinyin: faniyav5
+  Rarity: 0
   enName: "\u672A\u8BBE\u7F6E"
-  roleID: 2049001
-  Rarity: 99
   damageElement: 0
   roleDefinition: 0
   profile: "\u672A\u8BBE\u7F6E"
