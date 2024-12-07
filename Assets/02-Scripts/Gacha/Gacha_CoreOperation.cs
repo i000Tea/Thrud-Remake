@@ -103,7 +103,7 @@ namespace TeaFramework
             itemID = (item as WeaponItem_Data).itemID.ToString();
             itemType = "wep";
          }
-         Debug.Log($"搜索到{itemName}");
+         //Debug.Log($"搜索到{itemName}");
          getItems[index] = $"{itemID}{sep}{rarity}{sep}{onGetV5Up}{sep}{itemName}{sep}{itemType}";
       }
 
@@ -158,7 +158,7 @@ namespace TeaFramework
          }
 
          logStr = $"获取到稀有度为{getRarity}{logStr}";
-         Debug.Log(logStr);
+         //Debug.Log(logStr);
          return getRarity;
       }
 
