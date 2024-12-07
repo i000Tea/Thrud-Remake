@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace TeaFramework
@@ -17,6 +18,7 @@ namespace TeaFramework
       {
          config = inputConfig;
          config.ResultUI.gameObject.SetActive(false);
+         config.GlobalVolumeCanvas.SetActive(false);
       }
 
       /// <summary>
@@ -109,6 +111,8 @@ namespace TeaFramework
       public static IEnumerator ShowLotteryResult()
       {
          var lotteryResultChild = config.LotteryResult.GetChild(0);
+         config.MainUI.gameObject.SetActive(false);
+         config.GlobalVolumeCanvas.SetActive(true);
          config.ResultUI.gameObject.SetActive(true);
          config.LotterySingle.gameObject.SetActive(false);
 
@@ -141,7 +145,9 @@ namespace TeaFramework
       /// </summary>
       public static void ShowLotteryOver()
       {
+         config.MainUI.gameObject.SetActive(true);
          config.ResultUI.gameObject.SetActive(false);
+         config.GlobalVolumeCanvas.SetActive(false);
          config.LotterySingle.gameObject.SetActive(false);
          config.LotteryResult.gameObject.SetActive(false);
       }
@@ -152,7 +158,9 @@ namespace TeaFramework
    {
       /// <summary> 池标签，用于标记池的类型 </summary>
       [SerializeField] PoolTag _tag;
+      public RectTransform MainUI;
       /// <summary> 抽卡结果总界面 </summary>
+      public GameObject GlobalVolumeCanvas;
       public RectTransform ResultUI;
       /// <summary> 单次抽卡结果界面 </summary>
       public RectTransform LotterySingle;

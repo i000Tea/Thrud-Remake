@@ -67,7 +67,9 @@ namespace TeaFramework
       /// </summary>
       private void Awake()
       {
+#if UNITY_EDITOR
          Time.timeScale = multiSpeed;
+#endif
          uiConfig.Initialize();
          CreateSequenceNumberDictionary(allRole.allRole.ToArray(), allWeapon.allwep.ToArray());
       }
@@ -269,8 +271,6 @@ namespace TeaFramework
       #endregion
 
       #region 字典
-
-
       /// <summary>
       /// 全局物品数据字典，用于快速查找物品
       /// </summary>
