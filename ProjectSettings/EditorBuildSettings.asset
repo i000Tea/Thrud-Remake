@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/01-Scenes/1MenuScene.unity
     guid: 3c251be4ef1189040bf3ce5b812dbf09
-  - enabled: 1
+  - enabled: 0
     path: Assets/01-Scenes/2GachaScene.unity
     guid: 07f8c673bf7e825458ecb689a0b99844
+  - enabled: 0
+    path: Assets/01-Scenes/2GachaSceneTest.unity
+    guid: 8fc7d2981849a1446a64ea95e6bc5f16
   - enabled: 0
     path: Assets/01-Scenes/3BattleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
