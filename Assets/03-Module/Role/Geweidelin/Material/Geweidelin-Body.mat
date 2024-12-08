@@ -273,7 +273,7 @@ Material:
     - _OutlineWidth: 0.2
     - _OutlineWidthAffectedByViewDistance: 0
     - _OutlineZPostionInCamera: 0
-    - _OverallShadowColorPower: 1
+    - _OverallShadowColorPower: 0
     - _PSGLOTEX: 0
     - _PTexturePower: 1
     - _Parallax: 0.02
@@ -301,9 +301,9 @@ Material:
     - _SelfShadowAffectedByLightShadowStrength: 0
     - _SelfShadowHardness: 0.931
     - _SelfShadowRealTimeShadowColorPower: 1
-    - _SelfShadowRealtimeShadowIntensity: 0.679
+    - _SelfShadowRealtimeShadowIntensity: 0.607
     - _SelfShadowShadowTAtViewDirection: 0
-    - _SelfShadowThreshold: 0.915
+    - _SelfShadowThreshold: 0.792
     - _ShadowColorTexturePower: 0
     - _ShadowHardness: 0
     - _ShadowTColorPower: 1

@@ -16,11 +16,11 @@ MonoBehaviour:
   itemID: 4033
   itemPinyin: "\u89D2\u8272\u7684\u540D\u5B57"
   Rarity: 0
-  itemName: "\u5361\u6C60\u540D"
   pooltag: 0
   sprite_PoolBg: {fileID: 21300000, guid: c337dda02490a4049b82468929acd0ec, type: 3}
   sprite_PoolBtnBg: {fileID: 21300000, guid: f27550dde901aac4e8613d19bf2fac0f, type: 3}
-  poolV5UP_ItemData: []
+  poolV5UP_ItemData:
+  - {fileID: 11400000, guid: 6a0436b470cf2654695aa7901474aa16, type: 2}
   poolV5_ItemData:
   - {fileID: 11400000, guid: ad3ae915e4a7138479b9953688484145, type: 2}
   - {fileID: 11400000, guid: 8260f4634b3bd214489cd27b3e1a8937, type: 2}
