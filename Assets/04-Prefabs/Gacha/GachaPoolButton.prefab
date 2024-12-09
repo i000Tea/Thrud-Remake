@@ -64,9 +64,9 @@ MonoBehaviour:
   clickEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_Setting: {fileID: 11400000, guid: ab58be1efb008de4e899ce1a803a16b9, type: 2}
-  isDebug: 0
-  dragObj: {fileID: 0}
+  clickChangeScale: 1
+  clickTransparency: 0.7
+  clickTransSpeed: 1
 --- !u!1 &2363612639172565625
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9, g: 0.9, b: 0.9, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
