@@ -1339,7 +1339,6 @@ MonoBehaviour:
     sprintFov: 90
     fovLerpSpeed: 10
     rotationSpeed: 20
-    health: 360
     lockEnemy: {fileID: 0}
     weaponForword: {fileID: 8769880738983302467}
     lockEnemySpeed: 15
@@ -1622,7 +1621,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 87
+    m_Bits: 343
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
