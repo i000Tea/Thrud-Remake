@@ -23,9 +23,7 @@ namespace TeaFramework
       [SerializeField][Range(1, 10)] private float distMaxScope = 3; // 等待时间对象，用于减少频繁创建
       private WaitForSeconds lifeTime; // 等待时间对象，用于减少频繁创建
 
-      /// <summary>
-      /// 初始化方法，清理列表并设置显示时间
-      /// </summary>
+      /// <summary> 初始化方法，清理列表并设置显示时间 </summary>
       protected override void Awake()
       {
          lifeTime = new WaitForSeconds(dmgTextShowTime); // 初始化显示时长
