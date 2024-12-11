@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3d8751b7f76b439d76efe3ea8cd67, type: 3}
   m_Name: 4033
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: 0
   itemID: 4033
-  itemPinyin: "\u89D2\u8272\u7684\u540D\u5B57"
+  itemPinyin: "\u672A\u8BBE\u7F6E\u62FC\u97F3"
   Rarity: 0
+  profile: "\u6CA1\u6709\u6587\u6848"
   pooltag: 0
-  sprite_PoolBg: {fileID: 21300000, guid: c337dda02490a4049b82468929acd0ec, type: 3}
-  sprite_PoolBtnBg: {fileID: 21300000, guid: f27550dde901aac4e8613d19bf2fac0f, type: 3}
-  poolV5UP_ItemData:
-  - {fileID: 11400000, guid: 6a0436b470cf2654695aa7901474aa16, type: 2}
+  sprite_PoolBg: {fileID: 21300000, guid: 3c604977df0643e4aaa797ebab78c73c, type: 3}
+  sprite_PoolBtnBg: {fileID: 21300000, guid: b97ce010fdc8a7d4abc83f290dadd400, type: 3}
+  poolV5UP_ItemData: []
   poolV5_ItemData:
   - {fileID: 11400000, guid: ad3ae915e4a7138479b9953688484145, type: 2}
   - {fileID: 11400000, guid: 8260f4634b3bd214489cd27b3e1a8937, type: 2}

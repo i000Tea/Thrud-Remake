@@ -8,9 +8,7 @@ namespace TeaFramework
       public string enName = "englishName";
       public DamageElement damageElement;
       public RoleSpecialty roleDefinition;
-      /// <summary> 简介 </summary>
-      [TextArea]
-      public string profile = "没有文案";
+      public int inPoolType;
       [Header("战斗数值")]
       public float health = 360;
       [Header("模型预制件")]

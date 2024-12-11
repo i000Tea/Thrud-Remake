@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2003001-Charlotte
   m_EditorClassIdentifier: 
   itemName: "\u590F\u6D1B"
-  itemID: 2003001
+  itemID: 200300
   itemPinyin: xialuo
   Rarity: 4
   enName: Charlotte

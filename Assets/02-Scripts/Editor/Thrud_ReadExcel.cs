@@ -28,6 +28,7 @@ namespace TeaFramework.editor
       [MenuItem("Thrud/读取表格设置/1.设置【斯露德】信息")]
       public static void ReadExcelGetThrudData()
       {
+         // 获取so文件
          var getData = resPath.GetOrCreateDataAsset<RoleItem_ListData>("AllRoleItem_Data");
 
          // 调用数据填充方法
@@ -39,7 +40,7 @@ namespace TeaFramework.editor
       {
          var getData = resPath.GetOrCreateDataAsset<WeaponItem_ListData>("AllWeaponItem_Data");
          // 调用数据填充方法
-         getData.FromExcelSetData(file, 3);
+         getData.FromExcelSetData(file, 2);
       }
 
       [MenuItem("Thrud/读取表格设置/3.设置【卡池】信息")]
@@ -47,7 +48,7 @@ namespace TeaFramework.editor
       {
          var getData = resPath.GetOrCreateDataAsset<GachaPool_ListData>("AllPoolItem_Data");
          // 调用数据填充方法
-         getData.FromExcelSetData(file, 2);
+         getData.FromExcelSetData(file, 4);
       }
 
       [MenuItem("Thrud/读取表格设置/4.设置【道具】信息")]
@@ -111,10 +112,9 @@ namespace TeaFramework.editor
          var excelData = ReadExcel(path, out int columnNum, out int rowNum, page);
          Debug.Log($"{columnNum} {rowNum}");
 
+         // 通过不同的类判断使用方法
          if (typeof(T) == typeof(RoleItem_ListData))
          {
-            // 现在可以安全地使用 roleItemData 进行操作
-
             (itemData as RoleItem_ListData).Thrud_SetItemList(excelData, columnNum, rowNum);
          }
          else if (typeof(T) == typeof(WeaponItem_ListData))
@@ -125,19 +125,16 @@ namespace TeaFramework.editor
          {
             (itemData as GachaPool_ListData).Pool_SetItemList(excelData, columnNum, rowNum);
          }
-         else if (typeof(T) == typeof(WeaponItem_ListData))
+         else if (typeof(T) == typeof(PropItem_ListData))
          {
 
          }
 
-
-         // 强制刷新缓存，避免重复加载
+         // 刷新缓存，避免重复加载
          SpriteListDic.Clear(); // 清空缓存，防止之前的缓存影响新的加载
          AssetDatabase.SaveAssets(); // 保存修改
          EditorUtility.SetDirty(itemData); // 标记 newData 为脏数据，保存修改
       }
-
-    
 
       #region 通用方法
 
@@ -150,19 +147,33 @@ namespace TeaFramework.editor
       /// <returns></returns>
       public static Sprite GetSpriteWithKeyword(this string endPath, string[] Keywords)
       {
+         if (Keywords == null || Keywords.Length == 0)
+         {
+            throw new ArgumentException("Keywords cannot be null or empty", nameof(Keywords));
+         }
+
          if (!SpriteListDic.TryGetValue(endPath, out Sprite[] Sprites))
          {
             Sprites = endPath.LoadFirstSpritesFromTextures().ToArray();
             SpriteListDic.Add(endPath, Sprites);
          }
-         foreach (var sprite in Sprites) { if (Keywords.Any(keyword => sprite.name.Contains(keyword))) { return sprite; } }
+
+         foreach (var sprite in Sprites)
+         {
+            if (Keywords.Any(keyword => sprite.name.Contains(keyword)))
+            {
+               return sprite;
+            }
+         }
 
          for (int i = 0; i < Sprites.Length; i++)
          {
-            //Debug.Log(Sprites[i].name + " " + Keywords[0]);
+            // Debug.Log(Sprites[i].name + " " + Keywords[0]);
          }
+
          return default; // 如果没有找到匹配的Sprite，返回默认值
       }
+
 
       /// <summary>
       /// 加载一个路径文件夹下 所有图片素材中的第一个Sprite图

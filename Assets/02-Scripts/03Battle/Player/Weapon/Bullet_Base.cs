@@ -3,7 +3,7 @@ namespace TeaFramework
 {
    public class Bullet_Base : MonoBehaviour
    {
-      bool canHit=true;
+      bool canHit = true;
       private void OnTriggerEnter(Collider other)
       {
          if (!canHit) return;
@@ -14,7 +14,8 @@ namespace TeaFramework
             enemy.BeHit();
             canHit = false;
          }
-         Destroy(gameObject, 0.05f);      
+         Destroy(gameObject, 0.05f);
+         Debug.Log("子弹碰撞到对象后销毁" + other.gameObject.name);
       }
    }
 }

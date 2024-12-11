@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace TeaFramework
 {
-   public class P_VisualEffect : P_IModular
+   public class P_VisualEffect : P_0ModularBase
    {
       private float cacheFov;
       private float healthWidth;

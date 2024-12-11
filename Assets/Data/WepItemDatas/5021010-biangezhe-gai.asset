@@ -19,10 +19,21 @@ MonoBehaviour:
   weaponType: 0
   weaponSubType: 0
   profile: "REVO S210\uFF0C\u539F\u5178\u7CFB\u5217\u7684\u6539\u8FDB\u578B\uFF0C\u5728\u7B2C\u4E00\u4EE3\u7684\u57FA\u7840\u4E0A\u4F18\u5316\u4E86\u4F9B\u80FD\u7BA1\u7EBF\uFF0C\u4F46\u5B83\u8FD0\u8F6C\u65F6\u7684\u58F0\u54CD\u5F88\u96BE\u8BA9\u4EBA\u5C06\u5176\u4E0E\u8868\u9762\u7684\u94ED\u6587\u8054\u7CFB\u5230\u4E00\u8D77\u3002"
-  baseDamage: 360
+  damage_Base: 360
+  damage_Max: 360
+  gunshot_Base: 360
+  gunshot_Max: 360
+  reload_Base: 360
+  reload_Max: 360
+  magazineSize_Base: 360
+  magazineSize_Max: 360
+  firingRate_Base: 360
+  firingRate_Max: 360
+  stability_Base: 360
+  stability_Max: 360
   skillName: "\u65E0"
   skillDescribe: "\u65E0"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 743962216739086330, guid: 44a60e3630620fb478b88a5e519c9a1a, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: bd0f58e187001f44ba77396950fa58ad, type: 3}
   sprite_Square: {fileID: 21300000, guid: 88792e3b0e597e8429228a156ce0ee49, type: 3}
   sprite_Line: {fileID: 21300000, guid: 96048cd22d754f04b83ba2ad81582189, type: 3}

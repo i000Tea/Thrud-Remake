@@ -23,6 +23,8 @@ namespace TeaFramework
       [Header("模型显示轴")]
       /// <summary> 显示对象轴向 </summary>
       public Transform showViewAxis;
+      public Transform roleParent;
+      public Transform wepParent;
 
       #endregion
 
@@ -133,20 +135,15 @@ namespace TeaFramework
 
       #region battle 战斗相关
       [Header("战斗相关")]
-
+      public int selectRoleIndedx = 0;
+      /// <summary> 锁定敌人 </summary>
       public EnemyEntity_Main lockEnemy;
+      /// <summary> 武器牵引方向 </summary>
       public Transform weaponForword;
       public float LockEnemySpeed => lockEnemySpeed * lockSpeedMulti;
       [SerializeField] private float lockEnemySpeed = 10;
       public float lockSpeedMulti = 10;
       public float enemyLockDistance = 175;
-      #endregion
-
-      #region 角色参数模型相关
-      [Header("角色参数模型相关")]
-      public Transform roleParent;
-      public List<RoleData> loadRoles;
-      public int selectRoleIndedx = 0;
       #endregion
    }
    [System.Serializable]

@@ -19,9 +19,10 @@ MonoBehaviour:
   enName: GwyrDolyn
   damageElement: 4
   roleDefinition: 1
+  inPoolType: 1
   profile: "\u6BCF\u4E2A\u4EBA\u90FD\u6709\u4E0D\u60F3\u88AB\u4EBA\u77E5\u9053\u7684\u79D8\u5BC6\uFF0C\u53EF\u8FD9\u79D8\u5BC6\u53C8\u662F\u5982\u6B64\u663E\u800C\u6613\u89C1\u3002"
   health: 360
-  rolePreafab: {fileID: 0}
+  rolePreafab: {fileID: 6039487699033000045, guid: e1976b7bd006b69418903a3c9ea6f853, type: 3}
   sprite_listIcon: {fileID: 21300000, guid: 19d88636809796840852c80e9ed2cd27, type: 3}
   sprite_Lottery: {fileID: 21300000, guid: bcd3bc12826c3c9429ab9b05aa4d8b88, type: 3}
   sprite_LotteryLeader: {fileID: 21300000, guid: d2e5afdaeebdb764aa80041738e40248, type: 3}

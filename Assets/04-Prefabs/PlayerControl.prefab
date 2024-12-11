@@ -928,7 +928,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8769880738983302467}
-  - {fileID: 2318320703206167719}
   m_Father: {fileID: 2318320704242562891}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1261,8 +1260,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2318320704533282568}
   - component: {fileID: 2318320704533282575}
-  - component: {fileID: 2508559883799120530}
   - component: {fileID: 333498376}
+  - component: {fileID: 2508559883799120530}
   m_Layer: 0
   m_Name: PlayerControl
   m_TagString: Untagged
@@ -1304,6 +1303,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &333498376
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2318320704533282569}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2508559883799120530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1326,6 +1346,8 @@ MonoBehaviour:
     pitchingAxis: {fileID: 5713977487223001317}
     forword: {fileID: 5713977487223001317}
     showViewAxis: {fileID: 2318320704242562891}
+    roleParent: {fileID: 3512349366370038483}
+    wepParent: {fileID: 9220361602020810085}
     DepthFromWorld: 0
     moveForce: 70
     rollMultiForce: 50
@@ -1339,40 +1361,18 @@ MonoBehaviour:
     sprintFov: 90
     fovLerpSpeed: 10
     rotationSpeed: 20
+    selectRoleIndedx: 0
     lockEnemy: {fileID: 0}
     weaponForword: {fileID: 8769880738983302467}
     lockEnemySpeed: 15
     lockSpeedMulti: 1
     enemyLockDistance: 175
-    roleParent: {fileID: 3512349366370038483}
-    loadRoles: []
-    selectRoleIndedx: 0
   canvasConfig:
     faceCanvas: {fileID: 24460063050624675}
     lockEnemyArm: {fileID: 1715050979}
     onHealth: {fileID: 4429583134600204298}
     onHealthText: {fileID: 7849757925618691299}
---- !u!95 &333498376
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2318320704533282569}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  entityBattleDatas: []
 --- !u!1 &2553276820653586104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,65 +1868,3 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1001 &4004999920862874021
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 9220361602020810085}
-    m_Modifications:
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1709338507534032133, guid: 488faba36093134449afa397c9b5265e, type: 3}
-      propertyPath: m_Name
-      value: Wep-Jinzhi_Yin
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 488faba36093134449afa397c9b5265e, type: 3}
---- !u!4 &2318320703206167719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1709338507534032130, guid: 488faba36093134449afa397c9b5265e, type: 3}
-  m_PrefabInstance: {fileID: 4004999920862874021}
-  m_PrefabAsset: {fileID: 0}

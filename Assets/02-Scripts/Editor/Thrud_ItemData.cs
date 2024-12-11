@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing.Drawing2D;
 using TeaFramework.editor;
 using UnityEditor;
 using UnityEngine;
@@ -80,6 +81,11 @@ namespace TeaFramework.editor
          if (!string.IsNullOrEmpty(value)) roleData.enName = value; index++;
 
          // 获取途径
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : "default";
+         if (value.Equals("限定池")) roleData.inPoolType = 2;
+         else if (value.Equals("常驻池")) roleData.inPoolType = 1;
+         else roleData.inPoolType = 0;
+         //Debug.Log(value + roleData.inPoolType);
          index++;
 
          // 简介
@@ -122,7 +128,6 @@ namespace TeaFramework.editor
          // 生日
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) roleData.birthday = value; index++;
-         Debug.Log($"{roleData.itemName} {roleData.birthday}");
 
          // 年龄
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -221,13 +226,14 @@ namespace TeaFramework.editor
 
          #region id 名称 拼音
 
-         // ID行
+         // 名字
          string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         if (!string.IsNullOrEmpty(value)) wepData.itemName = value; index++;
+
+         // ID行
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (int.TryParse(value, out int wepID)) wepData.itemID = wepID; index++;
 
-         // 名字
-         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         if (!string.IsNullOrEmpty(value)) wepData.itemName = value; index++;
 
          // 拼音行
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
@@ -249,6 +255,14 @@ namespace TeaFramework.editor
          #endregion
 
          // 获取途径
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : "";
+         if (value.Equals("限定共鸣")) wepData.getType = 2;
+         else if (value.Equals("通常共鸣")) wepData.getType = 1;
+         else wepData.getType = 0;
+         index++;
+
+
+         // 旧未设置的获取途径
          index++;
 
          #region 介绍 技能
@@ -263,8 +277,36 @@ namespace TeaFramework.editor
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         if (!string.IsNullOrEmpty(value)) wepData.skillDescribe = value;
-         //index++;
+         if (!string.IsNullOrEmpty(value)) wepData.skillDescribe = value; index++;
+         #endregion
+
+         #region 基础数值
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.damage_Base, out wepData.damage_Max); index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.gunshot_Base, out wepData.gunshot_Max); index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.reload_Base, out wepData.reload_Max); index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.magazineSize_Base, out wepData.magazineSize_Max); index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.firingRate_Base, out wepData.firingRate_Max); index++;
+
+         // 技能描述
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value.SetDoubleValue(out wepData.stability_Base, out wepData.stability_Max); index++;
+
+
          #endregion
 
          #region 图片
@@ -282,6 +324,24 @@ namespace TeaFramework.editor
 
          #endregion
       }
+
+      private static void SetDoubleValue(this string value, out float v1, out float v2)
+      {
+         var values = value.Split('~');
+         float.TryParse(values[0], out v1);
+         if (values.Length >= 2) { float.TryParse(values[1], out v2); }
+         else { v2 = v1; }
+
+      }
+      private static void SetDoubleValue(this string value, out int v1, out int v2)
+      {
+         var values = value.Split('~');
+         int.TryParse(values[0], out v1);
+         if (values.Length >= 2) { int.TryParse(values[1], out v2); }
+         else { v2 = v1; }
+
+      }
+
       #endregion
 
       #region Gacha Pool
@@ -291,12 +351,12 @@ namespace TeaFramework.editor
          for (int i = 1; i < rowNum; i++)
          {
             // 如果该行是空行，不计算
-            if (excelData[i].IsEmptyRow( columnNum)) continue;
+            if (excelData[i].IsEmptyRow(columnNum)) continue;
 
             var poolDataList = itemData.allPool;
             var excelRow = excelData[i];
             GachaPool_Data poolData = null;
-            excelRow[1].ToString().ExtractDigitsAndConvertToInt(out var poolID);
+            excelRow[2].ToString().ExtractDigitsAndConvertToInt(out var poolID);
             // 查找角色是否已存在，如果存在，则更新数据
             for (int j = 0; j < poolDataList.Count; j++)
             {
@@ -332,15 +392,15 @@ namespace TeaFramework.editor
          int index = 0;
 
          // 卡池名
-         string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         string value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : poolData.itemID.ToString();
          if (!string.IsNullOrEmpty(value)) poolData.itemName = value; index++;
 
          // 拼音
-         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : "未设置拼音";
          if (!string.IsNullOrEmpty(value)) poolData.itemPinyin = value; index++;
 
          // ID行
-         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
+         value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : "999999";
          if (value.ExtractDigitsAndConvertToInt(out int poolID)) poolData.itemID = poolID;
          //index++;
 

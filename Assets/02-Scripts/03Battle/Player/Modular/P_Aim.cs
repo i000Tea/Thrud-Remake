@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace TeaFramework
 {
-   public class P_Aim : P_IModular
+   public class P_Aim : P_0ModularBase
    {
       Vector2 screenTarget;
 
@@ -14,7 +14,7 @@ namespace TeaFramework
       {
          ArmUpdate();
       }
-      /// <summary>  </summary>
+      /// <summary> 瞄准对象插值移动 </summary>
       private void ArmUpdate()
       {
          RectTransform rect = UiConfig.lockEnemyArm;
@@ -24,6 +24,7 @@ namespace TeaFramework
          else { Config.lockSpeedMulti = 12; }
          rect.anchoredPosition = Vector2.Lerp(rect.anchoredPosition, screenTarget, Config.LockEnemySpeed * Time.deltaTime);
       }
+      /// <summary> 查询目标敌人(需要优化算法) </summary>
       private void FindSelectEnemy()
       {
          EnemyEntity_Main index = null;

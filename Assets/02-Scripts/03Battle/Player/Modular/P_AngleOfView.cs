@@ -1,7 +1,7 @@
 using UnityEngine;
 namespace TeaFramework
 {
-   public class P_AngleOfView : P_IModular
+   public class P_AngleOfView : P_0ModularBase
    {
       private float xRotation = 0f;        // 记录垂直旋转角度\
       public override void Update()

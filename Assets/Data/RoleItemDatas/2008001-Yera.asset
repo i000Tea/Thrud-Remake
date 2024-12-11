@@ -19,9 +19,10 @@ MonoBehaviour:
   enName: Yera
   damageElement: 3
   roleDefinition: 0
+  inPoolType: 1
   profile: "\u8868\u8C61\u662F\u6781\u6613\u6D88\u901D\u7684\uFF0C\u771F\u76F8\u662F\u6781\u5176\u73CD\u8D35\u7684\uFF0C\u503C\u5F97\u6211\u4ED8\u51FA\u4EFB\u4F55\u4EE3\u4EF7\u3002"
   health: 360
-  rolePreafab: {fileID: 0}
+  rolePreafab: {fileID: 3562356071051701757, guid: 4c10698331c52dc449d6585b7442d916, type: 3}
   sprite_listIcon: {fileID: 21300000, guid: e98aa8b509a6a6f49bc701ca4d332d2e, type: 3}
   sprite_Lottery: {fileID: 21300000, guid: f14d4a815e3dd7f408b91d1dfada58e3, type: 3}
   sprite_LotteryLeader: {fileID: 21300000, guid: 7ab4bc9e074bc0b45a5a380cf613ca14, type: 3}

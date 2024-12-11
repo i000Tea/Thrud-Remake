@@ -5,7 +5,7 @@ using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 namespace TeaFramework
 {
-   public class P_Movement : P_IModular
+   public class P_Movement : P_0ModularBase
    {
       #region 参数变量
       private Vector3 cacheForce;        // 值
@@ -34,7 +34,7 @@ namespace TeaFramework
       public void OnMove()
       {
          // 当按住左shift时
-         if (!Input.GetKey(KeyCode.LeftShift) || !Config.OnInputForword()) { Config.OffSprint(); }
+         if (!InputValue.onSprint || !Config.OnInputForword()) { Config.OffSprint(); }
 
          var force = cacheForce * Config.moveForce;
 

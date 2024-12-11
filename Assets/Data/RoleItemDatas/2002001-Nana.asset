@@ -26,11 +26,11 @@ MonoBehaviour:
   sprite_Lottery: {fileID: 21300000, guid: 4043b469dd4d10c48b6aceaa50963016, type: 3}
   sprite_LotteryLeader: {fileID: 21300000, guid: 8eafbc9ab282c4b4e9c1b8b23c0473eb, type: 3}
   sprite_roleUI: {fileID: 21300000, guid: e46320f2a690ab2438625acbdd1a2de1, type: 3}
-  onTeam: "\u74E6\u54C8\u7EB3"
-  onFactions: REVO
-  birthplace: "\u53CC\u5CF0\u5730\u533A"
-  birthday: "4\u670828\u65E5"
-  Age: 16
+  onTeam: 
+  onFactions: 
+  birthplace: 
+  birthday: 
+  Age: 0
   height: 153
   SpecialtyAndHobby: "\u5077\u61D2\u8D5A\u94B1"
   CV: "\u87F2\u87F2"

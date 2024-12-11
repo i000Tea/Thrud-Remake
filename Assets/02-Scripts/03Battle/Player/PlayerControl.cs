@@ -13,10 +13,11 @@ namespace TeaFramework
       public bool ControlTakeOff;
       public PlayerConfig config;
       public FaceCanvasConfig canvasConfig;
+      public EntityBattleData[] entityBattleDatas;
 
       #region 缓存参数
 
-      private P_IModular[] modulars;
+      private P_0ModularBase[] modulars;
 
       #endregion
 
@@ -28,8 +29,8 @@ namespace TeaFramework
 
          Time.timeScale = scale;
 
-         modulars = new P_IModular[] {
-            new P_Roles(),
+         modulars = new P_0ModularBase[] {
+            new P_ViewModule(),
             new P_Input(),
             new P_Movement(),
             new P_AngleOfView(),
@@ -39,6 +40,7 @@ namespace TeaFramework
       }
       private void Start()
       {
+         if (StoreBattleRoleData.I) entityBattleDatas = StoreBattleRoleData.I.battleDatas;
          for (int i = 0; i < modulars.Length; i++) { modulars[i].Start(); }
       }
       private void Update()

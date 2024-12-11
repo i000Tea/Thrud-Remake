@@ -11,5 +11,8 @@ namespace TeaFramework
       public int itemID;
       public string itemPinyin = "角色的名字";
       [Range(1, 5)] public int Rarity = 0;
+      /// <summary> 简介 </summary>
+      [TextArea]
+      public string profile = "没有文案";
    }
 }

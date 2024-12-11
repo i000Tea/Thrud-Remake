@@ -19,9 +19,10 @@ MonoBehaviour:
   enName: Faria
   damageElement: 4
   roleDefinition: 0
+  inPoolType: 0
   profile: "\u603B\u662F\u85CF\u6709\u8BB8\u591A\u5FC3\u4E8B\u7684\u5C11\u5973\u3002\u5979\u6240\u5E0C\u5180\u7684\uFF0C\u6216\u8BB8\u5C31\u662F\u6211\u4EEC\u8FFD\u9010\u7684\u76EE\u6807\u3002"
   health: 360
-  rolePreafab: {fileID: 0}
+  rolePreafab: {fileID: 8819676972542836319, guid: 66e8b33f7b28ecf4c8a47d2d3b479262, type: 3}
   sprite_listIcon: {fileID: 21300000, guid: 674d778e7996cea45a4cc4ebf5abc8ec, type: 3}
   sprite_Lottery: {fileID: 21300000, guid: 7eba37e68300ddc489f554ec4d92da16, type: 3}
   sprite_LotteryLeader: {fileID: 21300000, guid: 5ad175ab832a73646b1b645a52165772, type: 3}
