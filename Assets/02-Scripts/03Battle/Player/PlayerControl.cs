@@ -30,12 +30,13 @@ namespace TeaFramework
          Time.timeScale = scale;
 
          modulars = new P_0ModularBase[] {
-            new P_ViewModule(),
             new P_Input(),
+            new P_ViewModule(),
             new P_Movement(),
             new P_AngleOfView(),
             new P_VisualEffect(),
             new P_Aim(),
+            new P_WeaponTrigger(),
          };
       }
       private void Start()

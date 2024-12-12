@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5041083
   itemPinyin: kuangxiang-kuangxiao
   Rarity: 4
+  profile: "\u8FDB\u5165\u56F0\u60D1\u65F6\u4EE3\u540E\uFF0C\u65AF\u9732\u5FB7\u4EEC\u5931\u53BB\u4E86\u6218\u6597\u7684\u7406\u7531\u548C\u610F\u4E49\uFF0C\u53C8\u56E0\u4E3A\u5979\u4EEC\u7684\u7279\u6B8A\u6027\u800C\u88AB\u6574\u4E2A\u793E\u4F1A\u6392\u65A5\uFF0C\u6210\u4E3A\u65F6\u4EE3\u7684\u5F03\u5B50\uFF0C\u4EC5\u4F59\u9057\u68A6\u7545\u60F3\u3002"
   weaponType: 0
   weaponSubType: 2
-  profile: "\u8FDB\u5165\u56F0\u60D1\u65F6\u4EE3\u540E\uFF0C\u65AF\u9732\u5FB7\u4EEC\u5931\u53BB\u4E86\u6218\u6597\u7684\u7406\u7531\u548C\u610F\u4E49\uFF0C\u53C8\u56E0\u4E3A\u5979\u4EEC\u7684\u7279\u6B8A\u6027\u800C\u88AB\u6574\u4E2A\u793E\u4F1A\u6392\u65A5\uFF0C\u6210\u4E3A\u65F6\u4EE3\u7684\u5F03\u5B50\uFF0C\u4EC5\u4F59\u9057\u68A6\u7545\u60F3\u3002"
-  baseDamage: 360
+  getType: 1
+  damage: {x: 3, y: 3}
+  gunshot: {x: 100, y: 112}
+  reload: {x: 0.9, y: 1}
+  magazineSize: {x: 75, y: 77}
+  firingRate: {x: 600, y: 646}
+  stability: {x: 50, y: 56}
   skillName: "\u98CE\u66B4\u5DE8\u5854"
   skillDescribe: "\u5BF9\u98CE\u7F20\u7684\u654C\u65B9\u9020\u6210\u7684\u4F24\u5BB3\u589E\u52A030%"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: a1770416f06a19c4b96ae2e598f34e4c, type: 3}
   sprite_Square: {fileID: 21300000, guid: 78570bdfe3c597948a34df5b16a9d6ac, type: 3}
   sprite_Line: {fileID: 21300000, guid: 76ae04134e593c24fb10270373ef4113, type: 3}

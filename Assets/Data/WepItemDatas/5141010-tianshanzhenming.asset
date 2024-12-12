@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5141010
   itemPinyin: tianshanzhenming
   Rarity: 4
+  profile: "\u8574\u542B\u795E\u79D8\u80FD\u91CF\u7684\u5F3A\u5927\u6B66\u88C5\uFF0C\u6CA1\u4EBA\u77E5\u9053\u5B83\u4ECE\u4F55\u800C\u6765\u3002"
   weaponType: 0
   weaponSubType: 0
-  profile: "\u8574\u542B\u795E\u79D8\u80FD\u91CF\u7684\u5F3A\u5927\u6B66\u88C5\uFF0C\u6CA1\u4EBA\u77E5\u9053\u5B83\u4ECE\u4F55\u800C\u6765\u3002"
-  baseDamage: 360
+  getType: 1
+  damage: {x: 3, y: 4}
+  gunshot: {x: 100, y: 100}
+  reload: {x: 0.9, y: 1}
+  magazineSize: {x: 60, y: 82}
+  firingRate: {x: 150, y: 179}
+  stability: {x: 90, y: 96}
   skillName: "\u96F7\u7535"
   skillDescribe: "\u751F\u547D\u503C\u5927\u4E8E50%\u65F6\uFF0C\u66B4\u51FB\u4F24\u5BB3\u63D0\u9AD820%"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: 6ebd748f58faae647bb970e0d1e4672b, type: 3}
   sprite_Square: {fileID: 21300000, guid: 8967edfa87a796047a2f26311e97b880, type: 3}
   sprite_Line: {fileID: 21300000, guid: 91abb9b73efd6704d88a119b492fc18f, type: 3}

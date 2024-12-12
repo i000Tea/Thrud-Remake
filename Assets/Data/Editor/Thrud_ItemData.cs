@@ -216,7 +216,13 @@ namespace TeaFramework.editor
             {
                AssetDatabase.CreateAsset(wepData, assetPath); // 保存武器数据为资源文件
             }
+            else
+            {
+               // 标记为脏对象，表示该对象已被修改
+               EditorUtility.SetDirty(wepData);
+            }
 
+            Debug.Log("保存更改");
             AssetDatabase.SaveAssets();  // 保存所有更改
          }
       }
@@ -284,27 +290,27 @@ namespace TeaFramework.editor
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.damage_Base, out wepData.damage_Max); index++;
+         value.SetVector2IntValue(out wepData.damage); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.gunshot_Base, out wepData.gunshot_Max); index++;
+         value.SetVector2IntValue(out wepData.gunshot); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.reload_Base, out wepData.reload_Max); index++;
+         value.SetVector2Value(out wepData.reload); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.magazineSize_Base, out wepData.magazineSize_Max); index++;
+         value.SetVector2IntValue(out wepData.magazineSize); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.firingRate_Base, out wepData.firingRate_Max); index++;
+         value.SetVector2IntValue(out wepData.firingRate); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetDoubleValue(out wepData.stability_Base, out wepData.stability_Max); index++;
+         value.SetVector2IntValue(out wepData.stability); index++;
 
 
          #endregion
@@ -325,21 +331,23 @@ namespace TeaFramework.editor
          #endregion
       }
 
-      private static void SetDoubleValue(this string value, out float v1, out float v2)
+      private static void SetVector2Value(this string value, out Vector2 vector2)
       {
          var values = value.Split('~');
-         float.TryParse(values[0], out v1);
+         float.TryParse(values[0], out var v1);
+         float v2;
          if (values.Length >= 2) { float.TryParse(values[1], out v2); }
          else { v2 = v1; }
-
+         vector2 = new Vector2(v1, v2);
       }
-      private static void SetDoubleValue(this string value, out int v1, out int v2)
+      private static void SetVector2IntValue(this string value, out Vector2Int vector2)
       {
          var values = value.Split('~');
-         int.TryParse(values[0], out v1);
+         int.TryParse(values[0], out var v1);
+         int v2;
          if (values.Length >= 2) { int.TryParse(values[1], out v2); }
          else { v2 = v1; }
-
+         vector2 = new Vector2Int(v1, v2);
       }
 
       #endregion

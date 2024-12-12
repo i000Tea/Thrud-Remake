@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5044040
   itemPinyin: lapulanbomu
   Rarity: 4
+  profile: "\u8868\u9762\u88AB\u575A\u51B0\u8986\u76D6\u7684\u6B66\u88C5\uFF0C\u63CF\u8FF0\u7740\u62C9\u666E\u5170\u7684[\u51AC]\u3002"
   weaponType: 1
   weaponSubType: 5
-  profile: "\u8868\u9762\u88AB\u575A\u51B0\u8986\u76D6\u7684\u6B66\u88C5\uFF0C\u63CF\u8FF0\u7740\u62C9\u666E\u5170\u7684[\u51AC]\u3002"
-  baseDamage: 360
+  getType: 1
+  damage: {x: 16, y: 20}
+  gunshot: {x: 106, y: 109}
+  reload: {x: 0.9, y: 1}
+  magazineSize: {x: 16, y: 18}
+  firingRate: {x: 100, y: 125}
+  stability: {x: 90, y: 96}
   skillName: "\u62C9\u666E\u5170\u7684\u51AC\u666F"
   skillDescribe: "\u6253\u51FA\u8FC7\u8F7D\u6548\u679C\u65F6\uFF0C\u6062\u590D\u81EA\u8EAB3\u70B9\u80FD\u91CF"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: 3ed012b09147f7e4cbdd31a6183a02fd, type: 3}
   sprite_Square: {fileID: 21300000, guid: a61c6f8504c36ec4287f4e0a385d3e6c, type: 3}
   sprite_Line: {fileID: 21300000, guid: 0952bc58db3e6eb47a4789292cf2d8f7, type: 3}

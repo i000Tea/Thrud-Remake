@@ -74,7 +74,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 0.02
+  m_Time: 0.1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.05
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 6821680082351704828}
   - component: {fileID: 4443887100450990877}
   m_Layer: 0
-  m_Name: Bullet_Player_Base
+  m_Name: Bullet_Player_Base 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a99d10076fd96f438c9f38d31a41905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
 --- !u!1 &6821680082675477225
 GameObject:
   m_ObjectHideFlags: 0

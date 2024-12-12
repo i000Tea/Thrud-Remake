@@ -33,6 +33,8 @@ namespace TeaFramework
    /// <summary> 武器子分类 </summary>
    public enum WeaponSubType
    {
+      #region 突击型 assault
+
       [EnumDescription("精确框架")]
       assault_PreciseFrame,
       [EnumDescription("能量框架")]
@@ -44,6 +46,10 @@ namespace TeaFramework
       [EnumDescription("强攻框架")]
       assault_StormFrame,
 
+      #endregion
+
+      #region 重装型 heavy
+
       [EnumDescription("追踪飞弹")]
       heavy_TrackingMissile,
       [EnumDescription("强力飞弹")]
@@ -53,10 +59,18 @@ namespace TeaFramework
       [EnumDescription("多联装飞弹")]
       heavy_MultiLoadedMissile,
 
+      #endregion
+
+      #region 散射型 scatter
+
       [EnumDescription("重击霰弹")]
       scatter_SmashShot,
       [EnumDescription("精确霰弹")]
       scatter_PrecisionShot,
+
+      #endregion
+
+      #region 狙击型 sniper
 
       [EnumDescription("穿透型")]
       sniper_Penetrating,
@@ -66,6 +80,8 @@ namespace TeaFramework
       sniper_Swift,
       [EnumDescription("充能型")]
       sniper_Charged,
+
+      #endregion
    }
 
    /// <summary> 角色定位(职业) </summary>

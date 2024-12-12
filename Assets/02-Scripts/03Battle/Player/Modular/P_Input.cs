@@ -36,6 +36,7 @@ namespace TeaFramework
                Input.GetKey(KeyCode.RightArrow);
 
          InputValue.onSprint = Input.GetKey(KeyCode.LeftShift);
+         InputValue.onFire = Input.GetMouseButton(0);
       }
    }
 }

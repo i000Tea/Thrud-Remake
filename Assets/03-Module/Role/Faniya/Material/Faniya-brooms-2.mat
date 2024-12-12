@@ -351,7 +351,7 @@ Material:
     - _RimLightColor: {r: 1, g: 1, b: 1, a: 1}
     - _SSAOColor: {r: 0, g: 0, b: 0, a: 0}
     - _SelfLitColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SelfShadowRealTimeShadowColor: {r: 0, g: 8.909804, b: 23.968628, a: 1}
+    - _SelfShadowRealTimeShadowColor: {r: 0, g: 9.562418, b: 11.984314, a: 1}
     - _ShadowTColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _XYZPosition: {r: 0, g: 0, b: 0, a: 0}

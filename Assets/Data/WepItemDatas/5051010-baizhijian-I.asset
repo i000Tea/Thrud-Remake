@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5051010
   itemPinyin: baizhijian-I
   Rarity: 5
+  profile: "\u5F00\u542F\u8D85\u9A8C\u4E16\u754C\u7684\u94A5\u5319\u4E4B\u4E00\u3002"
   weaponType: 0
   weaponSubType: 2
-  profile: "\u5F00\u542F\u8D85\u9A8C\u4E16\u754C\u7684\u94A5\u5319\u4E4B\u4E00\u3002"
-  baseDamage: 360
+  getType: 0
+  damage: {x: 3, y: 3}
+  gunshot: {x: 114, y: 114}
+  reload: {x: 1, y: 1}
+  magazineSize: {x: 102, y: 102}
+  firingRate: {x: 600, y: 600}
+  stability: {x: 50, y: 50}
   skillName: "\u95E8\u6249\u5C06\u542F"
   skillDescribe: "\u5BF9\u5904\u4E8E\u8FC7\u8F7D\u72B6\u6001\u7684\u654C\u65B9\u9020\u6210\u7684\u4F24\u5BB3\u63D0\u534730%"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: e9f6dfdb523b8ec44869a92f24f14131, type: 3}
   sprite_Square: {fileID: 21300000, guid: b07a701e80a7eaa4fb3ebef428a0b73d, type: 3}
   sprite_Line: {fileID: 21300000, guid: c9e6cf284d629b743a8b5ac4cfeb8d39, type: 3}

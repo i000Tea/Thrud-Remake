@@ -11,5 +11,7 @@ namespace TeaFramework
 
       public static bool onInputForword;  // 方向键的输入
       public static bool onSprint;        // 冲刺的输入
+
+      public static bool onFire;        // 冲刺的输入
    }
 }

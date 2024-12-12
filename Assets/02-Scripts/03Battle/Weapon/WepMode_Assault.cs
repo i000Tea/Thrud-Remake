@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Threading.Tasks;
+
 namespace TeaFramework
 {
    /// <summary> 突击型 </summary>
@@ -9,10 +8,23 @@ namespace TeaFramework
 
    }
 
-   /// <summary> 突击型 精确框架 </summary>
+   /// <summary> 突击型 精确框架 (多次点射) </summary>
    public class WepMode_Assault_PreciseFrame : WepMode_Assault
    {
-
+      public override void OnShootEvent()
+      {
+         base.OnShootEvent();
+         ExecuteDelayedTask();
+      }
+      private async void ExecuteDelayedTask()
+      {
+         for (int i = 0; i < 2; i++)
+         {
+            OneShoot();
+            // 延迟 0.1 秒
+            await Task.Delay(100);
+         } 
+      }
    }
 
    /// <summary> 突击型 能量框架 </summary>

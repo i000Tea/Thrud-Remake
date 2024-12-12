@@ -41,6 +41,11 @@ namespace TeaFramework.editor
          var getData = resPath.GetOrCreateDataAsset<WeaponItem_ListData>("AllWeaponItem_Data");
          // 调用数据填充方法
          getData.FromExcelSetData(file, 2);
+
+         for (int i = 0; i < getData.allwep.Count; i++)
+         {
+            if (getData.allwep[i].bulletPrefab == null) getData.allwep[i].bulletPrefab = getData.baseBulletPreafab;
+         }
       }
 
       [MenuItem("Thrud/读取表格设置/3.设置【卡池】信息")]

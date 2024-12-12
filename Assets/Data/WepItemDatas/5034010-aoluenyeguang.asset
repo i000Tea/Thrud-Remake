@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5034010
   itemPinyin: aoluenyeguang
   Rarity: 3
+  profile: "\u6700\u521D\u7684\u65AF\u9732\u5FB7\u4EEC\u66FE\u4F7F\u7528\u8FC7\u7684\u6B66\u88C5\uFF0C\u539F\u672C\u7684\u6D82\u88C5\u5DF2\u7ECF\u892A\u8272\uFF0C\u4E3A\u4E86\u7EAA\u5FF5\u5979\u4EEC\u6240\u5411\u5F80\u7684\u5929\u7A7A\u800C\u8FDB\u884C\u4E86\u91CD\u65B0\u8BBE\u8BA1\u3002"
   weaponType: 1
   weaponSubType: 6
-  profile: "\u6700\u521D\u7684\u65AF\u9732\u5FB7\u4EEC\u66FE\u4F7F\u7528\u8FC7\u7684\u6B66\u88C5\uFF0C\u539F\u672C\u7684\u6D82\u88C5\u5DF2\u7ECF\u892A\u8272\uFF0C\u4E3A\u4E86\u7EAA\u5FF5\u5979\u4EEC\u6240\u5411\u5F80\u7684\u5929\u7A7A\u800C\u8FDB\u884C\u4E86\u91CD\u65B0\u8BBE\u8BA1\u3002"
-  baseDamage: 360
+  getType: 0
+  damage: {x: 17, y: 20}
+  gunshot: {x: 100, y: 109}
+  reload: {x: 1, y: 1}
+  magazineSize: {x: 10, y: 11}
+  firingRate: {x: 100, y: 120}
+  stability: {x: 90, y: 93}
   skillName: "\u66F3\u5149\u9053\u6807"
   skillDescribe: "\u6253\u51FA\u8FC7\u8F7D\u6548\u679C\u65F6\uFF0C\u8FC7\u8F7D\u4F24\u5BB3\u63D0\u534725%"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: ccd1afaf8f1bf3640a44ae41997800b3, type: 3}
   sprite_Square: {fileID: 21300000, guid: 7b9a88bcd6d0a6744ac5d154ec3ab342, type: 3}
   sprite_Line: {fileID: 21300000, guid: de7115f4a3428c64782abfeeb42c806a, type: 3}

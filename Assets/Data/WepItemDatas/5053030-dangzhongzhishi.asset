@@ -16,13 +16,20 @@ MonoBehaviour:
   itemID: 5053030
   itemPinyin: dangzhongzhishi
   Rarity: 5
+  profile: "\u6765\u6E90\u4E0D\u660E\u3001\u5236\u9020\u8005\u4E0D\u660E\u7684\u6B66\u88C5\uFF0C\u5177\u6709\u590D\u6742\u7684\u64D2\u7EB5\u7ED3\u6784\uFF0C\u4F46\u5947\u602A\u7684\u662F\uFF0C\u8FD9\u4E9B\u65F6\u523B\u4FDD\u6301\u8FD0\u8F6C\u7684\u7ED3\u6784\u5E76\u975E\u5176\u80FD\u591F\u4F5C\u4E3A\u6B66\u5668\u4F7F\u7528\u7684\u5173\u952E\u3002"
   weaponType: 3
   weaponSubType: 11
-  profile: "\u6765\u6E90\u4E0D\u660E\u3001\u5236\u9020\u8005\u4E0D\u660E\u7684\u6B66\u88C5\uFF0C\u5177\u6709\u590D\u6742\u7684\u64D2\u7EB5\u7ED3\u6784\uFF0C\u4F46\u5947\u602A\u7684\u662F\uFF0C\u8FD9\u4E9B\u65F6\u523B\u4FDD\u6301\u8FD0\u8F6C\u7684\u7ED3\u6784\u5E76\u975E\u5176\u80FD\u591F\u4F5C\u4E3A\u6B66\u5668\u4F7F\u7528\u7684\u5173\u952E\u3002"
-  baseDamage: 360
+  getType: 0
+  damage: {x: 34, y: 34}
+  gunshot: {x: 125, y: 125}
+  reload: {x: 0.9, y: 0.9}
+  magazineSize: {x: 12, y: 12}
+  firingRate: {x: 60, y: 60}
+  stability: {x: 98, y: 98}
   skillName: "\u9006\u6D41\u65F6\u8BA1"
   skillDescribe: "\u751F\u547D\u4E0A\u9650\u63D0\u534710%\uFF0C\u5904\u4E8E\u524D\u4F4D\u65F6\uFF0C\u6BCF\u79D2\u4E3A\u6062\u590D\u5168\u961F\u88C5\u5907\u8005\u6700\u5927\u751F\u547D\u503C0.5%\u7684\u751F\u547D\u503C\u3002"
-  wepPreafab: {fileID: 0}
+  wepPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: a5a3d66e326fa0c4ab1927fff519c820, type: 3}
   sprite_Square: {fileID: 21300000, guid: abc906a6cca0a5f4eb5fb6ba076ef6cc, type: 3}
   sprite_Line: {fileID: 21300000, guid: 851e3050b2d6a724a9e3fed9d4fed1f9, type: 3}
