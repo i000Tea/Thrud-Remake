@@ -33,7 +33,7 @@ namespace TeaFramework
 
       public void HealthUpdate(float healthPer)
       {
-         Debug.Log(healthPer);
+         //Debug.Log(healthPer);
          if (!onOpen)
          {
             onOpen = true;

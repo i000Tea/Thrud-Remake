@@ -20,12 +20,14 @@ MonoBehaviour:
   weaponType: 0
   weaponSubType: 2
   getType: 1
-  damage: {x: 3, y: 4}
-  gunshot: {x: 100, y: 112}
-  reload: {x: 0.9, y: 1}
-  magazineSize: {x: 75, y: 96}
-  firingRate: {x: 600, y: 689}
-  stability: {x: 50, y: 56}
+  damage: 3
+  gunshot: 100
+  reload: 0.9
+  magazineSize: 75
+  firingRate: 600
+  stability: 50
+  expandValue01: 0
+  expandValue02: 0
   skillName: "\u91D1\u679D\u4E4B\u53F6"
   skillDescribe: "\u6BCF\u4F7F\u7528\u8BE5\u6B66\u5668\u6D88\u706D\u4E00\u4E2A\u76EE\u6807\uFF0C\u653B\u51FB\u529B\u63D0\u9AD84%\uFF0C\u6301\u7EED14\u79D2\uFF0C\u6700\u591A\u53EF\u53E0\u52A05\u5C42\uFF0C\u53D7\u5230\u653B\u51FB\u65F6\u8BE5\u6548\u679C\u6D88\u5931"
   wepPrefab: {fileID: 0}

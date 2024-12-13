@@ -3,10 +3,7 @@ using System.Threading.Tasks;
 namespace TeaFramework
 {
    /// <summary> 突击型 </summary>
-   public abstract class WepMode_Assault : WepMode_0Base
-   {
-
-   }
+   public abstract class WepMode_Assault : WepMode_0Base  {  }
 
    /// <summary> 突击型 精确框架 (多次点射) </summary>
    public class WepMode_Assault_PreciseFrame : WepMode_Assault
@@ -18,11 +15,11 @@ namespace TeaFramework
       }
       private async void ExecuteDelayedTask()
       {
-         for (int i = 0; i < 2; i++)
+         for (int i = 0; i < expansion01; i++)
          {
             OneShoot();
             // 延迟 0.1 秒
-            await Task.Delay(100);
+            await Task.Delay((int)expansion02);
          } 
       }
    }

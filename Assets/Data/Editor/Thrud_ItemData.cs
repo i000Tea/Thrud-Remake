@@ -240,7 +240,6 @@ namespace TeaFramework.editor
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (int.TryParse(value, out int wepID)) wepData.itemID = wepID; index++;
 
-
          // 拼音行
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
          if (!string.IsNullOrEmpty(value)) wepData.itemPinyin = value; index++;
@@ -290,27 +289,27 @@ namespace TeaFramework.editor
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2IntValue(out wepData.damage); index++;
+         value.SetGroupIntValue(out wepData.damage); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2IntValue(out wepData.gunshot); index++;
+         value.SetGroupIntValue(out wepData.gunshot); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2Value(out wepData.reload); index++;
+         value.SetGroupFloatValue(out wepData.reload); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2IntValue(out wepData.magazineSize); index++;
+         value.SetGroupIntValue(out wepData.magazineSize); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2IntValue(out wepData.firingRate); index++;
+         value.SetGroupIntValue(out wepData.firingRate); index++;
 
          // 技能描述
          value = excelRow[index] != DBNull.Value ? excelRow[index].ToString() : null;
-         value.SetVector2IntValue(out wepData.stability); index++;
+         value.SetGroupIntValue(out wepData.stability); index++;
 
 
          #endregion
@@ -331,23 +330,16 @@ namespace TeaFramework.editor
          #endregion
       }
 
-      private static void SetVector2Value(this string value, out Vector2 vector2)
+      private static void SetGroupIntValue(this string value, out int output)
       {
          var values = value.Split('~');
-         float.TryParse(values[0], out var v1);
-         float v2;
-         if (values.Length >= 2) { float.TryParse(values[1], out v2); }
-         else { v2 = v1; }
-         vector2 = new Vector2(v1, v2);
+          int.TryParse(values[0], out output);
+
       }
-      private static void SetVector2IntValue(this string value, out Vector2Int vector2)
+      private static void SetGroupFloatValue(this string value, out float output)
       {
          var values = value.Split('~');
-         int.TryParse(values[0], out var v1);
-         int v2;
-         if (values.Length >= 2) { int.TryParse(values[1], out v2); }
-         else { v2 = v1; }
-         vector2 = new Vector2Int(v1, v2);
+         float.TryParse(values[0], out output);
       }
 
       #endregion

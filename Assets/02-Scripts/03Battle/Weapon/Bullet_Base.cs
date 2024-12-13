@@ -4,7 +4,7 @@ namespace TeaFramework
    public class Bullet_Base : MonoBehaviour
    {
       bool canHit = true;
-      public int damage;
+      public int damage = 1;
       private void OnTriggerEnter(Collider other)
       {
          if (!canHit) return;

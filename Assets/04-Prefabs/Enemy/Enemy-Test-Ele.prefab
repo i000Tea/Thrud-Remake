@@ -48,6 +48,8 @@ MonoBehaviour:
   onCame: 0
   element: 4
   beLockPoint: {fileID: 0}
+  shotCDMin: 3
+  shotCDMax: 5
   uiYOffset: 1.5
   BaseHP: 40
 --- !u!1 &2929120688072316927
@@ -112,7 +114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a4c2026a83257894ea769cce3b8ec178, type: 2}
+  - {fileID: 2100000, guid: 8b73e8872ca76104bbca4ee2b704a1b4, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -145,5 +147,5 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
