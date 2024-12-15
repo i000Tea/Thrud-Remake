@@ -45,7 +45,7 @@ namespace TeaFramework
 
             // 计算音量差值
             float diffValue = Mathf.Abs(audioSource.volume - endVolume);
-            Debug.Log(diffValue);
+            //Debug.Log(diffValue);
 
             // 如果差值小于阈值，直接设置音量并跳出循环
             if (diffValue < 0.02f)

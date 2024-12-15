@@ -406,8 +406,6 @@ namespace TeaFramework.editor
 
          string[] Keywords = new string[] {
                poolData.itemID.ToString(),
-               poolData.itemName,
-               poolData.itemPinyin,
             };
 
          var middlePath = "GachaResource/GachaUIResource/";
