@@ -1,3 +1,4 @@
+using Codice.Client.Common;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -47,6 +48,10 @@ namespace TeaFramework.editor
 
                AssetDatabase.CreateAsset(roleData, assetPath); // 保存角色数据为资源文件
                roleDataList.Add(roleData); // 如果角色数据不存在，则添加
+            }
+            else
+            {
+               EditorUtility.SetDirty(roleData);
             }
             // 保存已获取的武器数据
             AssetDatabase.SaveAssets();  // 保存所有更改
@@ -382,6 +387,11 @@ namespace TeaFramework.editor
 
                AssetDatabase.CreateAsset(poolData, assetPath); // 保存角色数据为资源文件
                poolDataList.Add(poolData); // 如果角色数据不存在，则添加
+            }
+            else
+            {
+               // 标记为脏对象，表示该对象已被修改
+               EditorUtility.SetDirty(poolData);
             }
             // 保存已获取的武器数据
             AssetDatabase.SaveAssets();  // 保存所有更改

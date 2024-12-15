@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c3d8751b7f76b439d76efe3ea8cd67, type: 3}
   m_Name: 1001
   m_EditorClassIdentifier: 
-  itemName: 0
+  itemName: 1001
   itemID: 1001
   itemPinyin: "\u672A\u8BBE\u7F6E\u62FC\u97F3"
   Rarity: 0
