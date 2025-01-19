@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.4434
       objectReference: {fileID: 0}
+    - target: {fileID: 176337021, guid: 00e532845b94b4e4cbcae01a84ca0a0c, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 7453792621191454152, guid: 61e35759f1561cb4191b24e861a6f14a, type: 3}
     - target: {fileID: 1709338507534032130, guid: 00e532845b94b4e4cbcae01a84ca0a0c, type: 3}
       propertyPath: m_RootOrder
       value: 0

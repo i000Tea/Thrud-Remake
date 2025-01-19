@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
       propertyPath: m_Name
-      value: Bullet_Player_Base
+      value: Bullet_Player_Blast
       objectReference: {fileID: 0}
     - target: {fileID: 6821680082351704826, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
       propertyPath: m_RootOrder
@@ -55,5 +55,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6821680082675477224, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821680082675477224, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821680082675477224, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6821680082675477229, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}

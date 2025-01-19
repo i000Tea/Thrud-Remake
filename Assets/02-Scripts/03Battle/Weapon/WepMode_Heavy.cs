@@ -3,6 +3,7 @@ namespace TeaFramework
    /// <summary> 重装型武器 </summary>
    public abstract class WepMode_Heavy : WepMode_0Base
    {
+      protected override float bulletVelocity => 20;
 
    }
    /// <summary> 重装型武器 追踪飞弹 </summary>

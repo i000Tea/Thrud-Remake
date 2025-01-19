@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace TeaFramework
 {
@@ -10,14 +11,14 @@ namespace TeaFramework
    {
       public override void OnShootEvent()
       {
-         base.OnShootEvent();
          ExecuteDelayedTask();
       }
       private async void ExecuteDelayedTask()
       {
          for (int i = 0; i < expansion01; i++)
          {
-            OneShoot();
+            Debug.Log($"射击次数：{i}");
+            OneShoot(i);
             // 延迟 0.1 秒
             await Task.Delay((int)expansion02);
          } 

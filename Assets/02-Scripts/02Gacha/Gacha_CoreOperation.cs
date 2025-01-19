@@ -1,39 +1,55 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace TeaFramework
 {
+   /// <summary>
+   /// 抽卡核心操作类
+   /// 处理抽卡的主要逻辑，包括概率计算、保底机制等
+   /// </summary>
    public static class Gacha_CoreOperation
    {
+      /// <summary> 物品信息分隔符 </summary>
       public const char sep = '$';
 
+      /// <summary> 临时存储抽取到的物品信息 </summary>
       private static string[] getItems = new string[10];
+      
+      /// <summary> 缓存所有卡池的抽卡记录 </summary>
       public static Dictionary<string, PoolRecord> cachePoolRecords = new();
+      
+      /// <summary> 当前选中卡池的记录 </summary>
       private static PoolRecord NowPoolRecord => cachePoolRecords[onSelectPoolKey];
+      
+      /// <summary> 当前选中卡池的Key </summary>
       private static string onSelectPoolKey;
 
-      /// <summary> 5星概率 </summary>
+      #region 概率相关常量
+      /// <summary> 5星基础概率 (0.2%) </summary>
       private static int v5Prob = 200;
-      /// <summary> 5星up占比 </summary>
+      /// <summary> 5星UP角色占5星总概率比例 (50%) </summary>
       private static int v5UpProb = 5000;
 
-      /// <summary> 5星阶梯提升开始次数 </summary>
+      /// <summary> 5星概率提升起始抽数 </summary>
       private static int v5StageUpIndex = 59;
-      /// <summary> 5星阶梯提升量 </summary>
+      /// <summary> 每次5星概率提升值 </summary>
       private static int v5StageUpValue = 200;
-      /// <summary> 5星保底数 </summary>
+      /// <summary> 5星保底抽数 </summary>
       private static int v5MaxIndex = 79;
 
-      /// <summary> 4星概率 </summary>
+      /// <summary> 4星基础概率 (1.8%) </summary>
       private static int v4Prob = 1800;
-      /// <summary> 4星up占比 </summary>
+      /// <summary> 4星UP物品占4星总概率比例 (50%) </summary>
       private static int v4UpProb = 5000;
-      /// <summary> 4星保底数 </summary>
+      /// <summary> 4星保底抽数 </summary>
       private static int v4MaxIndex = 9;
 
-      /// <summary> 3星概率 </summary>
+      /// <summary> 3星概率 (10%) </summary>
       private static int v3Prob = 10000;
+      #endregion
 
+      /// <summary> 缓存当前选中的卡池数据 </summary>
       private static GachaPool_Data cacheSelectPool;
 
       /// <summary>
@@ -113,13 +129,13 @@ namespace TeaFramework
          string logStr = default;
          int getRarity = 2;
          // 未出5星已到数量 保底5
-         if (NowPoolRecord.unGetV5Index >= v5MaxIndex)
+         if (NowPoolRecord.pullsSinceLastFiveStar >= v5MaxIndex)
          {
             getRarity = 5;
             logStr += "\n未出5星到限制 保底5星";
          }
          // 未出4星已到数量 保底4
-         else if (NowPoolRecord.unGetV4Index >= v4MaxIndex)
+         else if (NowPoolRecord.pullsSinceLastFourStar >= v4MaxIndex)
          {
             getRarity = 4;
             logStr += "\n未出4星到限制 保底4星";
@@ -127,11 +143,11 @@ namespace TeaFramework
          // 没有保底，开始计算
          else
          {
-            logStr += $"\n距离上一个5过去{NowPoolRecord.unGetV5Index}距离上一个4过去{NowPoolRecord.unGetV4Index}";
+            logStr += $"\n距离上一个5过去{NowPoolRecord.pullsSinceLastFiveStar}距离上一个4过去{NowPoolRecord.pullsSinceLastFourStar}";
             var randomValue = Random.Range(0, 10000);
 
             var get5Prob = v5Prob +
-             Mathf.Max(0, NowPoolRecord.unGetV5Index - v5StageUpIndex) * v5StageUpValue;
+             Mathf.Max(0, NowPoolRecord.pullsSinceLastFiveStar - v5StageUpIndex) * v5StageUpValue;
             if (randomValue < get5Prob)
                getRarity = 5;
             else if (randomValue < get5Prob + v4Prob)
@@ -142,18 +158,18 @@ namespace TeaFramework
          }
          if (getRarity == 5)
          {
-            NowPoolRecord.unGetV5Index = 0;
-            NowPoolRecord.unGetV4Index = 0;
+            NowPoolRecord.pullsSinceLastFiveStar = 0;
+            NowPoolRecord.pullsSinceLastFourStar = 0;
          }
          else if (getRarity == 4)
          {
-            NowPoolRecord.unGetV5Index++;
-            NowPoolRecord.unGetV4Index = 0;
+            NowPoolRecord.pullsSinceLastFiveStar++;
+            NowPoolRecord.pullsSinceLastFourStar = 0;
          }
          else
          {
-            NowPoolRecord.unGetV5Index++;
-            NowPoolRecord.unGetV4Index++;
+            NowPoolRecord.pullsSinceLastFiveStar++;
+            NowPoolRecord.pullsSinceLastFourStar++;
 
          }
 
@@ -194,26 +210,43 @@ namespace TeaFramework
       }
    }
 
-   /// <summary> 卡池记录 </summary>
+   /// <summary> 卡池抽卡记录类 </summary>
    [System.Serializable]
    public class PoolRecord
    {
-      public string poolKey;
-      /// <summary> 卡池类型 </summary>
-      public string poolTag;
-      /// <summary> 卡池id </summary>
-      public int poolId;
-      /// <summary> 总抽次数 </summary>
-      public int allGachaIndex;
-      /// <summary> 总抽v5次数 </summary>
-      public int allGetV5Index;
-      /// <summary> 总抽v4次数 </summary>
-      public int allGetV4Index;
-      /// <summary> 未出5次数 </summary>      
-      public int unGetV5Index;
-      /// <summary> 未出4次数 </summary>      
-      public int unGetV4Index;
-      /// <summary> 下一个5是否是大保底 </summary>      
-      public bool nextV5IsUP;
+      [FormerlySerializedAs("poolKey")]
+      public string poolIdentifier; // 更改变量名并保留旧引用
+      
+      /// <summary> 卡池类型标识 </summary>
+      [FormerlySerializedAs("poolTag")]
+      public string poolCategory;
+      
+      /// <summary> 卡池唯一标识ID </summary>
+      [FormerlySerializedAs("poolId")]
+      public int poolIdentificationNumber;
+      
+      /// <summary> 该卡池总抽卡次数 </summary>
+      [FormerlySerializedAs("allGachaIndex")]
+      public int totalPullCount;
+      
+      /// <summary> 该卡池获得5星总次数 </summary>
+      [FormerlySerializedAs("allGetV5Index")]
+      public int totalFiveStarCount;
+      
+      /// <summary> 该卡池获得4星总次数 </summary>
+      [FormerlySerializedAs("allGetV4Index")]
+      public int totalFourStarCount;
+      
+      /// <summary> 距离上次获得5星的抽数 </summary>
+      [FormerlySerializedAs("unGetV5Index")]
+      public int pullsSinceLastFiveStar;
+      
+      /// <summary> 距离上次获得4星的抽数 </summary>
+      [FormerlySerializedAs("unGetV4Index")]
+      public int pullsSinceLastFourStar;
+      
+      /// <summary> 下一个5星是否必定为UP角色(大保底) </summary>
+      [FormerlySerializedAs("nextV5IsUP")]
+      public bool guaranteedUpFiveStar;
    }
 }

@@ -26,8 +26,8 @@ MonoBehaviour:
   magazineSize: 30
   firingRate: 120
   stability: 50
-  expandValue01: 0
-  expandValue02: 0
+  expandValue01: 2
+  expandValue02: 50
   skillName: "\u65E0"
   skillDescribe: "\u65E0"
   wepPrefab: {fileID: 743962216739086330, guid: 44a60e3630620fb478b88a5e519c9a1a, type: 3}

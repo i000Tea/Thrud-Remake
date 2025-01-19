@@ -31,7 +31,7 @@ MonoBehaviour:
   skillName: "\u65E0"
   skillDescribe: "\u65E0"
   wepPrefab: {fileID: 3367369661434140887, guid: ca628471237713740a8c1a5b71d8ec6a, type: 3}
-  bulletPrefab: {fileID: 6821680082351704822, guid: deb0b3d2b1700a64cb121612d4922659, type: 3}
+  bulletPrefab: {fileID: 7453792621191454152, guid: 61e35759f1561cb4191b24e861a6f14a, type: 3}
   sprite_LotteryResult: {fileID: 21300000, guid: 7d4a707818b423445a094cca0094cb00, type: 3}
   sprite_Square: {fileID: 21300000, guid: ed06ac7eea875774f91a5d1b33d3c40b, type: 3}
   sprite_Line: {fileID: 21300000, guid: ecb2273cbf5340d47a6742177b2e21ae, type: 3}

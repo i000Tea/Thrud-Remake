@@ -13,7 +13,7 @@ namespace TeaFramework
          }
          for (int i = 0; i < EntityBattleDatas.Length; i++)
          {
-            EntityBattleDatas[i].wepMode.TimeStep();
+            //EntityBattleDatas[i].wepMode.TimeStep();
          }
       }
    }

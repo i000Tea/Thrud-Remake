@@ -3,29 +3,57 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.Serialization; // 添加命名空间
 
 namespace TeaFramework
 {
+   /// <summary>
+   /// 抽卡系统的主控制器
+   /// 负责管理抽卡界面、动画播放和结果展示
+   /// </summary>
    public class Gacha_MainControl : MonoBehaviour
    {
       #region 成员变量与组件引用
-      [SerializeField] float multiSpeed = 1;
-      [Header("场景对象与预制件")]
-      /// <summary>卡池按钮的父对象，用于动态生成卡池按钮</summary>
-      [SerializeField] private Transform poolBtnParent;
-      /// <summary>卡池按钮的预制件</summary>
-      [SerializeField] private GameObject poolBtnPrfab;
 
-      /// <summary>单抽动画</summary>
-      [SerializeField] private PlayableDirector tl_Input;
-      [SerializeField] private PlayableDirector tl_Idle;
-      [SerializeField] private PlayableDirector g01;
-      /// <summary>单抽出高稀有度物品的动画</summary>
-      [SerializeField] private PlayableDirector g01v5;
-      /// <summary>十连抽动画</summary>
-      [SerializeField] private PlayableDirector g10;
-      /// <summary>十连抽出高稀有度物品的动画</summary>
-      [SerializeField] private PlayableDirector g10v5;
+      [Tooltip("编辑器模式下的时间缩放倍数")]
+      [SerializeField] private float multiSpeed = 1;
+
+      [Header("场景对象与预制件")]
+      [Tooltip("卡池按钮的父对象，用于动态生成卡池按钮")]
+      [SerializeField] private Transform poolBtnParent;
+
+      [Tooltip("卡池按钮的预制件")]
+      [FormerlySerializedAs("poolBtnPrfab")]
+      [SerializeField] private GameObject poolButtonPrefab;
+
+      [Header("动画时间轴")]
+      [Tooltip("输入动画")]
+      [FormerlySerializedAs("tl_Input")]
+      [SerializeField] private PlayableDirector timelineInput;
+
+      [Tooltip("待机动画")]
+      [FormerlySerializedAs("tl_Idle")]
+      [SerializeField] private PlayableDirector timelineIdle;
+
+      [Tooltip("普通单抽动画")]
+      [FormerlySerializedAs("g01")]
+      [SerializeField] private PlayableDirector gachaSingle;
+
+      [Tooltip("高稀有度单抽动画")]
+      [FormerlySerializedAs("g01v5")]
+      [SerializeField] private PlayableDirector gachaSingleRare;
+
+      [Tooltip("普通十连动画")]
+      [FormerlySerializedAs("g10")]
+      [SerializeField] private PlayableDirector gachaTen;
+
+      [Tooltip("高稀有度十连动画")]
+      [FormerlySerializedAs("g10v5")]
+      [SerializeField] private PlayableDirector gachaTenRare;
+
+      [Tooltip("单次展示动画")]
+      [FormerlySerializedAs("gSingle")]
+      [SerializeField] private PlayableDirector gachaShowSingle;
 
       [Header("石板对象与材质")]
       /// <summary>石板模型对象数组</summary>
@@ -95,7 +123,7 @@ namespace TeaFramework
 
 
          await Task.Delay(20); // 替代协程的等待，用于异步延时
-         // 切换到第一个卡池
+                               // 切换到第一个卡池
          PoolSwitch(0);
 
          // 音量淡入（启动时播放音频）
@@ -106,9 +134,9 @@ namespace TeaFramework
       }
       private IEnumerator AwakeTimeline()
       {
-         tl_Input.Play();
-         yield return new WaitForSeconds((float)tl_Input.duration);
-         tl_Idle.Play();
+         timelineInput.Play();
+         yield return new WaitForSeconds((float)timelineInput.duration);
+         timelineIdle.Play();
       }
 
       /// <summary>
@@ -125,7 +153,7 @@ namespace TeaFramework
          // 遍历卡池列表，动态生成对应的按钮
          for (int i = 0; i < onOpenPool.Count; i++)
          {
-            var instPool = Instantiate(poolBtnPrfab, poolBtnParent);
+            var instPool = Instantiate(poolButtonPrefab, poolBtnParent);
             var index = i;
 
             // 为按钮添加点击事件监听
@@ -164,7 +192,7 @@ namespace TeaFramework
       {
          if (delayEventOnProgress) { Debug.Log("正在抽卡，请稍后"); return; }
          getItems = Gacha_CoreOperation.OnGacha01(out bool onGetV5);
-         var tl = onGetV5 ? g01v5 : g01;
+         var tl = onGetV5 ? gachaSingleRare : gachaSingle;
          delayEventOnProgress = true;
          StartCoroutine(GachaShow(tl));
       }
@@ -176,7 +204,7 @@ namespace TeaFramework
       {
          if (delayEventOnProgress) { Debug.Log("正在抽卡，请稍后"); return; }
          getItems = Gacha_CoreOperation.OnGacha10(out bool onGetV5);
-         var tl = onGetV5 ? g10v5 : g10;
+         var tl = onGetV5 ? gachaTenRare : gachaTen;
          delayEventOnProgress = true;
          StartCoroutine(GachaShow(tl));
       }
@@ -185,9 +213,15 @@ namespace TeaFramework
       public void GachaShowOver()
       {
          Gacha_UIOperation.ShowLotteryOver();
-         tl_Idle.time = 0;
-         tl_Idle.Play();
+         timelineIdle.time = 0;
+         timelineIdle.Play();
          delayEventOnProgress = false;
+      }
+
+      public void Button_UIEvent(string _event)
+      {
+         Debug.Log("设置ui事件" + _event);
+         Gacha_UIOperation.btnEvent = _event;
       }
       #endregion
 
@@ -205,7 +239,6 @@ namespace TeaFramework
          // 用于设置石板的稀有度组
          List<int> slateRaritys = new();
          List<GachaUIItemData> datas = new();
-
 
          for (int i = 0; i < getItems.Length; i++)
          {
@@ -227,18 +260,20 @@ namespace TeaFramework
 
             // 获取id对应数据
             if (itemDataDic.TryGetValue(id, out var getItem))
-               datas.Add(new(getItem));
+               datas.Add(new(getItem, uiConfig));
          }
 
          // 设置石板材质
          SetSlateMaterial(slateRaritys);
 
-
+         // 等待抽卡动画播放完毕
          yield return new WaitForSeconds((float)(pd.duration - 0.5f));
 
          // 更新抽卡结果UI
          Gacha_UIOperation.SetLotteryResultSprite(datas.ToArray());
          pd.Stop();
+
+         yield return Gacha_UIOperation.ShowLotterySingle(gachaShowSingle);
 
          // 显示抽卡动画和结算界面
          yield return Gacha_UIOperation.ShowLotteryResult();
